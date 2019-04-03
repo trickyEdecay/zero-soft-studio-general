@@ -1,0 +1,5 @@
+index.html为导航页（收藏的页面）
+
+login.html为登录页面1（在drafts文件下里有成品pic1）
+
+navigation.html为导航页面2（在drafts文件夹里有成品pic2）
