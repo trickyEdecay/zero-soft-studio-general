@@ -1,0 +1,53 @@
+body{
+		background: #F4F4F4;
+}
+
+#box{
+	width:1320px;
+	margin: 160px auto;
+}
+
+.my{
+	font-family: PingFangSC-Medium;
+	color: #333333;
+	font-size: 18px;
+	line-height: 25px;
+	margin: 10px;
+}
+
+.bg{
+	float: left;
+	box-sizing: border-box;
+	width: 310px;
+	height: 100px;
+	background: #FFFFFF;
+	padding: 20px;
+	margin: 10px;
+}
+
+.container{
+	width: 60px;
+	height: 60px;
+	background: #3F5DEA;
+	border-radius: 50px;
+	margin-right: 20px;
+	float: left;
+}
+
+.bg span{
+	font-family: PingFangSC-Regular;
+	color: #333333;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.content{
+	float: right;
+	width: 190px;
+	height: 34px;
+	font-family: PingFangSC-Regular;
+	color: #C4C4C4;
+	font-size: 12px;
+	line-height: 17px;
+	margin-top: 6px;
+}
