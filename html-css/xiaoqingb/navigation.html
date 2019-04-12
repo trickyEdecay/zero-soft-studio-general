@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		/*这是大标题*/
+		h1 {
+			position: absolute;
+			top: 160px;
+			left: 310px;
+			font-size: 18px;
+		}
+
+		/*设置背景为白色 */
+		body {
+			background-color: #F4F4F4;
+		}
+
+		/*图片统一为圆形*/
+		img {
+			width: 60px;
+			height: 60px;
+			border-radius: 60px;
+		}
+
+		/*去除下划线*/
+		a {
+			text-decoration: none;
+			font-size: 14px;
+		}
+
+		/*用于装下box1，box2，box3，box4的大box*/
+		#bigbox {
+			position: absolute;
+			left: 310px;
+			top: 205px;
+			width: 1300px;
+			height: 100px;
+			background-color: #F4F4F4;
+			font-size: 0;
+		}
+
+		/*box2,box3,box4内容采用相对位置*/
+		.box {
+			position: relative;
+			/*设置每个box边距*/
+			margin-left: 20px;
+			/*四个中div进行行转块，然后在设置其他属性*/
+			display: inline-block;
+			background-color: #FFFFFF;
+			width: 310px;
+			height: 100px;
+			font-size: 0;
+		}
+
+		/*第一个box对齐b左上角*/
+		.box:nth-of-type(1) {
+			margin-left: 0;
+			margin-top: 0;
+		}
+
+		/*图标*/
+		.icon {
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+
+		/*小标题*/
+		.title {
+			position: absolute;
+			left: 100px;
+			top: 20px;
+			font-size: 12px;
+		}
+
+		/*标题描述*/
+		.describe {
+			position: absolute;
+			left: 100px;
+			top: 46px;
+			font-size: 12px;
+		}
+
+		a:hover {
+			color: blue;
+		}
+
+		.box:hover {
+			background-color: rgb(213, 217, 221);
+		}
+
+		a:active {
+			color: gray;
+		}
+
+		/*消除边距*/
+		p {
+			margin: 0;
+		}
+	</style>
+	<title></title>
+</head>
+
+<body>
+	<h1>我的收藏</h1>
+	<!-- 大盒子 -->
+	<nav id="bigbox">
+		<!-- 小盒子 -->
+		<div class="box">
+			<!-- 圆形图标 -->
+			<div class="icon">
+				<img src="https://www.easyicon.net/api/resizeApi.php?id=1193371&size=128" />
+			</div>
+			<!-- 小标题 -->
+			<div class="title">
+				<a href="https://www.baidu.com/">百度</a>
+			</div>
+			<p class="describe">
+				百度，全球最大的中文搜索引擎、<br>最大的中文网站.
+			</p>
+		</div>
+
+
+		<!-- 小盒子 -->
+		<div class="box">
+			<!-- 圆形图标 -->
+			<div class="icon">
+				<img src="https://static.easyicon.net/preview/119/1193419.gif" />
+			</div>
+			<!-- 小标题 -->
+			<div class="title">
+				<a href="https://weibo.com/">微博</a>
+			</div>
+			<p class="describe">
+				随时随地发现新鲜事！
+			</p>
+		</div>
+
+		<!-- 小盒子 -->
+		<div class="box">
+			<!-- 圆形图标 -->
+			<div class="icon">
+				<img src="https://static.easyicon.net/preview/118/1181185.gif">
+			</div>
+			<div class="title">
+				<a href="https://github.com/github">Github</a>
+			</div>
+			<!-- 小标题 -->
+			<p class="describe">
+				gitHub是一个面向开源及私有软件<br>项目的托管平台.
+			</p>
+		</div>
+		<!-- 小盒子 -->
+		<div class="box">
+			<!-- 圆形图标 -->
+			<div class="icon">
+				<img src="https://i.loli.net/2019/04/11/5caf3a4823a6c.jpg">
+			</div>
+			<!-- 小标题 -->
+			<div class="title">
+				<a href="https://www.zhihu.com/">知乎</a>
+			</div>
+			<p class="describe">
+				网络问答社区，连接各行各业的用户.
+			</p>
+		</div>
+	</nav>
+</body>
+
+</html>
