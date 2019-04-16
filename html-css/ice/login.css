@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background:rgb(29, 71, 177); 
+}
+
+.container{
+   background: #fff;
+   height:408px;
+   width: 350px;
+   border-radius: 8px;
+   margin: 120px auto;
+   padding-top: 50px;
+   /* position: relative;  */
+   box-sizing: border-box； 
+}
+
+.logo{
+    background: #C4C4C4;
+    height:80px;
+    width: 80px;
+    border-radius: 80px;
+    margin: 0 auto;
+
+}
+
+ .welcome{ 
+    color: #333333;
+    font-size: 18px;
+    font-family: PingFangSC-Medium;
+    height:25px;
+    width:126px;
+    line-height: 25px; 
+    text-align: center;
+    font-weight:900;   /*设置粗细*/
+    margin: 50px 0 15px 35px;
+}
+
+.username{ 
+  color:#C4C4C4;
+  font-size: 18px;
+  font-family: PingFangSC-Regular;
+  height:36px;
+  width:280px;
+  line-height: 20px; 
+  margin:0 0 15px 35px;
+  border-radius:5px; 
+  border:1px solid black; 
+  padding-left: 5px;
+}
+
+.password{ 
+  color:#C4C4C4;
+  font-size: 18px;
+  font-family: PingFangSC-Regular;
+  height:36px;
+  width:280px;
+  line-height: 20px; 
+  margin:0 0 30px 35px;
+  border-radius:5px; 
+  border:1px solid black;
+  padding-left: 5px; 
+}
+
+.anniu{ 
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  height:36px;
+  width:280px;
+  line-height: 20px; 
+  margin:0 35px;
+  text-align: center;  
+  background: #3F5DEA;
+  border-radius: 4px;
+}
+
+.forget{
+  display: inline-block; 
+  color:#C4C4C4;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  margin:15px 140px 0 35px;
+  line-height: 20px;  
+}
+
+.newuser{ 
+  display: inline-block; 
+  color: #3F5DEA;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  line-height: 20px;    
+}
