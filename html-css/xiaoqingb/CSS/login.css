@@ -1,0 +1,96 @@
+body{
+    background-color: rgb(142, 151, 236);
+}
+/* 登陆总窗口 */
+.box{
+    width:350px;
+    height:458px;
+    border-radius:15px;
+    background-color:rgb(255, 255, 255);
+    font-size:0;
+    position: absolute;
+    top:306px;
+    left:785px;
+}
+/* 头像 */
+.headPortrait{
+    position:absolute;
+    width:80px;
+    height:80px;
+    border-radius:80px;
+    background-color:rgb(125, 153, 168);
+    top:50px;
+    left:135px;
+}
+/* 欢迎文字 */
+.words{
+    position:absolute;
+    font-family: fantasy;
+    font-size:18px;
+    top:180px;
+    left:35px;
+    margin: 0;
+}
+
+.name{
+    /* 用户名输入框位置 */
+    position:absolute;
+    top:220px;
+    left:35px;
+    /* 用户名 */
+    width:280px;
+    height:36px;
+    border-radius:4px;
+    font-size:14px;
+    
+}
+/* 密码输入框位置 */
+
+.password{
+    position:absolute;
+    top:271px;
+    left:35px;
+    /* 密码 */
+    width:280px;
+    height:36px;
+    border-radius:4px;
+    font-size:14px;
+}
+#comfirm{
+    width:280px;
+    height:36px;
+    position:absolute;
+    top:337px;
+    left:35px;
+    background-color:#3F5DEA;
+    border-radius:4px;
+    outline:none;
+}
+/* 去下划线 */
+a{
+    text-decoration: none;
+    font-size:14px;
+}
+.forget a{
+    color:gray;
+    
+}
+.forget,.rigist{
+    font-size:0;
+}
+.forget{
+    position:absolute;
+    top:388px;
+    left:35px;
+}
+.rigist{
+    position:absolute;
+    top:388px;
+    left:245px;
+}
+a:hover{
+    color: rgb(192, 147, 186);
+}
+a:active{
+    color: rgb(227, 241, 28);
+}

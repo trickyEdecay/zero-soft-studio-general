@@ -1,0 +1,167 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style type="text/css">
+        div,img,embed,h3,body,a,span,h5,h6,input{margin:0;padding:0;}
+        body {
+            background:#1D47B1;
+        }
+        .login-window {
+            margin-top: 306px;
+            margin-bottom: 316px;
+            margin-left: auto;
+            margin-right: auto;
+            width:350px;
+            height:458px;
+            background:white;
+            border-radius:8px;
+        }
+        .text-content {
+            margin-left: 35px;
+            margin-right: 35px;
+        }
+        .gray-point {
+            width:80px;
+            height: 80px;
+            background: #C4C4C4;
+            margin-left:100px;
+            margin-right:100px;
+            margin-top: 50px;
+            display:inline-block;
+            border-radius:80px;
+        }
+        .login-system {
+            margin-top: 50px;
+            font-family: PingFangSC-Medium;
+            font-size: 18px;
+            color:#333333;
+            height:25px;
+            width:126px;
+            line-height: 25px;
+        }
+        .username input,.password input {
+            margin-top:15px;
+            width:280px;
+            height:36px;
+            outline: none;
+            text-indent: 8px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .login-button input{
+            display: inline-block;
+            width: 280px;
+            height: 36px;
+            background: #3F5DEA;
+            color:#FFFFFF;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            line-height: 20px;
+            border:none;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .input_border-radius {
+            border-radius: 4px;
+        }
+        .border-setting {
+            border: 1px solid #C4C4C4;   
+        }  
+
+        /*占位符颜色控制，我百度的*/
+        ::-webkit-input-placeholder { /* WebKit browsers */ 
+        color: #C4C4C4; 
+        } 
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+        color: #C4C4C4; 
+        } 
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+        color: #C4C4C4; 
+        } 
+        :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+        color: #C4C4C4; 
+        }
+        .buttom-text {
+            font-size: 0;
+            line-height: 20px;
+            margin-top: 15px;
+            width: 280px;
+            height: 20px;
+        }
+        .buttom-text-left {
+            display: inline-block;
+            text-align: left;
+            font-size: 14px;
+            color: #C4C4C4;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        .buttom-text-right {
+            display: inline-block;
+            text-align: right;
+            margin-left: 140px;
+            font-size: 14px;
+            color: #3F5DEA;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        
+        a:nth-of-type(1):link {
+            text-decoration: none;
+        }
+        a:nth-of-type(1):hover {
+            color:black;
+            text-decoration: underline;
+        }
+        a:nth-of-type(1):active {
+            color: red;
+        }
+
+        a:nth-of-type(2):link {
+            text-decoration: none;
+        }
+        a:nth-of-type(2):hover {
+            color:red;
+            text-decoration: underline;
+        }      
+        .login-button input:hover{
+            background:#4796DB;
+        }
+        .login-button input:active{
+            background:#0444B2;
+        }
+      </style>
+</head>
+<body>
+   <div class="blue-background"><!--蓝色背景--> 
+    <div class="login-window"><!--到四周距离，居中--><!--白色登录窗口-->
+        <div class="text-content"><!--控制内容和内边框距离-->
+            <div class="gray-point"><!--大灰色圆点-->
+            </div>
+            <div class="login-system"><!--登录文字-->
+                欢迎登录本系统
+            </div>
+            <div class="username"><!--用户名框-->
+                <input type="text" name="username" placeholder="请输入您的用户名" class="input_border-radius border-setting">
+            </div>
+            <div class="password"><!--密码框-->
+                <input type="password" name="pwd" placeholder="请输入您的密码" class="input_border-radius border-setting">
+            </div>
+                <a href="https://www.baidu.com/" class="login-button"><!--登录按钮-->
+                    <input type="button" name="submit" value="登录" class="input_border-radius">
+                </a>
+            <div class="buttom-text"><!--修改密码，注册账号-->
+                <a href="https://www.baidu.com/" target="_blacnk" class="buttom-text-left">忘记密码？</a>
+                <a href="https://www.baidu.com/" target="_blacnk" class="buttom-text-right">注册新账号</a>
+            </div>    
+        </div>
+    </div>
+   </div>
+</body>
+</html>>

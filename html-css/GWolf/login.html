@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">  
+    <style>
+      *{
+        margin:0;
+        border:0;
+        padding:0;
+        box-sizing: border-box;
+        cursor: pointer;
+        }
+     body{
+         background: #3F5DEA;
+     }
+     #container{
+         width: 350px;
+         height: 458px;
+         margin: 0 auto;
+         margin-top: 10%;
+         border: 1px solid black;
+         background: white;
+         border-radius: 8px;
+         position: relative;
+     }
+     #circle{
+         border-radius: 50%;
+         background: #C4C4C4;
+         margin: 50px 135px 278px 135px;
+         width: 80px;
+         height: 80px;
+     } 
+     span{
+         position: absolute;
+         top: 180px;
+         left: 35px;
+         line-height: 25px;
+         font-size: 18px;
+         font-family: PingFangSC-Medium;
+         color:#333333;
+        
+     }
+     #id1{
+         position: absolute;
+         top:  220px;
+         left: 35px;
+         width: 280px;
+         height: 36px;
+         border: 1px solid #C4C4C4;
+         border-radius: 4px;  
+         
+     }
+     #id2{
+        position: absolute;
+         top:  271px;
+         left: 35px;
+         width: 280px;
+         height: 36px;
+         border: 1px solid #C4C4C4;
+         border-radius: 4px;  
+     }
+     .class1{
+        font-family: PingFangSC-Regula;
+        font-size: 14px;
+        color: #C4C4C4;
+        margin-top: 7px;
+        margin-left: 7px;
+        height: 20px;
+        line-height: 20px;
+        outline:none; 
+        z-index: 1px;     
+        }
+       #id3 {
+            background: #3F5DEA;
+            border-radius: 4px;
+            position: absolute;
+            top:  337px;
+            left: 35px;
+            width: 280px;
+            height: 36px;
+        } 
+        #id4{
+             font-family: PingFangSC-Regular;
+             font-size: 14px;
+             background: #3F5DEA;
+             color: #FFFFFF;
+             border:  0px;
+             margin-top: 8px;
+             margin-left: 126px;
+             height: 20px;
+            }
+        #id5{
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #C4C4C4;
+                position: absolute;
+                top:388px;
+                left: 35px;
+                height: 20px;
+            }
+        #id6 {        
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #3F5DEA;
+                position: absolute;
+                top:388px;
+                left: 245px;
+                height: 20px;
+            }
+    </style>
+</head>
+<body>
+        <div id="container">
+            <div id="circle"></div>
+            <span>欢迎登入本系统</span>
+            <div id="id1">
+                <input type="text" class="class1" placeholder="请输入你的用户名">
+            </div>
+            <div id="id2">
+                <input type="password" class="class1" placeholder="请输入你的密码">
+            </div>
+            <div id="id3">
+                <input type="button" id="id4" value="登陆">
+            </div>
+            <div id="id5">忘记密码？</div>
+            <div id="id6">注册新账号</div>
+        </div>
+    </div>
+</body>
+</html>
