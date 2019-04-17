@@ -6,7 +6,7 @@ body{
 	width: 350px;
 	height: 458px;
 	background: #FFFFFF;
-	margin: 120px auto;
+	margin: 306px auto 316px auto;
 	position: relative;
 	border-radius: 8px;
 }
@@ -28,11 +28,12 @@ body{
 	top: 180px;
 }
 
-#down span{
+#down h1{
 	color: #333333;
 	font-size: 18px;
 	line-height: 25px;
-	font-family: PingFangSC-Medium;
+	font-family: "PingFangSC-Medium";
+	margin: 0;
 }
 
 .text{
@@ -40,17 +41,26 @@ body{
 	height: 36px;
 	margin-top: 15px;
 	border-radius: 4px;
-	border: 1px solid #C4C4C4;
+	border: 0;
 }
 
 .text input{	
+	width: 280px;
+	height: 36px;
 	font-size: 14px;
 	color: #C4C4C4;
-	line-height: 20px;
-	font-family: PingFangSC-Regular;
-	border: 0;
+	font-family: "PingFangSC-Regular";
+	border: 1px solid #C4C4C4;
 	outline: none;
-	margin: 8px;
+	background: transparent;
+	padding: 8px;
+	box-sizing: border-box;	
+	border-radius: 4px;
+
+}
+
+.text input:focus{
+	border:1px solid #3F5DEA;
 }
 
 #login{
@@ -61,6 +71,9 @@ body{
 	background: #3F5DEA;
 	border-radius: 4px;
 	margin-top: 30px;
+	border: 0;
+	outline: none;
+	padding: 0;
 }
 
 #left{
