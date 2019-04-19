@@ -1,0 +1,763 @@
+body{
+    background-color: rgb(242, 245, 246);
+    font-size: 0;
+    margin: 0;
+    width: 100%;
+    
+    
+}
+/* 上部分的主导航栏 */
+.head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 1920px;
+    padding-left: 200px;
+    padding-right: 150px;
+    width: 100%;
+    opacity: 1;
+    overflow:hidden;
+    background-color: white;
+    z-index: 2;
+    margin: 0;
+}
+
+/* -----------------------------------头左边 ---------------------------------*/
+.left-head{
+    display: inline-block;
+    background-color:transparent;
+    width: 550px;
+    height:100% ;    
+    overflow: hidden;
+}
+/* margin-left 要使用@media */
+/* 左边容纳LOGO的容器 */
+.icon{
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+    height: 60px;
+    width: 80px;
+    background:transparent;
+    overflow: hidden;
+}
+/* 斗鱼图标 */
+.douyu-logo{
+    height: 70px;
+}
+/* 菜单大框 */
+.left-head-menu{
+    float: left;
+    width: 460px;
+    height: 100%;
+    background-color: #fff;
+}
+/* 菜单列表框 */
+.left-head-menu-contain
+{
+    margin-left:20px;
+    height: 100%;
+    padding: 0;
+}
+/* 菜单内容 */
+.menu-words{
+    float: left;
+    margin-right: 25px;
+    
+}
+.left-head-url{
+    font-size: 18px;
+    line-height: 80px;
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+/* ---------------------------头左边【完】-------------------------- */
+
+/* -----------------------------头右边----------------------------- */
+.right-head{
+    display: inline-block;
+    margin-left: 18%;
+    width: 500px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    
+}
+/* 搜索框 */
+.search{
+    display: inline-block;
+    float: left;
+    height: 100%;
+    width: 170px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    margin-right: 20px;
+}
+.search-frame{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    left: 20px;
+    top:20px;
+    border-radius: 40px;
+    background-color: rgb(240, 240, 240);
+}
+.search-input{
+    width: 105px;
+    margin-left: 10px;
+    margin-top: 7px;
+    background: transparent;
+    font-size:12px;
+    border: 0;
+    outline: none;
+}
+.search-btn{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: 5px;
+    right: 5px;
+    
+    border-color: rgb(221, 182, 182);
+    outline:none;
+    cursor:pointer;
+}
+.search-btn:hover{  
+    border-color: rgb(119, 104, 104);
+}
+.search-btn:active{
+    border-color:rgb(197, 164, 133);
+}
+/* 搜索框 */
+/* 其他按钮 */
+.right-head-btn{
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    height: 100%;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    cursor:pointer;
+    padding-top:20px;
+    
+}
+.img{
+    float: left;
+    height:20px;;
+}
+.right-head-words{
+    float:left;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color:rgb(188, 188, 188);
+    text-align: center;
+}
+/* 让图片居中 */
+.img-client{
+    margin-left:5px;
+    height:22px;
+}
+.img-love{
+    margin-left: 2px;
+}
+.img-container{
+    height: 25px;
+}
+/* -------------------头右边【完】------------------------------------ */
+
+
+/* 左边导航栏 */
+.nav{
+    position:fixed;
+    background-color:rgb(45,46,54);
+    width: 240px;
+    top: 70px;
+    height: 801px;
+    overflow-y: scroll;
+}
+.nav::-webkit-scrollbar{/*滚动条整体部分，其中的属性有width,height,background,border等（就和一个块级元素一样）（位置1）*/
+    width:10px;
+    height:10px;
+    background-color: rgb(45,46,54);
+}
+.nav::-webkit-scrollbar-button{/*滚动条两端的按钮，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置2）*/
+    display: none;
+}
+.nav::-webkit-scrollbar-thumb{/*滚动条里面可以拖动的那部分（位置5）*/
+    background:rgb(67,68,80);
+    border-radius:4px;
+}
+
+
+
+/* 左边上面四个选项 */
+.nav-main{
+    background-color:transparent;
+    width:240px;
+    padding: 0 15px;
+    height:192px;
+    box-sizing: border-box;
+}
+
+.nav-main-content{
+    display:block;
+    width: 100%;
+    height: 25%;
+    font-size: 15px;
+    position: relative;
+}
+
+.main-content-icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color:transparent;
+    float: left;
+    margin-top: 14px;
+}
+.main-content-icon-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.em-content{
+    float: left;
+    display: inline-block;
+    line-height: 1.5em;
+    margin-top: 14px;
+    margin-left: 15px;
+    font-size: 15px;
+    color: #8a8a8a;
+    font-weight: 400;
+}
+.underline{
+    border-bottom:rgb(38, 39, 46) solid; 
+}
+
+/* 左边上面四个选项【完】 */
+.nav-class-menu{   
+    background-color:transparent;
+    width:240px;
+    padding: 0 15px;
+    height:1500px;
+    box-sizing: border-box;
+}
+.nav-menu-container{
+    width: 100%;
+    border-bottom:rgb(38, 39, 46) solid;
+    margin-top: 1px;
+    padding:10px 0;
+    box-sizing: border-box;
+}
+.nav-container-title{
+    width: 100%;
+    height:40px;
+    border: transparent;
+    border-top:2px; 
+}
+.nav-container-title-words{
+    display: block;
+    float: left;
+    font-size: 15px;
+    text-decoration: none;
+    color:#8a8a8a;
+    width: 100px;
+    border-left:25px; 
+    border-left:  rgb(255, 93, 35) solid;
+}
+.nav-container-title-all{
+    display:block;
+    float:right;
+    margin-right:5px;
+    text-decoration: none;
+    color: #646464;
+    font-size: 13px;
+}
+.content-name{
+    float: left;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+    color: #8a8a8a;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding:0 5px;
+    border-radius: 8px;
+    line-height: 30px;
+}
+.nav-menu-container:nth-of-type(1){
+    height: 230px;
+}
+.nav-menu-container:nth-of-type(2){
+    height: 120px;
+}
+.nav-menu-container:nth-of-type(3){
+    height: 200px;
+}
+.nav-menu-container:nth-of-type(4){
+    height: 145px;
+}
+.nav-menu-container:nth-of-type(5){
+    height: 150px;
+}
+.nav-menu-container:nth-of-type(6){
+    height: 120px;
+}.nav-menu-container:nth-of-type(7){
+    height:80px;
+}
+.left-head-url:hover,.em-content:hover{
+    color: rgb(255, 93, 35);
+}
+.nav-main-content:hover,.content-name:hover{
+    color: rgb(255, 93, 35);
+    background-color:rgb(38, 39, 46);
+}
+/* 导航栏【完】 */
+
+/* 视频区域 */
+.video-area{
+    z-index: 1;
+    flex-wrap: wrap;
+    margin-top: 85px;
+    margin-left: 250px;
+    width: 1265px;
+    height: 2000px;
+    padding-left: 10px;
+    
+    background-color:rgb(242, 245, 246);
+    
+}
+/* 推荐区域 */
+.douyu-recommend{
+    float: left;
+    width: 915px;
+    height: 280px;
+    padding-left: 10px;
+    background-color:transparent;
+    
+}
+/* 推荐标头 */
+.recommend-title{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0;
+    background-color: transparent;
+}
+.recommend-dytj{
+    margin: 0 0 0 5px;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 400;
+    color: #353434;
+    
+}
+.love-recommend{
+    display: inline-block;
+    font-size: 12px;
+    height: 40px;
+    padding-top: 20px;
+    margin: 0 25px;
+    box-sizing: border-box;
+    color:  #646464;
+}
+.change-recommend{
+    display: inline-block;
+    height: 24px;
+    width:65px;
+    padding-top: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+}
+.change-icon{
+    display: inline-block;
+    position: absolute;
+    top:3px;
+    left: 2px;
+    display: block;
+    width: 17px;
+    height: 17px;
+}
+.change-words{
+    position: absolute;
+    top:6px;
+    left: 23px;
+    font-size: 10px;
+    text-decoration: none;
+}
+.change-words:hover{
+    color:rgb(225, 93, 35);
+}
+/* 推荐标头【完】 */
+/* 推荐视频内容 */
+.video-recommand{
+    float: left;
+    height:220px;
+    width:30%;
+    background-color: rgb(255, 255, 255);
+    padding: 0 5px;
+    border-radius: 5px ;
+    box-sizing: border-box;
+}
+@media screen and (max-width:1300px){
+    
+    .video-recommand{
+        height: 195px;
+        width: 27%;
+        margin: 0 10px;
+    }
+    .video-title{
+        width: 180px;
+    }
+}
+.video-recommand:nth-of-type(2){
+    margin-right: 35px;
+    margin-left: 35px;
+}
+.live-video{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.video-describe{
+    display: inline-block;
+    float: left;
+    height: 28px;
+    width: 99%;
+}
+.video-man{
+    display: inline-block;
+    float: left;
+    height: 30px;
+    width: 99%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.video-title{
+    display: inline-block;
+    
+    height: 100%;
+    width: 120px;
+    font-size: 15px;
+}
+.video-class{
+    display: inline-block;
+    float: right;
+    text-align: right;
+    height: 100%;
+    width: auto;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.user-coin{
+    display: inline-block;
+    height:15px;
+    width: 13px;
+    margin-right: 5px;
+}
+.name{
+    display:inline-block;
+    height:15px;
+    width: 100px;
+    font-size: 12px;
+    
+}
+.fire-img{
+    display: inline-block;
+    float: right;
+    height:15px;
+    width: 13px;
+}
+.follow-num{
+    display:inline-block;
+    float: right;
+    text-align: right;
+    height:15px;
+    width: 36px;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+/* 抽奖框架 */
+.luck-draw{
+    
+    float: left;
+    width: 320px;
+    height: 280px;
+    padding-left: 5px;
+    background-color:transparent;
+    
+}
+.luck-draw-title{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 11px 120px 0 0;
+}
+.luck-draw-content{
+    display: inline-block;
+    float:left; 
+    width: 306px;
+    height: 220px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    overflow:hidden;
+}
+.darw-url{
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: 23%;
+    padding:5px 5px 0 5px;
+    margin:3px 0;
+    box-sizing: border-box;
+    background-color:transparent;
+}
+.draw-url-icon{
+    display: inline-block;
+    float: left;
+    height: 40px;
+    width:40px;
+    border-radius: 55px;
+    margin-right: 10px;
+}
+.gift-icon{
+    display:inline-block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 10px 0 2px 0;
+}
+.gift-dec{
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    height: 16px;
+    width: 230px;
+    margin: 10px  0 2px 0;
+}
+
+
+/* -------------------------------- 在线直播-------------------------------- */
+.live-nav{
+    float: left;
+    display: flex;
+    width:1245px;
+    height: 54px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:transparent;
+    flex-wrap: wrap; 
+    align-content: center;
+    margin: 20px 0;
+}
+.online-live{
+    margin: 0;
+    font-weight: 400;
+    font-size: 30px;
+}
+.online-live-item{
+    width: 85px;
+    height: 34px;
+    margin-left: 16px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-decoration: none;
+}
+.live-item-name{
+    font-size: 14px;
+}
+.live-item-name：hover{
+    color:rgb(255, 93, 35)；
+}
+.online-live-item:hover{
+    border: rgb(255, 93, 35) solid;
+    
+}
+
+.xiala{
+    margin-left: 16px;
+    width: 34px;
+    height: 34px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    
+}
+.xiala-img{
+    width: 16px;
+    height: 16px;
+}
+.lingqu-img{
+    margin:4px 5px 0 40px;
+    height: 26px;
+    border-radius: 34px;
+}
+.lingqu{
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.lingqu:hover,.hot-video-words:hover{
+    color:rgb(225, 93, 35);
+}
+.video-icon-container{
+    height: 20px;
+    width: 100px;
+    border-left: #646464 solid;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    justify-content: center;   
+    align-content: center;
+}
+.hot-video-icon{
+    height: 25px;
+    width: 20px;
+}
+.hot-video-words{
+    margin: 5px 0 0 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+.live-video-box{
+    float: left;
+    width: 100%;
+    height: 1000px;
+    background-color: transparent;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.video-recommand-x{
+    height:205px;
+    width:23%;
+    background-color: rgb(255, 255, 255);
+    padding: 0 2px;
+    border-radius: 5px;   
+    box-sizing: border-box;
+    margin:10px 0;
+}
+
+.live-video-x{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.video-describe-x{
+    display: inline-block;
+    float: left;
+    height: 28px;
+    width: 99%;
+}
+.video-man-x{
+    display: inline-block;
+    float: left;
+    height: 30px;
+    width: 99%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.video-title-x{
+    display: inline-block;
+    height: 100%;
+    width: 200px;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.video-class-x{
+    display: inline-block;
+    float: right;
+    text-align: right;
+    height: 100%;
+    width: auto;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.user-coin-x{
+    display: inline-block;
+    height:15px;
+    width: 13px;
+    margin-right: 5px;
+}
+.name-x{
+    display:inline-block;
+    height:15px;
+    width: 100px;
+    font-size: 12px;
+    
+}
+.fire-img-x{
+    display: inline-block;
+    float: right;
+    height:15px;
+    width: 13px;
+}
+.follow-num-x{
+    display:inline-block;
+    float: right;
+    height:15px;
+    width: 36px;
+    font-size: 12px;
+    margin-left: 4px;
+    text-align: right;
+}
+@media screen and (max-width:1000px){
+    .head{
+        padding-left: 140px;
+    }
+    .video-recommand-x{
+        height: 185px;
+        width: 20%;
+    }
+    .video-title-x{
+        width: 160px;
+    }
+}
+@media screen and (max-width:1300px) and (min-width:1000px){
+    .head{
+        padding-left: 150px;
+    }
+    .live-video-box{
+        justify-content: flex-start;
+    }
+    .video-recommand-x{
+        height: 195px;
+        width: 21%;
+        margin: 0 10px;
+    }
+    .video-title-x{
+        width: 180px;
+    }
+}
+@media screen and (max-width:1000px){
+    .head{
+        padding-left: 70px;
+    }
+
+    }
