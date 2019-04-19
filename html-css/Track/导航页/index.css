@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+.Interface{
+    width: 1920px;
+    height: 1080px;
+    background: #F4F4F4;
+    margin: 0 auto;
+}
+.container{
+    padding-top: 160px;
+    margin-left: 310px;
+}
+.container1{
+    width: 310px;
+    height: 100px;
+    padding: 20px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.left,.right{
+    display: inline-block;
+}
+.right{
+    margin-left: 20px;
+}
+.yuan{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: #3F5DEA;
+    display: inline-block;
+}
+.picture{
+    width: 30px;
+    margin: 15px;
+    display: inline-block;
+    color: #FFFFFF;
+}
+.describe{
+    width:190px;
+    font-size: 12px;
+    color: #C4C4C4;
+}
