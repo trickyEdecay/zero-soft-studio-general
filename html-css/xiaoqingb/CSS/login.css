@@ -1,5 +1,8 @@
 body{
     background-color: rgb(142, 151, 236);
+    margin: 0;
+    width: 1980px;
+    height: 1080px;
 }
 /* 登陆总窗口 */
 .box{
