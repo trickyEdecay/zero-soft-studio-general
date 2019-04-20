@@ -1,9 +1,12 @@
+html{
+    height: 100%;
+}
 body{
     background-color: rgb(242, 245, 246);
     font-size: 0;
     margin: 0;
     width: 100%;
-    
+    height: 100%;
     
 }
 /* 上部分的主导航栏 */
@@ -323,7 +326,7 @@ body{
     flex-wrap: wrap;
     margin-top: 85px;
     margin-left: 250px;
-    width: 1265px;
+    width: 1250px;
     height: 2000px;
     padding-left: 10px;
     
