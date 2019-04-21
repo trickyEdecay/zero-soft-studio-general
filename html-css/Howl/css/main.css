@@ -1,0 +1,45 @@
+body{
+	background-color: rgb(255,250,232);
+}
+
+#animate{
+	width: 130px;
+}
+
+#bar{
+	opacity:0.3;
+	position:relative;
+	margin-top: 200px;
+	width: 130px;
+	margin-left: -80px;
+	background-color: rgb(255,255,255);
+	text-align:center;
+	line-height:30px;
+}
+
+#Navigation
+{
+	display:none;
+}
+
+#Navigation a{
+	background-color: rgb(200,200,200);
+	color: #fff;
+	display: block;
+	width: 130px;
+	height: 40px;
+	line-height:40px;
+	text-align: center;
+	text-decoration:none
+}
+
+#Navigation a:hover {
+	background-color: rgb(255,255,255);
+	color: rgb(200,200,200);
+}
+
+#none{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 40px;
+}
