@@ -1,0 +1,81 @@
+body{
+    background:white;
+   /* 背景固定 */
+    background-repeat:no-repeat;
+    background-size: 100% 100%; 
+    background-attachment: fixed ;
+}
+#username{
+    color: skyblue;
+    font-size: 35px;
+    background-color:#d7fdb0; 
+}
+/* 导航栏组 */
+.url{
+    font-size: 20px;
+    margin: 5px;
+    color: skyblue;
+    background-color:#d7fdb0;
+}
+/* 单独导航栏 */
+#url1{
+    text-align: right;
+    margin-top: 0cm;
+}
+.bp{
+    height: 160px;
+}
+#sousuokuang{
+    text-align: left;
+    width: 400px;
+}
+#check,#xiaoqingb{
+    text-align: center;
+}
+#xiaoqingb{
+    margin-top: 0;
+    color: blue;
+    text-align: bottom;
+}
+/* 按钮 */
+#comfirm{
+    background-color: gold;
+    color: coral;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+/* 取消下划线 */
+a{
+    text-decoration: none;
+}
+/* 指针特效 */
+a #username:link{
+    background: red;
+}
+a #username:visited{
+    background:yellow;
+}
+a #username:hover{
+    background:#cccfff ;
+}
+a #username:active{
+    background: blue;
+}
+/* 
+
+a #url:link{
+    background: red;
+}
+a #url:visited{
+    background:yellow;
+}
+a #url:hover{
+    background:#cccfff ;
+}
+a #url:active{
+    background: blue;
+} */
+#wechat{
+    width: 100px;
+}

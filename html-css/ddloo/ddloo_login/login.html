@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charest=utf-8">
+        <link rel="stylesheet" href="css/login.css" type="text/css">
+        <link rel="stylesheet" href="css/normal.css" type="text/css">
+        <script type="text/javascript" src="js/login_visible.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <div class="outermost">
+            <div class="outside">
+                <h2 class="title">登录</h2>
+                <form action="" autocomplete="off">
+                    <div class="inside">
+                        <label for="input" class="lab">账号: </label>
+                        <img src="img/user.jpg" class="login-img" alt="图片">
+                        <input class="put" id="input" type="text" placeholder="用户名/邮箱/手机号" autofocus required oninput="setCustomValidity('')" oninvalid="setCustomValidity('账号不能为空哦')">
+                    </div>
+                    <div class="inside">
+                        <label for="password" class="lab">密码: </label>
+                        <img src="img/password.jpg" class="login-img" alt="图片">
+                        <input class="put" id="password" type="password" placeholder="人家不会看你密码啦" required oninput="setCustomValidity('')" oninvalid="setCustomValidity('密码不能为空哦')">
+                        <img src="img/visible.png" id="login-visimg" onclick="ishideshow()">
+                    </div>
+                    <div class="divremember">
+                            <input id="remember" type="checkbox" checked>
+                            <label class="labremember" for="remember">记住我</label>
+                    </div>
+                    <div class="divforget">
+                        <a class="ahref" href="">忘记密码?</a>
+                    </div>
+                    <div class="divlogin">
+                        <input id="login" type="submit" value="登录">
+                        <a id="aregister" href="phone_register.html">注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
