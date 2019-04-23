@@ -1,0 +1,77 @@
+*{
+  margin:0;}
+.title{
+    width: 72px;
+    height: 26px;
+    margin-left: 310px;
+    margin-top: 160px;
+    margin-bottom: 20px;
+}
+.box{
+    margin-left: 310px;
+    width: 1500px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.box-1{
+    border:1px solid white;
+    background: #ffffff;
+    margin-right: 20px;
+    width: 270px;
+    height: 60px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.box-1-icon-1{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    background: #3f5dea;
+    border-radius: 100%;
+}
+.box-1-icon-2{
+    width: 30px;
+    height: 30px;
+    margin: 15px 15px;
+    background: transparent;
+}
+.box-1-icon-3{
+    width: 190px;
+    height: 60px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+.box-1-icon-3 h2{
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.box-1-icon-3 p{
+    width: 150px;
+    height: 40px;
+    font-size:12px;
+    
+    overflow: hidden;
+}
+.box-1-icon-3 h2,a{
+    text-decoration: none;
+    /*去掉超链接下划线*/
+}
+.box-1-icon-3 a:hover{
+    color: gray;
+    text-decoration: underline;
+}
+.box-1-icon-3 a:active{
+    color: green;
+}
