@@ -1,0 +1,36 @@
+.contain{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+.monster{
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    background-color: green;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    line-height: 300px;
+}
+.monster-blood-trough {
+    margin: 50px auto;
+    width: 400px;
+    height: 30px;
+    border: 1px solid black;
+
+}
+.monster-blood{
+    width: 400px;
+    height: 100%;
+    background-color: red;
+}
+
+.attack{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #1D47B1;
+    line-height: 100px;
+    text-align: center;
+}
