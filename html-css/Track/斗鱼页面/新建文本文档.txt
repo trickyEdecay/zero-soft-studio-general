@@ -1,0 +1,7 @@
+.Header-logo{
+display:table-cell;
+height:68px;
+line-height:68px;
+width:76px;
+vertical-align:middle;
+} 
