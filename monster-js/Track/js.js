@@ -1,5 +1,4 @@
 var monsterhp=100;
-var herohp=100;
 var monsterHpEle=document.getElementById("monster-hp");
 var critEle=document.getElementById("crit");
 
