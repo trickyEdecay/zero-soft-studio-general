@@ -1,6 +1,9 @@
 body{
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
 .Interface{
     width: 1920px;
     height: 1080px;
@@ -19,11 +22,13 @@ body{
     background: #FFFFFF;
     border-radius: 4px;
     display: inline-block;
-    vertical-align: bottom;
     margin-right: 20px;
+    vertical-align: bottom;
 }
+
 .left,.right{
     display: inline-block;
+    vertical-align: bottom;
 }
 .right{
     margin-left: 20px;
@@ -45,4 +50,5 @@ body{
     width:190px;
     font-size: 12px;
     color: #C4C4C4;
+    height: 34px;
 }

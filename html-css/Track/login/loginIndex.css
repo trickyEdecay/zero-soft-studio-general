@@ -4,7 +4,7 @@ body{
     font-family: PingFangSC-Medium;
 }
 /*设置页面大小：1920*1080，背景颜色蓝色，使界面上下对齐*/
-#yemian{
+#main{
     width: 1920px;
     height: 1080px;
     background-color: blue;

@@ -1,10 +1,10 @@
 var hp=100;
-var myBtnEle=document.getElementById("button");
-var monatweHpEle=document.getElementById("monster-hp");
-function hello() {
+var monsterHpEle=document.getElementById("monster-hp");
+function attack() {
     hp-=10;
     if(hp<0){
-        return 0;
+        hp=0;
+        alert("The monster is dead")
     }
-    document.getElementById("monster-hp").style.width=hp+"%";
+    monsterHpEle.style.width=hp+"%";
 }

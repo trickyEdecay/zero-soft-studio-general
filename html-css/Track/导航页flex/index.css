@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ a{
     height: 1080px;
     background: #F4F4F4;
     margin: 0 auto;
+    overflow: hidden;
 }
 h1{
     margin-top: 160px;
@@ -19,9 +21,14 @@ h1{
 .layout{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin: 20px 310px 0 310px;
 }
 .layout-main{
+    display: flex;
+    margin-top: 20px;
+}
+.layout-container{
     height: 100px;
     width: 100%;
     display: flex;
