@@ -7,6 +7,7 @@ function random(min, max) {
 function attack() {
     if(random(0,100)>69){
         hp-=(random(0,10));
+        return;
     }
     hp-=(random(5,10));
     if(hp<0){
