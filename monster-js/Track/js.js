@@ -8,7 +8,7 @@ function random(min, max) {
 }
 function heroattack() {
     critEle.style.opacity="0.0";
-    if(random(0,100)>50){
+    if(random(0,100)>70){
         monsterhp-=(random(0,10));
         critEle.style.opacity="1.0";
     }
