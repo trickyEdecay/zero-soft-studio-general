@@ -1,7 +1,10 @@
 var hp=100;
 var myBtnEle=document.getElementById("button");
-var monatweHpEle=document.getElementById("MonsterHp");
+var monatweHpEle=document.getElementById("monster-hp");
 function hello() {
     hp-=10;
-    document.getElementById("MonsterHp").style.width=hp+"%";
+    if(hp<0){
+        return 0;
+    }
+    document.getElementById("monster-hp").style.width=hp+"%";
 }
