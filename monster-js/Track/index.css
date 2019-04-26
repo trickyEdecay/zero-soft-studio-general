@@ -6,6 +6,7 @@ body{
     width: 1000px;
     height: 100%;
     margin: 0 auto;
+    position: relative;
 }
 .monster{
     width: 300px;
@@ -34,8 +35,13 @@ body{
 .attack{
     width: 100px;
     height: 100px;
-    margin: 50px auto;
+    margin: 50px 0 50px 800px;
     background-color: #1D47B1;
     line-height: 100px;
     text-align: center;
+    display: inline-block;
+}
+.crit{
+    display: inline-block;
+    opacity: 0.0;
 }
