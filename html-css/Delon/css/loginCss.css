@@ -40,7 +40,7 @@ h2{
 	box-sizing: border-box;
 }
 #container input:focus{
-	border:1px solid #3F5DEA;  v 
+	border:1px solid #3F5DEA;  
 }
 .nav-content{
 	position: absolute;
