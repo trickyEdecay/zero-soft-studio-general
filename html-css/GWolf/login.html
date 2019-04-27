@@ -7,17 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="normalize.css">  
     <style>
-      *{
+    *{
         margin:0;
         border:0;
         padding:0;
         box-sizing: border-box;
         cursor: pointer;
         }
-     body{
+    body{
          background: #3F5DEA;
-     }
-     #container{
+        }
+    #login-container{
          width: 350px;
          height: 458px;
          margin: 0 auto;
@@ -25,65 +25,53 @@
          border: 1px solid black;
          background: white;
          border-radius: 8px;
-         position: relative;
-     }
-     #circle{
-         border-radius: 50%;
+        }
+    #login-icon{
+         border-radius: 80px;
          background: #C4C4C4;
-         margin: 50px 135px 278px 135px;
+         margin-top:50px;
+         margin-left:135px;
          width: 80px;
          height: 80px;
      } 
-     span{
-         position: absolute;
-         top: 180px;
-         left: 35px;
+     h1{
+         margin-top: 50px;
+         margin-left: 35px;
          line-height: 25px;
          font-size: 18px;
          font-family: PingFangSC-Medium;
-         color:#333333;
-        
+         color:#333333;   
      }
-     #id1{
-         position: absolute;
-         top:  220px;
-         left: 35px;
+     .login-text-input{        
          width: 280px;
          height: 36px;
-         border: 1px solid #C4C4C4;
-         border-radius: 4px;  
-         
+         border-radius: 4px;   
+         margin-left: 35px;
+         margin-top: 15px;   
      }
-     #id2{
-        position: absolute;
-         top:  271px;
-         left: 35px;
-         width: 280px;
+     .login-messsage{
+         font-family: PingFangSC-Regula;
+         font-size: 14px;
+         color: #C4C4C4;
+         width:280px;
          height: 36px;
-         border: 1px solid #C4C4C4;
-         border-radius: 4px;  
-     }
-     .class1{
-        font-family: PingFangSC-Regula;
-        font-size: 14px;
-        color: #C4C4C4;
-        margin-top: 7px;
-        margin-left: 7px;
-        height: 20px;
-        line-height: 20px;
-        outline:none; 
-        z-index: 1px;     
+         line-height: 36px;
+         outline:none;  
+         background: transparent;
+         padding:8px 160px 8px 8px;
+         border: 1px solid  black;
+         box-sizing: border-box;
+         border-radius: 5px; 
         }
-       #id3 {
+       #login-button-container {
             background: #3F5DEA;
             border-radius: 4px;
-            position: absolute;
-            top:  337px;
-            left: 35px;
+            margin-top:30px;
+            margin-left: 35px;
             width: 280px;
             height: 36px;
         } 
-        #id4{
+        #login-button{
              font-family: PingFangSC-Regular;
              font-size: 14px;
              background: #3F5DEA;
@@ -93,41 +81,43 @@
              margin-left: 126px;
              height: 20px;
             }
-        #id5{
+        #login-error-password{
                 font-family: PingFangSC-Regular;
                 font-size: 14px;
                 color: #C4C4C4;
-                position: absolute;
-                top:388px;
-                left: 35px;
+                margin-top:15px;
+                margin-left: 35px;
                 height: 20px;
+                width: 70px;
+                line-height: 20px;
             }
-        #id6 {        
+        #login-new-user {        
                 font-family: PingFangSC-Regular;
                 font-size: 14px;
+                float: right;
                 color: #3F5DEA;
-                position: absolute;
-                top:388px;
-                left: 245px;
+                margin-right: 35px;
+                margin-bottom: 50px;
+                width: 70px;
                 height: 20px;
             }
     </style>
 </head>
 <body>
-        <div id="container">
-            <div id="circle"></div>
-            <span>欢迎登入本系统</span>
-            <div id="id1">
-                <input type="text" class="class1" placeholder="请输入你的用户名">
+        <div id="login-container">
+            <div id="login-icon"></div>
+            <h1>欢迎登入本系统</h1>
+            <div class="login-text-input">
+                <input type="text" class="login-messsage" placeholder="请输入你的用户名">
             </div>
-            <div id="id2">
-                <input type="password" class="class1" placeholder="请输入你的密码">
+            <div class="login-text-input">
+                <input type="password" class="login-messsage" placeholder="请输入你的密码">
             </div>
-            <div id="id3">
-                <input type="button" id="id4" value="登陆">
+            <div id="login-button-container">
+                <input type="button" id="login-button" value="登陆">
             </div>
-            <div id="id5">忘记密码？</div>
-            <div id="id6">注册新账号</div>
+            <span id="login-error-password">忘记密码？</span>
+            <span id="login-new-user">注册新账号</span>
         </div>
     </div>
 </body>
