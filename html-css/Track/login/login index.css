@@ -1,0 +1,81 @@
+#yemian{
+    width: 1920px;
+    height: 1080px;
+    background-color: blue;
+    padding-bottom: 50%;
+    padding-top: 50%;
+    padding-top: 50px;
+}/*设置页面大小：1920*1080，背景颜色蓝色，使界面上下对齐*/
+#container{
+    width: 350px;
+    height: 458px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    margin: auto;
+    padding-top: 50px;
+}
+/*设置界面大小350*458，圆角8px，背景颜色,水平对齐*/
+.logo{
+    background-color: #C4C4C4;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    margin-left: 135px;
+    margin-right: 135px;
+    box-sizing: border-box;
+}
+/*设置圆形，并且移动到相应位置*/
+
+#welcome{
+    color: #333333;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-left: 35px;
+    margin-right: 189px;
+    font-family: PingFangSC-Regular;
+
+}
+.input{
+    width: 280px;
+    height: 36px;
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-top: 15px;
+    border: 1px solid #C4C4C4;
+    padding: 8px;
+}
+#Rectangle{
+    width: 280px;
+    height: 36px;
+    background-color: #3F5DEA;
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-top: 30px;
+}
+#land{
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 36px;
+}
+#register{
+    margin-top: 15px;
+    margin-left: 35px;
+    font-size: 14px;
+    color: #C4C4C4;
+    font-family: PingFangSC-Regular;
+    display: inline-block;
+}
+#forget{
+    margin-top: 15px;
+    margin-left: 140px;
+    margin-right: 35px;
+    font-size: 14px;
+    color: #3F5DEA;
+    font-family: PingFangSC-Regular;
+    display: inline-block;
+
+}
+
+
+
