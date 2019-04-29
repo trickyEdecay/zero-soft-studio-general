@@ -1,7 +1,7 @@
 body{
+	margin: 0;
 	font-size: 0px;
 	background: #F4F4F4;
-	margin: 0;
 }
 p,h1{
 	margin: 0px;
@@ -10,40 +10,36 @@ p,h1{
 	width: 1300px;
 	margin: 0px auto;
 }
-.nav{
-	display: inline-block;
-	width: 1300px;
-	height: 100px;
-}
-#nav_one{
-	margin-bottom: 20px;
-}
-.nav > div{
-	vertical-align: top;
-	margin-right: 20px;
-	display: inline-block;
-	width: 310px;
-	height: 100px;
-	background: #fff;
-}
 #collect{
 	line-height: 25px;
 	width: 72px;
 	height: 25px;
 	font-size: 18px;
 	color: #333333;
-	font-family: PingFangSC-Medium;
+	font-family: PingFangSC-Medium sans-serif;
 	margin-top: 160px;
 	margin-bottom: 20px;
 }
-.img{
+#nav{
+	width: 1300px;
+}
+.block{
+	margin-bottom: 20px;
+	margin-right: 20px;
+	border-radius: 4px;
 	display: inline-block;
+	width: 310px;
+	height: 100px;
+	background: #fff;
+}
+.logo-img{
+	width: 60px;
+	height: 60px;
+	margin: 20px;
 }
 .title{
 	vertical-align: top;
 	display: inline-block;
-	font-family: PingFangSC-Regular;
-	font-size: 14px;
 	color: #333333;
 }
 .t1{
@@ -53,17 +49,8 @@ p,h1{
 	font-weight: 100;
 }
 .t2{
-	font-family: PingFangSC-Regular;
 	font-size: 12px;
 	color: #C4C4C4;
 	width: 190px;
-}
-img{
-	width: 60px;
-	height: 60px;
-	margin: 20px;
-}
-.block{
-	border-radius: 4px;
 }
 
