@@ -1,39 +1,49 @@
+html{
+    margin: 0;
+    height: 100%;
+
+}
 body{
     margin:0;
-  width: 1920px;
-  height: 1080px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-
+    width: auto;
+    height: 1080px;
     background-color: #F4F4F4;
+    position: absolute;
 }
 h1{
     margin: 0;
-    font-family: PingFangSC-Medium;
+    position: absolute;
+    display: inline-block;
+    top: 166px;
+    left: 310px;
+    height: 25px;
+    font-family: PingFangSC-Medium sans-serif;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 800;
+    color: #333333;
 }
 .url-box{
-    margin-top: 20px;
+    margin: 211px 310px 310px;
+
     display: flex;
     flex-wrap: wrap;
     width: 1300px;
-    height: 220px;
-    justify-content: space-between;
+    height:auto;
 }
 .url-container{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
     width: 310px;
     height: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     background-color: #fff;
     padding:20px;
     box-sizing: border-box;
     align-content: center;
+}
+.url-container:nth-of-type(4n){
+    margin-right: 0;
 }
 .url-icon{
     display: flex;
@@ -57,14 +67,15 @@ img{
 }
 .url-name{
     margin: 0;
+    display: inline-block;
     height: 20px;
-    font-family: PingFangSC-Regular;
+    font-family: PingFangSC-Regular sans-serif;
     font-size: 14px;
     color: #333333;
-    font-weight: 400;
+    font-weight: 600;
 }
 .url-dec{
-    font-family: PingFangSC-Regular;
+    font-family: PingFangSC-Regular sans-serif;
     display: flex;
     margin-top: 6px;
     font-size: 12px;
@@ -72,5 +83,40 @@ img{
     height: 34px;
     color: #333333;
     font-weight: 400;
+    overflow: hidden;
+}
 
+.search-content{
+    position: absolute;
+    top: 90px;
+    left: 650px;
+    width: 480px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular sans-serif;
+}
+.search-btn{
+    position: absolute;
+    top: 90px;
+    left: 1150px;
+    height: 36px;
+    width: 120px;
+    background: #3F5DEA;
+    border-radius: 4px;
+    border: none;
+    outline: 0;
+    font-family: PingFangSC-Regular sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.search-btn:hover{
+    background: rgb(84, 112, 236);
+}
+.search-btn:active{
+    background: rgb(155, 166, 219);
 }
