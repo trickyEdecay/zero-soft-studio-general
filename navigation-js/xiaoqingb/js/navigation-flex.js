@@ -104,10 +104,6 @@ function confirmAdd(Url,Title,Dec){
     localStorage.setItem("title"+num,newUrlName.innerHTML);
     localStorage.setItem("dec"+num,newUrldec.innerHTML);
     localStorage.setItem("url"+num,"https://"+Url);
-    // localStorage.setItem("title-"+num,newUrlName.innerHTML); 
-    // localStorage.setItem("dec-"+num,newUrldec.innerHTML);
-    // localStorage.setItem("url-"+num,document.getElementById("add-url").value);
-
     // 重置添加的个数
     console.log("输出内容成功");
     localStorage.setItem("Num",num+=1);
@@ -145,6 +141,7 @@ function initedSetUrl(){
     console.log("调用成功");
     }
 }
+
 
 function putUrl(i){
       // ---------------------------------单独的一个完整链接框框-----------------------
