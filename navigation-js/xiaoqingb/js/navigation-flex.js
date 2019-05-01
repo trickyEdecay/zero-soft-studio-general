@@ -30,7 +30,7 @@ var grayBgEle=document.getElementById("gray-bg");
 // -------------------------------添加窗口的内容--------------------------
 // 获取添加窗口
 var addCollectEle=document.getElementById("add-collect");
-// 导航标题，描述，链接
+// 导航标题,描述,链接
 var addUrlTitleEle=document.getElementById("add-url-title");
 var addUrlDecEle=document.getElementById("add-url-dec");
 var addUrlEle=document.getElementById("add-url");
@@ -61,9 +61,10 @@ function confirmGetIfoToAdd(){
     var Title=document.getElementById("add-url-title").value;
     var Dec=document.getElementById("add-url-dec").value;
     console.log("获取内容成功");
-    confirmAdd(Url,Title,Dec);
-    
+    confirmAdd(Url,Title,Dec);   
 }
+
+// 添加Url
 function confirmAdd(Url,Title,Dec){
     // ---------------------------------单独的一个完整链接框框-----------------------
     // 添加白色框框
@@ -95,20 +96,20 @@ function confirmAdd(Url,Title,Dec){
     newUrldec.innerHTML=Dec;
     newUrlRightContainerEle.appendChild(newUrldec);
     // ---------------------------------单独的一个完整链接框框【完】-----------------------
-
-    // 存入本地仓库
+    
+    // 刷新时自动设置下一个添加的是第几个键值对
     if(num==0&&localStorage.getItem("Num")) {
         num= parseInt(localStorage.getItem("Num"));
         console.log("重新赋值成功")
     }
+    // 存入本地仓库
     localStorage.setItem("title"+num,newUrlName.innerHTML);
     localStorage.setItem("dec"+num,newUrldec.innerHTML);
     localStorage.setItem("url"+num,"https://"+Url);
     // 重置添加的个数
-    console.log("输出内容成功");
     localStorage.setItem("Num",num+=1);
-    //console.log(localStorage.getItem("title1"));//输出
-    // 添加完成自动退出窗口，并初始化
+    console.log("添加链接成功");
+    // 添加完成自动退出窗口，并初始化输入框内容
     cancel();
 }
 
@@ -129,6 +130,7 @@ function initedSetUrl(){
     if(localStorage.getItem("Num")){
         console.log(typeof(localStorage.getItem('Num')));
         console.log("存在键值对"+localStorage.getItem('Num'));
+        // i表示第几个键值对
         i=0;
         while(i!=localStorage.getItem("Num"))
         {
@@ -138,13 +140,13 @@ function initedSetUrl(){
             Number(i);
             i++;
         }
-    console.log("调用成功");
+        console.log("调用成功");
     }
 }
 
-
+// 刷新时自动显示添加至本地仓库的链接
 function putUrl(i){
-      // ---------------------------------单独的一个完整链接框框-----------------------
+    // ---------------------------------单独的一个完整链接框框-----------------------
     // 添加白色框框
     var newUrlContainerEle=document.createElement("a");
     newUrlContainerEle.classList.add("url-container");
@@ -174,5 +176,4 @@ function putUrl(i){
     newUrldec.innerHTML=localStorage.getItem("dec"+i);
     newUrlRightContainerEle.appendChild(newUrldec);
     // ---------------------------------单独的一个完整链接框框【完】-----------------------
-
 }
