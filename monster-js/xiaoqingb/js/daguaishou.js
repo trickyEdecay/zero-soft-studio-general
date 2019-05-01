@@ -114,3 +114,15 @@ function paper(){
         bloodMaxed(); 
     }
 }
+
+setInterval(addblood,300);
+function addblood(){
+    if(0<health&&health<100){
+    health+=10;
+    if(health>=100) health=100;
+    bloodEle.innerHTML="Hp:"+health;
+    document.getElementById("blood-volumn").style.width=health+"%";
+    }
+    if(65>health) document.getElementById("blood-volumn").style.backgroundColor="pink";
+    if(health<35) document.getElementById("blood-volumn").style.backgroundColor="green";
+}
