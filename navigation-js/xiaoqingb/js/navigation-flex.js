@@ -36,6 +36,8 @@ var addUrlDecEle=document.getElementById("add-url-dec");
 var addUrlEle=document.getElementById("add-url");
 // -------------------------------添加窗口的内容【完】--------------------------
 var num=0,title,url;
+// 添加弹窗状态
+var state="off";
 
 // 搜索跳转函数
 function search(){
@@ -48,11 +50,23 @@ function search(){
     }
 }
 
+document.onkeydown=function(event){
+    e=event||window.event;
+//  按下回车且弹窗为关闭状态,调用搜索函数
+    if(e&&e.keyCode==13 &&state==="off"){
+    search();
+    }
+//  按下回车且弹窗为开启状态,调用添加新链接函数
+    else if(e&&e.keyCode==13 &&state==="on"){
+        confirmGetIfoToAdd();
+        }
+}
 // 进入弹窗函数
 function popup(){
     console.log("弹出窗口");
     addCollectEle.classList.add("appear");
     grayBgEle.classList.add("appear");
+    state="on";
 }
 
 // 确认添加新链接
@@ -121,10 +135,10 @@ function cancel(){
     addUrlTitleEle.value="百度";
     addUrlDecEle.value="百度，全球最大的中文搜索引擎、最大的中文网站";
     addUrlEle.value="www.baidu.com";
+    state="off";
 }
-
+// 刷新时自动显示添加至本地仓库的链接
 setTimeout(initedSetUrl,10);
-
 function initedSetUrl(){
     // 先判断是否已经储存了键值对
     if(localStorage.getItem("Num")){
@@ -143,8 +157,7 @@ function initedSetUrl(){
         console.log("调用成功");
     }
 }
-
-// 刷新时自动显示添加至本地仓库的链接
+// 刷新添加函数
 function putUrl(i){
     // ---------------------------------单独的一个完整链接框框-----------------------
     // 添加白色框框
