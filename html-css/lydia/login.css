@@ -1,0 +1,121 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: #3f5dea;
+        height: 100%;
+        width: 100%;
+    }
+    .first{
+        width: 350px;
+        height: 458px;
+        background: #FFFFFF;
+        margin-top: 306px;
+        margin-left: 785px;
+        border-radius: 8px;
+        position: relative;
+    }
+    .two{
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+        margin: 50px 135px;
+        background: #c4c4c4;
+        position: absolute;
+    }
+    .three{
+        width: 126px;
+        height: 25px;
+        margin-left: 35px;
+        position: absolute;
+        margin-top: 180px;
+        color: #333333;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: PingFangSC-Medium;
+    }
+    .four{
+        width: 280px;
+        height: 36px;
+        margin-top: 220px;
+        margin-left: 35px;
+        border:  1px solid #c4c4c4;
+        border-radius: 4px;
+        position: absolute;
+    }
+    .four1{
+             width: 150px;
+             height: 20px;
+             font-family: PingFangSC-Regular;
+             line-height: 20px;
+             font-size: 14px;
+             margin-top: 8px;
+             margin-left: 8px;
+             color: #c4c4c4;
+         }
+    .five{
+        width: 280px;
+        height: 36px;
+        margin-top: 271px;
+        margin-left: 35px;
+        border:  1px solid #c4c4c4;
+        border-radius: 4px;
+        position: absolute;
+    }
+    .five1{
+        width: 150px;
+        height: 20px;
+        font-family: PingFangSC-Regular;
+        line-height: 20px;
+        font-size: 14px;
+        margin-top: 8px;
+        margin-left: 8px;
+        color: #c4c4c4;
+    }
+    .six{
+        width: 280px;
+        height: 36px;
+        margin-left: 35px;
+        margin-top: 337px;
+        background: #3f5dea;
+        border-radius: 4px;
+        position: absolute;
+    }
+    .six1 {
+        width: 30px;
+        height: 20px;
+        margin-top: 8px;
+        margin-left: 126px;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: PingFangSC-Regular;
+        color: #FFFFFF;
+    }
+    .seven{
+        width: 280px;
+        height: 20px;
+        margin-top: 388px;
+        margin-left: 35px;
+        position: absolute;
+    }
+    .seven1{
+        width: 80px;
+        height: 20px;
+        position: absolute;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        line-height: 20px;
+        color: #c4c4c4;
+    }
+    .seven2{
+        width: 80px;
+        height: 20px;
+        position: absolute;
+        margin-left: 200px;
+        font-family: PingFangSC-Regular;
+        color: #3f5dea;
+        line-height: 20PX;
+        font-size: 14px;
+    }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">  
+    <style>
+    *{
+        margin:0;
+        border:0;
+        padding:0;
+        box-sizing: border-box;
+        cursor: pointer;
+        }
+    body{
+         background: #3F5DEA;
+        }
+    #login-container{
+         width: 350px;
+         height: 458px;
+         margin: 0 auto;
+         margin-top: 10%;
+         border: 1px solid black;
+         background: white;
+         border-radius: 8px;
+        }
+    #login-icon{
+         border-radius: 80px;
+         background: #C4C4C4;
+         margin-top:50px;
+         margin-left:135px;
+         width: 80px;
+         height: 80px;
+     } 
+     h1{
+         margin-top: 50px;
+         margin-left: 35px;
+         line-height: 25px;
+         font-size: 18px;
+         font-family: PingFangSC-Medium;
+         color:#333333;   
+     }
+     .login-text-input{        
+         width: 280px;
+         height: 36px;
+         border-radius: 4px;   
+         margin-left: 35px;
+         margin-top: 15px;   
+     }
+     .login-messsage{
+         font-family: PingFangSC-Regula;
+         font-size: 14px;
+         color: #C4C4C4;
+         width:280px;
+         height: 36px;
+         line-height: 36px;
+         outline:none;  
+         background: transparent;
+         padding:8px 160px 8px 8px;
+         border: 1px solid  black;
+         box-sizing: border-box;
+         border-radius: 5px; 
+        }
+       #login-button-container {
+            background: #3F5DEA;
+            border-radius: 4px;
+            margin-top:30px;
+            margin-left: 35px;
+            width: 280px;
+            height: 36px;
+        } 
+        #login-button{
+             font-family: PingFangSC-Regular;
+             font-size: 14px;
+             background: #3F5DEA;
+             color: #FFFFFF;
+             border:  0px;
+             margin-top: 8px;
+             margin-left: 126px;
+             height: 20px;
+            }
+        #login-error-password{
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #C4C4C4;
+                margin-top:15px;
+                margin-left: 35px;
+                height: 20px;
+                width: 70px;
+                line-height: 20px;
+            }
+        #login-new-user {        
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                float: right;
+                color: #3F5DEA;
+                margin-right: 35px;
+                margin-bottom: 50px;
+                width: 70px;
+                height: 20px;
+            }
+    </style>
+</head>
+<body>
+        <div id="login-container">
+            <div id="login-icon"></div>
+            <h1>欢迎登入本系统</h1>
+            <div class="login-text-input">
+                <input type="text" class="login-messsage" placeholder="请输入你的用户名">
+            </div>
+            <div class="login-text-input">
+                <input type="password" class="login-messsage" placeholder="请输入你的密码">
+            </div>
+            <div id="login-button-container">
+                <input type="button" id="login-button" value="登陆">
+            </div>
+            <span id="login-error-password">忘记密码？</span>
+            <span id="login-new-user">注册新账号</span>
+        </div>
+    </div>
+</body>
+</html>
