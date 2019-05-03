@@ -3,20 +3,17 @@ var searchContentEle;
 // 获取容纳全部导航栏的大容器
 var urlBoxELe=document.getElementById("url-box");
 
-// -------------------------各按钮和监听器部分------------------------
-// 获取搜索按钮
+// ---------------------------各按钮和监听器部分------------------------
+// 获取搜索按钮，建立监听器
 var searchBtnEle=document.getElementById("search-btn");
-// 建立搜索按钮监听器
 searchBtnEle.addEventListener("click",search);
 
-// 获取添加按钮
+// 获取添加按钮，建立监听器
 var addBtnEle=document.getElementById("add-btn");
-// 建立添加按钮监听器
 addBtnEle.addEventListener("click",popup);
 
-// 获取添加收藏中的取消按钮
+// 获取添加收藏中的取消按钮，建立监听器
 var cancelBtnEle=document.getElementById("btn-cancel");
-// 建立取消收藏监听器
 cancelBtnEle.addEventListener("click",cancel);
 
 // 获取添加收藏中的确认按钮
@@ -26,6 +23,8 @@ confirmEle.addEventListener("click",confirmGetIfoToAdd);
 
 // 获取阴影
 var grayBgEle=document.getElementById("gray-bg");
+grayBgEle.addEventListener("click",cancel);
+
 
 // -------------------------------添加窗口的内容--------------------------
 // 获取添加窗口
@@ -35,6 +34,7 @@ var addUrlTitleEle=document.getElementById("add-url-title");
 var addUrlDecEle=document.getElementById("add-url-dec");
 var addUrlEle=document.getElementById("add-url");
 // -------------------------------添加窗口的内容【完】--------------------------
+
 var num=0,title,url;
 // 添加弹窗状态
 var state="off";
@@ -61,6 +61,7 @@ document.onkeydown=function(event){
         confirmGetIfoToAdd();
         }
 }
+
 // 进入弹窗函数
 function popup(){
     console.log("弹出窗口");
@@ -68,6 +69,7 @@ function popup(){
     grayBgEle.classList.add("appear");
     state="on";
 }
+
 
 // 确认添加新链接
 function confirmGetIfoToAdd(){
@@ -86,24 +88,34 @@ function confirmAdd(Url,Title,Dec){
     newUrlContainerEle.classList.add("url-container");
     newUrlContainerEle.href="https://"+Url;
     urlBoxELe.appendChild(newUrlContainerEle);
+
+
     // 添加图像蓝框
     var newUrlIconContainerEle=document.createElement("div");
     newUrlIconContainerEle.classList.add("url-icon");
     newUrlContainerEle.appendChild(newUrlIconContainerEle);
+
+    
     // 添加图像，链接名,和注释
     var newUrlIconEle=document.createElement("img");
     newUrlIconEle.src="img/BAT.png";
     newUrlIconEle.classList.add("url-img");
     newUrlIconContainerEle.appendChild(newUrlIconEle);
+
+
     // 添加链接右部分框框
     var newUrlRightContainerEle=document.createElement("div");
     newUrlRightContainerEle.classList.add("container-right");
     newUrlContainerEle.appendChild(newUrlRightContainerEle);
+
+
     // 添加链接名
     var newUrlName=document.createElement("h2");
     newUrlName.classList.add("url-name");
     newUrlName.innerHTML=Title;
     newUrlRightContainerEle.appendChild(newUrlName);
+
+
     // 添加注释
     var newUrldec=document.createElement("span");
     newUrldec.classList.add("url-dec");
@@ -137,6 +149,8 @@ function cancel(){
     addUrlEle.value="www.baidu.com";
     state="off";
 }
+
+
 // 刷新时自动显示添加至本地仓库的链接
 setTimeout(initedSetUrl,10);
 function initedSetUrl(){
@@ -157,6 +171,8 @@ function initedSetUrl(){
         console.log("调用成功");
     }
 }
+
+
 // 刷新添加函数
 function putUrl(i){
     // ---------------------------------单独的一个完整链接框框-----------------------

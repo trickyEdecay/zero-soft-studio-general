@@ -139,7 +139,7 @@ body{
 } 
 
 .add-btn{
-    position: absolute;
+    position:absolute;
     bottom:48px;
     right: 48px;
     height: 64px;
