@@ -9,7 +9,7 @@
                 display: inline-block;
                 font-weight: bold;
                 background:rgba(196, 231, 241, 0);
-                color: #000;
+                color: rgba(33, 97, 150);
                 font-size: 20px;
                 text-align: center;
                 margin-left: 45%;
@@ -33,15 +33,15 @@
                 height: 30px;
                 border-radius: 50%;
                 cursor: pointer;
-                animation-name: run;
+                /* animation-name: run; */
                 /*制作旋转效果*/
-                animation-timing-function: linear;
+                /* animation-timing-function: linear;
                 animation-duration: 2s;
                 animation-delay: 0s;
                 animation-iteration-count: infinite;
-                animation-play-state: paused;
+                animation-play-state: paused; */
             }
-            #sum span img:hover{
+            /* #sum span img:hover{
                 animation-play-state: running;
             }
             @keyframes run{
@@ -51,14 +51,14 @@
                 to{
                     transform:rotate(360deg);
                 }
-            }
+            } */
             /*未看的新番的样式*/
             #comic{
                 font-weight: bold;
                 border: 1px;
                 padding: 0;
                 font-size: 33px;
-                color: rgba(65, 245, 200, 0.911);
+                color: rgb(4, 62, 110);
                 display: inline-block;
                 background: rgba(218, 243, 245, 0.473);
                 margin-left: 25%;
@@ -68,7 +68,10 @@
                 margin-left: 10px;
             }
             #comic ul{
-                display: none;
+                transition: all 0.2s linear;
+                display: block;
+                height: 0;
+                overflow: hidden;
                 padding: 0;
                 margin: 0;
             }
@@ -100,7 +103,7 @@
             #comic:hover{
                 cursor: pointer;
                 background: rgba(218, 243, 245, 0.411);
-                color: rgba(65, 245, 200, 0.705);
+                color: rgba(9, 79, 136, 0.959);
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
                 border-bottom-left-radius: 20px;
@@ -108,7 +111,7 @@
             }
             /*二级菜单*/
             #comic:hover ul{
-                display: block;
+                height:180px;
             }
             #comic ul li:hover{
                 font-weight: bold;
@@ -130,7 +133,7 @@
                 width: 40%;
             }
             #gkd li{
-                background: rgba(218, 243, 245, 0.473);
+                background: rgba(218, 243, 245, 0.637);
                 margin-left: 15px;
                 margin-top: 10px;
                 width: 120px;
@@ -152,7 +155,7 @@
             }
             /*鼠标悬停网站链接的样子*/
             #gkd li:hover{
-                background: rgba(218, 243, 245, 0.685);
+                background: rgba(218, 243, 245, 0.897);
                 color: rgba(9, 79, 136, 0.959);
                 font-weight: bold;
             }
@@ -167,7 +170,7 @@
                   margin: 0;
                   padding: 0;
                   overflow: auto;
-                  background: url('https://i.loli.net/2019/04/04/5ca588d91ad7f.jpg') no-repeat;
+                  background: url('img/33.jpg') no-repeat;
                   background-size: 100% 100%
                 }
         </style>
@@ -193,13 +196,49 @@
                         x = "0" + x;
                     return x;
                 }
+
+
+                window.onload = function(){
+                    var headphotoEle = document.getElementById("headphoto");
+                    var angle = 0;
+                    var rotateTimer = null;
+                    var leaveTimer = null;
+                    var speed = 10;
+                    var animateDuration = 100;
+                    // headphotoEle.onmouseover = function(){
+                    //     headphotoEle.style.transform = "rotate("+angle+"deg)";
+                    // }
+
+                    headphotoEle.onmouseenter = function(){
+                        clearInterval(leaveTimer);
+                        rotateTimer = setInterval(function(){
+                            angle+=speed;
+                            if(angle>=360){
+                                angle=0;
+                            }
+                            headphotoEle.style.transform = "rotate("+angle+"deg)";
+                        },animateDuration);
+                    }
+                    
+                    headphotoEle.onmouseleave = function(){
+                        clearInterval(rotateTimer);
+                        leaveTimer = setInterval(function(){
+                            angle+=speed;
+                            if(angle>=360){
+                                clearInterval(leaveTimer);
+                                angle = 0;
+                            }
+                            headphotoEle.style.transform = "rotate("+angle+"deg)";
+                        },animateDuration);          
+                    }
+                }
             </script>
     </head>
     <body>
 
-        <div id="times"></div>
+        <div id="times" ></div>
         <nav id="sum">
-            <span><img src="https://i.loli.net/2019/04/03/5ca4d27f76ef5.jpg">  ddloo |</span>
+            <span><img id="headphoto" src="https://i.loli.net/2019/04/03/5ca4d27f76ef5.jpg">  ddloo |</span>
             <span>邮箱: 1249129864@qq.com</span>
         </nav>
        <nav id="comic">
