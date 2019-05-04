@@ -6,17 +6,18 @@ html{
     font-family: PingFangSC-Medium,sans-serif;
 }
 body{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
     margin:0;
     width: auto;
     background-color: #F4F4F4;
     padding-top: 90px;
     box-sizing: border-box;
 }
+.input-container{
+    width:620px;
+    margin:0 auto;
+}
 .search-content{
+    float: left;
     width: 480px;
     height: 36px;
     background: #FFFFFF;
@@ -30,6 +31,7 @@ body{
     border: #3F5DEA;
 }
 .search-btn{
+    float: left;
     margin-left: 20px;
     height: 36px;
     width: 120px;
@@ -43,12 +45,12 @@ body{
 }
 
 .url-box{
-    margin-top: 76px;
+    margin: 0 auto;
     width: 1300px;
-    height:auto;
+
 }
 .my-collect{
-    margin: 0 0 20px 0;
+    margin: 40px 0 20px 0;
     width: 100%;
     display: inline-block;
     height: 25px;
@@ -72,6 +74,8 @@ body{
 .url-container:nth-of-type(4n){
     margin-right: 0;
 }
+
+
 .url-container:hover{
     /* background-color: rgb(224, 224, 224); */
     box-shadow:0 0 10px 1px rgba(105, 105, 105, 0.3);
