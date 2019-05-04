@@ -174,9 +174,8 @@ body{
     width: 480px;
     border-radius: 4px;
     background: #fff;
-    top: 340px;
-    left: 720px;
-    float: left;
+    top: 30%;
+    left: 34%;
     padding: 20px;
     box-sizing: border-box;
     display: none;
