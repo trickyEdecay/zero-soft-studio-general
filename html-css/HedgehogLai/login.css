@@ -1,5 +1,5 @@
 body{
-	background: blue;
+	background: #3F5DEA;
 }
 
 .container{
@@ -8,8 +8,8 @@ body{
     width:350px;
     height: 458px;
     margin:auto;
-     margin-top: 100px;
-}
+    margin-top: 100px;
+ }
 .container-top{
 	width: 350px;
 	height: 100px;
@@ -40,13 +40,14 @@ body{
 	display: inline-block;
 	width: 265px;
 	height: 36px;
-	margin-top: 23px;
+	margin-top: 15px;
 	border: 1px solid #C4C4C4;
     border-radius: 4px;
     letter-spacing:0;
     padding-left: 10px;
  }
 .second{
+	display: inline-block;
  	text-align: center;
  	background: #3F5DEA;
     border-radius: 4px;
@@ -55,22 +56,24 @@ body{
     letter-spacing:0;
     font-family: PingFangSC-Regular;
     font-size: 14px;
-    color: #FFFFFF;
-   line-height: 35px;
-   margin-bottom: 0px;
+    line-height: 15px;
+    margin-bottom: 0px;
+    color:white;
+    margin-top: 30px;
+    border:0;
 }
 .third{
 	font-family: PingFangSC-Regular;
     font-size: 14px;
     color: #C4C4C4;
-    display: inline-block;
-
+    float: left;
+    margin-top: 15px;
 }
-.container-button p:last-of-type{
+.container-button a:last-of-type{
 	font-family: PingFangSC-Regular;
     font-size: 14px;
     color: #3F5DEA;
     display: inline-block;
     margin-top:15px; 
-    margin-left: 149px;
+    float: right;
 }
