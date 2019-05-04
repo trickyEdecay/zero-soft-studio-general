@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        /*盒子，相对定位*/
+        .dropdown{
+            display:inline-block;
+            position:relative;
+        }
+        button{
+            background-color:pink;
+            color:white;
+            border:none;
+            margin:6px;
+            padding:5px;
+            font-size:16px;
+        }
+        /*下拉内容，绝对定位，初始不显示，背景颜色为pink*/
+        .content{
+            display:none;
+            position:absolute;
+            background-color:pink;
+            min-width:160px;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index:1;
+        }
+        /*下拉内容a链接样式*/
+        .content a{
+            display:block;
+            color:white;
+            padding:12px 16px;
+            text-align:center;
+        }
+        /*鼠标移到下拉菜单a链接时背景变为灰色*/
+        .content a:hover{
+            background-color:gray;
+        }
+        button:hover{
+            background-color:gray;
+        }
+        /*鼠标点击盒子区域，显示下拉菜单！*/
+        .dropdown:hover .content{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<div class="dropdown">
+    <button>下拉菜单</button>
+    <div class="content">
+        <a herf="">首页</a>
+        <a herf="">学习中心</a>
+        <a herf="">考试中心</a>
+        <a herf="">考试动态</a>
+    </div>
+</div>
+</body>
+</html>
