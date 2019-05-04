@@ -6,32 +6,58 @@ html{
     font-family: PingFangSC-Medium,sans-serif;
 }
 body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     margin:0;
     width: auto;
-    height: 1080px;
     background-color: #F4F4F4;
-    position: absolute;
+    padding-top: 90px;
+    box-sizing: border-box;
+}
+.search-content{
+    width: 480px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+.search-content:focus{
+    border: #3F5DEA;
+}
+.search-btn{
+    margin-left: 20px;
+    height: 36px;
+    width: 120px;
+    background: #3F5DEA;
+    padding: 8px 0;
+    border-radius: 4px;
+    border: none;
+    outline: 0;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.url-box{
+    margin-top: 76px;
+    width: 1300px;
+    height:auto;
 }
 .my-collect{
-    margin: 0;
-    position: absolute;
+    margin: 0 0 20px 0;
+    width: 100%;
     display: inline-block;
-    top: 166px;
-    left: 310px;
     height: 25px;
-
     font-size: 18px;
     font-weight: 800;
     color: #333333;
 }
-.url-box{
-    margin: 211px 310px 310px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 1300px;
-    height:auto;
-}
 .url-container{
+    float: left;
     display: flex;
     text-decoration: none;
     width: 310px;
@@ -101,36 +127,7 @@ body{
     font-size: 12px;
     color: #C4C4C4;
 }
-.search-content{
-    position: absolute;
-    top: 90px;
-    left: 650px;
-    width: 480px;
-    height: 36px;
-    background: #FFFFFF;
-    border: 1px solid #E7E7E7;
-    border-radius: 4px;
-    box-sizing: border-box;
-    padding: 8px 16px;
-    font-size: 14px;
-}
-.search-content:focus{
-    border: #3F5DEA;
-}
-.search-btn{
-    position: absolute;
-    top: 90px;
-    left: 1150px;
-    height: 36px;
-    width: 120px;
-    background: #3F5DEA;
-    padding: 8px 0;
-    border-radius: 4px;
-    border: none;
-    outline: 0;
-    font-size: 14px;
-    color: #FFFFFF;
-}
+
 .search-btn:hover,.add-btn:hover,.btn-confirm:hover,.btn-cancel:hover{
     background: #738BFF;
 }
@@ -139,9 +136,9 @@ body{
 } 
 
 .add-btn{
-    position:absolute;
+    position: fixed;
     bottom:48px;
-    right: 48px;
+    right: 2.5%;
     height: 64px;
     width: 64px;
     border-radius: 64px;

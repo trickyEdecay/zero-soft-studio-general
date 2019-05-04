@@ -25,7 +25,6 @@ confirmEle.addEventListener("click",confirmGetIfoToAdd);
 var grayBgEle=document.getElementById("gray-bg");
 grayBgEle.addEventListener("click",cancel);
 
-
 // -------------------------------添加窗口的内容--------------------------
 // 获取添加窗口
 var addCollectEle=document.getElementById("add-collect");
