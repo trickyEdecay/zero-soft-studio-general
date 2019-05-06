@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html charest=utf-8">
+        <!-- <link rel="stylesheet" href="css/" type="text/css"> -->
+    </head>
+    <style>
+        body,
+        html{
+            border: 0;
+            
+        }
+        header{
+            margin-top: 100px; 
+        }
+        .information{
+            position: absolute;
+            display: inline-block;
+            font-family: 'Lucida Sans Unicode';
+            width: 120px;
+            left: 200px;
+            top: 115px;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+        .img{
+            padding-left: 20px;
+            display: block;
+            width: 150px;
+            height: 150px;
+            margin-left: 1%;
+            margin-bottom: 10px;
+        }
+        .img-harm{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            z-index: -1;
+        }
+        .btn{
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            background-color: rgba(224, 145, 55, 0.89);
+            font-family: 'Lucida Sans Unicode';
+            /* font-weight: bold; */
+            font-size: 18px;
+            padding: 0 30px;
+            margin-top: 1px;
+            margin-left: 30px;
+            border: 0;
+            border-radius: 5px;
+        }
+        .div-hero-select{
+            font-size: 0;
+        }
+        /* .hide{
+            display: none;
+        } */
+        .skill-name,
+        .hide-weapon{
+            border-radius: 5px;
+            margin-left: 0;
+        }
+        #hero{
+            /* position: absolute; */
+            left: 0;
+            position: relative;
+            display: inline-block;
+            width: 550px;
+            margin-left: 200px;
+        }
+        #hero h3{
+            width: 300px;
+            margin: 0;
+            text-align: center;
+        }
+        #hero-wrap{
+            margin-top: 15px;
+        }
+        #hero-bar{
+            position: relative;
+            display: inline-block;
+            border: 0;
+            width: 150px;
+            text-align: center;
+            vertical-align: top;
+            border-radius: 10px;
+        }
+        #hero-bar-hp{
+            width: 100%;
+            border-radius: 10px;
+            background-color: rgb(236, 10, 10);
+            transition: width .3s;
+        }
+        #img-hero-harm{
+            top: 83px;
+            padding-left: 40px;
+        }
+        #div-hero-select{
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+        }
+        #div-skill-name,
+        #div-hide-weapon{
+            display: none;
+        }
+
+        /*BOSS视图*/
+        #monster{
+            position: absolute;
+            display: inline-block;
+            width: 400px;
+            margin-left: 200px;
+        }
+        #monster-bar{
+            position: relative;
+            display: inline-block;
+            border: 0;
+            width: 250px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #monster-bar-hp{
+            width: 100%;
+            background-color: rgb(236, 10, 10);
+            border-radius: 10px;
+            transition: width .3s;
+        }
+        #monster h3{
+            width: 400px;
+            margin: 0;
+            text-align: center;
+        }
+        #img-monster{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            float: right;
+            right: -50px;
+        }
+        #img-monster-harm{
+            top: 130px;
+            right: 50px;
+        }
+        @media screen and (max-width: 960px){
+            #hero{
+                margin-left: 20px;
+            }
+            #monster{
+                left: 400px;
+                margin-left: 10px;
+            }
+        }
+        @media screen and (max-width: 640px){
+            #hero{
+                margin-left: 0px;
+            }
+            #monster{
+                left: 260px;
+                margin-left: 0px;
+            }
+        }
+        /* 扣血动画 */
+        @keyframes imgmonster{
+            0%{
+                opacity: 1;
+            }
+            25%{
+                opacity: 0.2;
+            }
+            50%{
+                opacity: 1;
+            }
+            75%{
+                opacity: 0.2;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes imghero{
+            0%{
+                opacity: 1;
+            }
+            25%{
+                opacity: 0.2;
+            }
+            50%{
+                opacity: 1;
+            }
+            75%{
+                opacity: 0.2;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+    <body>
+        <header></header>
+
+        <!-- 英雄视图 -->
+        <div id="hero">
+            <h3 id="hero-name">lv.1 比卡丘
+                <div id="hero-bar">
+                    <div id="hero-bar-hp">100</div>
+                </div>
+            </h3>
+            <div id="hero-wrap">
+                <img id="img-myhero" class="img" src="img/myhero.jpg" alt="比卡丘">
+                <img id="img-hero-harm" class="img-harm" src="img/抓痕.jpg">
+                <div class="information" id="skill-weapon-information">2</div>
+                <div id="hero-select">
+                    <div>
+                        <button class="btn" id="btn-attack" onclick="blood_deduction()">攻击</button>
+                    </div>
+                    <div class="div-hero-select">
+                        <button class="btn" id="btn-skill-dominance">技能</button>
+                        <div id="div-skill-name">
+                            <button class="btn skill-name" onmouseover="skill_message_arise(0)" onmouseout="message_disappear()" onclick="btnSkill('tempt')">诱惑</button>
+                            <button class="btn skill-name" onmouseover="skill_message_arise(1)" onmouseout="message_disappear()" onclick="btnSkill('immobility')">呆若木鸡</button>
+                            <button class="btn skill-name" onmouseover="skill_message_arise(2)" onmouseout="message_disappear()" onclick="btnSkill('fist')">动感铁拳</button>
+                        </div>
+                    </div>
+                    <div class="div-hero-select">
+                        <button class="btn" id="btn-hide-weapon">暗器</button>
+                        <div id="div-hide-weapon">
+                            <button class="btn hide-weapon" onmouseover="weapon_message_arise(0)" onmouseout="message_disappear()" onclick="btnWeapon('pillow')">枕头</button>
+                            <button class="btn hide-weapon" onmouseover="weapon_message_arise(1)" onmouseout="message_disappear()" onclick="btnWeapon('slipper')">拖鞋</button>
+                            <button class="btn hide-weapon" onmouseover="weapon_message_arise(2)" onmouseout="message_disappear()" onclick="btnWeapon('poison')">毒龙砂</button>
+                            <button class="btn hide-weapon" onmouseover="weapon_message_arise(3)" onmouseout="message_disappear()" onclick="btnWeapon('armor_break')">破甲散</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 怪兽视图 -->
+        <div id="monster">
+            <h3 id="monster-name">
+                <div id="monster-bar">
+                    <div id="monster-bar-hp">1000</div>
+                </div>
+                <span>lv.99 BOSS</span>
+            </h3>
+            <div id="monster-wrap">
+                <img id="img-monster" class="img" src="img/monster.jpg" alt="BOSS">
+                <img id="img-monster-harm" class="img-harm" src="img/抓痕.jpg">
+            </div>
+        </div>
+        <script src="js/hero vs monster.js"></script>
+    </body>
+</html>
