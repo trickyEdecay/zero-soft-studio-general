@@ -55,7 +55,7 @@ function num(){       //计算收藏的数量
 function collection(titleEle,describeEle,link){     	//创建收藏盒子
 	var aEle=document.createElement("a");
 	aEle.className=document.getElementsByClassName("small")[0].className;
-	aEle.href=link;
+	aEle.href="http://"+link;
 	document.getElementById("bottom").appendChild(aEle);
 
 	var imgEle=document.createElement("img");
@@ -99,6 +99,7 @@ function addCollection(){          //取到内容，建收藏并储存
 	localStorage.setItem("link["+(i-1)+"]",link);
 
 	dialogCancel();      //清楚黑屏和窗口
+	window.location.reload();      //刷新网页，实现再次填写时，不会出现上次填写的东西
 }
 
 var i=num();     //这个i代表的是刚开始盒子的数量，其实就是8
