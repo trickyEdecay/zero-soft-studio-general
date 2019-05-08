@@ -2,7 +2,7 @@
 var searchBtnEle = document.getElementById("search-btn");
 var searchEle = document.getElementById("search");
 var jumpEle = document.getElementById("jump");
-var turnIntoEle = document.getElementById("turninto");
+//var turnIntoEle = document.getElementById("turninto");
 
 //搜索键跳转
 searchBtnEle.onclick = function () {
@@ -16,13 +16,12 @@ searchBtnEle.onclick = function () {
 searchEle.onkeydown = function (e) {
     var e = event || window.event || arguments.callee.caller.arguments[0];
     if (e.keyCode == 13) {
-        turnIntoEle.href = "https://www.baidu.com/s?wd=" + searchEle.value.trim();
+        window.location.href = "https://www.baidu.com/s?wd=" + searchEle.value.trim();
         //清空value值
         searchEle.value = "";    
     } 
 };
-//当设置targrt = _blank 时新页面打开时，只要一点击搜索框还是上次的值，谷歌火狐都是
-//谷歌回车后还需要点击下输入框才可以跳转？？？而火狐直接可以跳转
+//当前页面跳转正常
 
 
 
