@@ -6,9 +6,16 @@ window.onload = function () {
     var addEle = document.getElementById("add");
     var maskEle = document.getElementById("mask");
     searchButtonEle.addEventListener("click", jump);
+    searchEle.addEventListener("keydown",ctrlDown);
+
     // 跳转到搜索页面
     function jump() {
         window.open("https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=" + searchEle.value);
+    }
+    function ctrlDown(event){
+       if(event.keyCode===13)
+       jump();
+       
     }
     addButtonEle.addEventListener("click", add);
     addEle.addEventListener("click", add);
