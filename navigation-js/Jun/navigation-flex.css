@@ -36,7 +36,7 @@ body {
 	border-radius: 4px;
 	border: none;
 	/*鼠标箭头移到某个div上就变为手型*/
-	cursor:pointer; 
+	cursor: pointer;
 }
 
 #search div:hover {
@@ -63,7 +63,7 @@ body {
 	margin-top: 205px;
 	margin-left: 310px;
 	margin-right: 290px;
-	height: 265px;
+	/* height: 265px; */
 }
 
 #content h3 {
@@ -91,7 +91,7 @@ body {
 	width: 270px;
 	margin-left: 20px;
 	margin-top: 20px;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .icon {
@@ -137,7 +137,7 @@ body {
 	background: #3F5DEA;
 	bottom: 48px;
 	right: 48px;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 #add p {
@@ -258,7 +258,7 @@ body {
 	left: 204px;
 	border-radius: 4px;
 	border: none;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 #sure p {
@@ -280,7 +280,7 @@ body {
 	bottom: 20px;
 	right: 20px;
 	border-radius: 4px;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 #unsure p {
@@ -302,6 +302,7 @@ body {
 	left: 0;
 	display: none;
 }
-a{
-	text-decoration:none;
+
+a {
+	text-decoration: none;
 }
