@@ -1,5 +1,6 @@
 
 window.onload = function () {
+    var mainEle = document.getElementById("main");
     var searchEle = document.getElementById("search");
     var searchButtonEle = document.getElementById("search-button");
     var addButtonEle = document.getElementById("add-button");
@@ -175,7 +176,7 @@ window.onload = function () {
             right.appendChild(addDescribe);
             aa.appendChild(left);
             aa.appendChild(right);
-            document.body.appendChild(aa);
+            mainEle.appendChild(aa);
 
         }
         //取消添加
