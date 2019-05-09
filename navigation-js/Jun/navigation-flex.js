@@ -8,11 +8,10 @@ var number = 0;
 var temp = 0;
 var text_row;
 window.onload = function() {
-	con = document.getElementById("content");
 	if (temp == 0) {
 		text = "<h3>我的收藏</h3>";
 	}
-	con.innerHTML = text;
+	document.getElementById("content").innerHTML = text;
 }
 //添加收藏函数
 function ShowAddPage(event) {
@@ -27,7 +26,7 @@ function ShowAddPage(event) {
 
 	if (temp % 4 == 0) {
 		text += "<div class='nav' id='nav" + number + "'></div>";
-		con.innerHTML = text;
+		document.getElementById("content").innerHTML = text;
 	}
 }
 
