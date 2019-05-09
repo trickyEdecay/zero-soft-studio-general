@@ -1,5 +1,4 @@
 var mask;
-var con;
 var text;
 var title;
 var con;
