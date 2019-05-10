@@ -86,3 +86,11 @@ function logicalOperation() {
 	text += "<div class='nav' id='nav" + number + "'></div>";
 	document.getElementById("content").innerHTML = text;
 }
+
+//实现点击搜索,跳转到百度相应的结果页面
+function search(){
+	//获得输入框文字
+	var value=document.getElementById("search-text").value;
+	//跳转到百度对应结果页面
+	window.location="https://www.baidu.com/s?ie=UTF-8&wd="+value;
+} 
