@@ -1,5 +1,5 @@
 body{
-	background: #3F5DEA;
+	background: #233db7;
 }
 
 .container{
@@ -10,41 +10,35 @@ body{
     margin:auto;
     margin-top: 100px;
  }
-.container-top{
-	width: 350px;
-	height: 100px;
-}
+
 .container-top-logo{
 	display: inline-block;
 	padding: 40px;	
 	margin:50px 135px;
 	background: #C4C4C4;
-	border-radius: 40px;	
+	border-radius: 40px;
 }
-.container-button{
-	display: inline-block;
-	width: 280px;
-	height: 358px;
-    margin-left: 35px;
-    margin-top: 10px;
-    margin-right: 35px;
-}
-.container-button p:first-of-type{
-	font-family: PingFangSC-Medium;
+
+p{
+	font-family: PingFangSC-Medium sans-serif;
     font-size: 18px;
     color: #333333;
-    padding-top: 50px;
-    margin: 0;
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 35px;
+    margin-bottom: 0;
 }
-.container-button input{
+input{
 	display: inline-block;
-	width: 265px;
+	width: 262px;
 	height: 36px;
 	margin-top: 15px;
+    margin-left: 35px;
 	border: 1px solid #C4C4C4;
     border-radius: 4px;
     letter-spacing:0;
     padding-left: 10px;
+    
  }
 .second{
 	display: inline-block;
@@ -54,26 +48,28 @@ body{
     width: 280px;
     height: 36px;
     letter-spacing:0;
-    font-family: PingFangSC-Regular;
+    font-family: PingFangSC-Regular sans-serif;
     font-size: 14px;
     line-height: 15px;
     margin-bottom: 0px;
     color:white;
     margin-top: 30px;
     border:0;
+    margin-left:35px;
 }
 .third{
-	font-family: PingFangSC-Regular;
+	font-family: PingFangSC-Regular sans-serif;
     font-size: 14px;
     color: #C4C4C4;
-    float: left;
-    margin-top: 15px;
+    margin-top:15px;
+    margin-left: 35px;
+    float:left;
 }
-.container-button a:last-of-type{
-	font-family: PingFangSC-Regular;
+.fouth{
+	font-family: PingFangSC-Regular sans-serif;
     font-size: 14px;
     color: #3F5DEA;
-    display: inline-block;
+    margin-right: 35px;
     margin-top:15px; 
-    float: right;
+    float:right;
 }
