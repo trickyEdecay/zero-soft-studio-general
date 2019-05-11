@@ -1,12 +1,16 @@
+
+//搜索栏设置
 var searchContentEle=document.getElementById("search-content");
 var searchButtonEle=document.getElementById("search-button");
 searchButtonEle.addEventListener("click",search);
-
 function search(){
     var searchContent=searchContentEle.value;
     location.href="https://www.baidu.com/s?wd="+searchContent;
 }
 
+
+
+// 设置加号点击事件
 var moreELe=document.getElementById("more");
 var onOffEle=document.getElementById("back-more")
 moreELe.addEventListener("click",open);
@@ -14,12 +18,14 @@ function open(){
     onOffEle.style.display="block";
 }
 
+//设置取消健关闭页面
 var closeEle=document.getElementById("cancel");
 closeEle.addEventListener("click",close);
 function close(){
     onOffEle.style.display="none";
 }
 
+//设置获取内容并生成新的导航栏，并设置确定键和灰色背景点击关闭页面
 var oadd3=document.getElementById("add3");
 var sureEle=document.getElementById("sure");
 var close1Ele=document.getElementById("close1");
