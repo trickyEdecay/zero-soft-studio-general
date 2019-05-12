@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO</title>
+    <script src="lib/jquery-3.1.4.js"></script>
+    <link href="styles/todo.less" rel="stylesheet/less">
+    <script src="lib/less-3.9.0.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1 class="module-title">我的待办</h1>
+        <div class="input-container">
+            <input placeholder="添加你的待办事项，回车键以保存" id="todo-input">
+            <button class="default-btn" id="add-todo-btn">添加</button>
+        </div>
+        <h2 class="todo-categories" id="todo-title">待完成</h2>
+        <div class="todo-list" id="todo-list">
+
+            <div class="todo-list-item">
+                <div class="default-checkbox">
+                    <input type="checkbox" class="checkbox">
+                    <div class="checkbox-border">
+                        <div class="checkbox-icon">√</div>
+                    </div>
+                </div>
+                <p>待办事项1</p>
+                <div class="remove-btn">x</div>
+            </div>
+
+            <div class="todo-list-item">
+                <div class="default-checkbox">
+                    <input type="checkbox" class="checkbox">
+                    <div class="checkbox-border">
+                        <div class="checkbox-icon">√</div>
+                    </div>
+                </div>
+                <p>待办事项2</p>
+                <div class="remove-btn">x</div>
+            </div>
+
+            <div class="todo-list-item">
+
+                <div class="default-checkbox">
+                    <input type="checkbox" class="checkbox">
+                    <div class="checkbox-border">
+                        <div class="checkbox-icon">√</div>
+                    </div>
+                </div>
+
+                <p>待办事项3</p>
+                <div class="remove-btn">x</div>
+            </div>
+
+        </div>
+        <h2 class="todo-categories">已完成</h2>
+        <div class="todo-list" id="done-list">
+
+            <div class="todo-list-item done">
+                <div class="default-checkbox done">
+                    <input type="checkbox" class="checkbox" checked>
+                    <div class="checkbox-border">
+                        <div class="checkbox-icon">√</div>
+                    </div>
+                </div>
+                <p>待办事项1</p>
+                <div class="remove-btn">x</div>
+            </div>
+
+            <div class="todo-list-item done">
+                <div class="default-checkbox done">
+                    <input type="checkbox" class="checkbox" checked>
+                    <div class="checkbox-border">
+                        <div class="checkbox-icon">√</div>
+                    </div>
+                </div>
+                <p>待办事项2</p>
+                <div class="remove-btn">x</div>
+            </div>
+
+            <div class="todo-list-item done">
+                <div class="default-checkbox done">
+                    <input type="checkbox" class="checkbox" checked>
+                    <div class="checkbox-border">
+                        <div class="checkbox-icon">√</div>
+                    </div>
+                </div>
+                <p>待办事项3</p>
+                <div class="remove-btn">x</div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/todo.js"></script>
+</body>
+</html>
