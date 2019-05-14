@@ -81,13 +81,13 @@ function collection(titleEle,describeEle,link){     	//创建收藏盒子
 
 function addCollection(){          //取到内容，建收藏并储存
 	//取出填写的内容
-	var title=document.getElementsByClassName("frame")[0].value;
+	var title=document.getElementsByClassName("frame")[0].value.trim();
 	var titleEle=document.createTextNode(title);
-	var describe=document.getElementsByClassName("frame")[1].value;
+	var describe=document.getElementsByClassName("frame")[1].value.trim();
 	var describeEle=document.createTextNode(describe);
-	var link=document.getElementsByClassName("frame")[2].value;
+	var link=document.getElementsByClassName("frame")[2].value.trim();
 
-	if(title.trim()==""||describe.trim()==""||link.trim()=="")
+	if(title==""||describe==""||link=="")
 		return;
 
 	collection(titleEle,describeEle,link);	
