@@ -49,16 +49,16 @@ function search(){
     }
 }
 
-document.onkeydown=function(event){
+document.getElementById("search-content").onkeydown=function(event){
     e=event||window.event;
-//  按下回车且弹窗为关闭状态,调用搜索函数
-    if(e&&e.keyCode==13 &&state==="off"){
-    search();
+    var searchContentEle=document.getElementById("search-content").value;
+//  按下回车调用搜索函数
+    if(e&&e.keyCode==13){
+        if(searchContentEle!="")
+            search();
+        else
+            alert("搜索值不能为空");
     }
-//  按下回车且弹窗为开启状态,调用添加新链接函数
-    else if(e&&e.keyCode==13 &&state==="on"){
-        confirmGetIfoToAdd();
-        }
 }
 
 // 进入弹窗函数
@@ -69,6 +69,11 @@ function popup(){
     state="on";
 }
 
+$("#add-url").keydown(function(e){
+    var addUrlEle=$("#add-url").val();
+    if(e.keyCode==13||addUrlEle!="")
+    confirmGetIfoToAdd();
+})
 
 // 确认添加新链接
 function confirmGetIfoToAdd(){
@@ -151,7 +156,7 @@ function cancel(){
 
 
 // 刷新时自动显示添加至本地仓库的链接
-setTimeout(initedSetUrl,10);
+initedSetUrl();
 function initedSetUrl(){
     // 先判断是否已经储存了键值对
     if(localStorage.getItem("Num")){
@@ -205,3 +210,129 @@ function putUrl(i){
     newUrlRightContainerEle.appendChild(newUrldec);
     // ---------------------------------单独的一个完整链接框框【完】-----------------------
 }
+
+
+
+
+
+
+
+// jQuery
+
+// 添加待办事项函数
+function addtodoissue(title){
+    if(title){
+        $nodoneIssue=$("#unfinished");
+        $nodoneIssue.append('\
+        <div class="issue-dec issue-dec-unfinished">\
+            <div class="check-box-container">\
+                <input type="checkbox" class="issue-check-box issue-check-box-nodone" checked>\
+                <span class="issue-check">\
+                </span>\
+                </div>\
+                <span class="issue-words">'+title+'\
+                </span>\
+                <button id="issue-delete" class="issue-delete">X\
+                </button>\
+            </div>');
+            // 绑定checkbox按钮事件
+            $(".issue-check-box-nodone:not(.done)").click(function(){
+                turnToDone($(this));
+            })
+        }
+};
+
+
+// 回车相应添加待办事项
+$(".input-frame").keydown(function(event) {
+    if(event.keyCode==13){
+        var $inputIssueEle=$(".input-frame").val();
+        console.log($inputIssueEle);
+        if($inputIssueEle){
+            addtodoissue($(".input-frame").val());
+            $(".input-frame").val("");
+            }
+        else 
+        {
+            alert("事项不能为空");
+        }
+    }
+})
+
+// 按钮添加事项
+$("#add-issue-btn").click(function(){
+    addtodoissue($(".input-frame").val());
+})
+
+
+// 事项收缩
+$(".clumn-shrink-first").click(function(){
+    $(".clumn-shrink-first").nextAll().slideToggle(pointDirection());
+});
+$(".clumn-shrink-second").click(function(){
+    $(".clumn-shrink-second").nextAll().slideToggle(pointDirection());  
+});
+
+
+// 收缩时小箭头的方向
+function pointDirection(){
+    // console.log($("#issue-coin").html(">"));
+    $buffFirst = $(".issue-dec-unfinished").css("display");
+    if($buffFirst == "block"){
+        $(".list-coin-unfinished").html(">");
+    }
+    else if($buffFirst == "none"){
+        $(".list-coin-unfinished").html("∨");
+    }
+
+    $buffSecond = $(".issue-dec-finished").css("display");
+    console.log($buffSecond);
+    if($buffSecond == "block"){
+        $(".list-coin-finished").html(">");
+    }
+    else if($buffSecond == "none"){
+        $(".list-coin-finished").html("∨");
+    }
+}
+
+
+// 事项切换为已完成
+function addIssueDone(title){
+    $doneIssue=$("#finished");
+    $doneIssue.append('\
+    <div class="issue-dec issue-dec-finished">\
+        <div class="check-box-container">\
+            <input type="checkbox" class="issue-check-box issue-check-box-done" checked>\
+            <span class="issue-check">√</span>\
+        </div>\
+        <span class="issue-words">'+title+'\
+        </span>\
+        <button id="issue-delete" class="issue-delete">X\
+        </button>\
+    </div>\
+')
+}
+
+function turnToDone($checkbox){
+    var title =$checkbox.parent().next().html();
+    $checkbox.parent().parent().remove();
+    addIssueDone(title)
+}
+function turnToNoDone($checkbox){
+    console.log($checkbox.parent().next().html());
+    var title =$checkbox.parent().next().html();
+    $checkbox.parent().parent().remove();
+    addtodoissue(title)
+}
+// 绑定完成与未完成事项转换
+$(".issue-check-box-nodone:not(.done)").click(function(){
+    turnToDone($(this));
+})
+$(".issue-check-box-done:not(.done)").click(function(){
+    turnToNoDone($(this));
+})
+
+
+$(".issue-delete").click(function(){
+    $(this).parent().remove();
+})

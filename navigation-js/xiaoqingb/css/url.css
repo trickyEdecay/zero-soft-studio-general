@@ -12,9 +12,13 @@ body{
     padding-top: 90px;
     box-sizing: border-box;
 }
+
 .input-container{
+    float: left;
     width:620px;
     margin:0 auto;
+    height: 36px;
+    margin-left: 340px;
 }
 .search-content{
     float: left;
@@ -50,6 +54,7 @@ body{
 
 }
 .my-collect{
+    float: left;
     margin: 40px 0 20px 0;
     width: 100%;
     display: inline-block;
