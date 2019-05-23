@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src =  "lib/jquery-3.4.1.js"></script>
+    <link rel="stylesheet/less"  href="styles/digitron.less" />
+    <!-- 顺序问题 -->
+    <script src="lib/3.9.0.less.min.js" ></script>
+
+</head>
+<body>
+    <input placeholder="输入你想要点亮的数字,回车运行" autocomplete="off">
+    <div id = "digitron-container">
+
+        <div id = "fe-container">
+            <div class="fe high"></div>
+            <div class="fe low"></div>
+        </div>
+
+        <div id = "agd-container">
+                <div class="agd top"></div>
+                <div class="agd middle"></div>
+                <div class="agd bottom"></div>
+        </div>
+
+        <div id = "bc-container">
+                <div class="bc up"></div>
+                <div class="bc down"></div>
+        </div>
+
+        <div id = "point"></div>
+    </div>
+
+
+
+    <script src="digitron.js"></script>
+</body>
+</html>
