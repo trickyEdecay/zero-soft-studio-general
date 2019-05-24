@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #real-monster-name {
+            display: block;
+            margin: 20px auto;
+
+        }
+
+        #confirm {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #monster {
+            display: block;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+        }
+
+        #monster-name {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #monster-blood {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #blood-container {
+            height: 20px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        #real-blood {
+            width: 100%;
+            height: 100%;
+            background: red;
+            /* 动态显示 */
+            transition: width .2s linear
+        }
+
+        #attack-btn {
+            display: block;
+            margin: 20px auto;
+            background: orange;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- input 的属性autocomplete 默认为on，其含义代表是否让浏览器自动记录之前输入的值； -->
+    <!-- onkeyup：表示键盘输入事件，不允许键盘输入空格字符。 -->
+    <input id="real-monster-name" placeholder="请输入你想要的怪兽名" autocomplete="off" onkeyup="this.value=this.value.replace(/\s+/g,'')" >
+    <button id="confirm">确认</button>
+    <img id="monster" alt="怪兽" src="http://img.zcool.cn/community/0111c15a5f292fa80120121f89e8b9.gif">
+    <h2 id="monster-name">monster</h2>
+    <h2 id="monster-blood">100</h2>
+    <div id="blood-container">
+        <div id="real-blood"></div>
+    </div>
+    <button id="attack-btn">攻击</button>
+
+
+
+    <script>
+
+        //获取元素
+        var realMonsterNameEle = document.getElementById("real-monster-name");
+        var MonsterNameEle = document.getElementById("monster-name");
+        var confirmEle = document.getElementById("confirm");
+        var attackBtnEle = document.getElementById("attack-btn");
+        var realBloodEle = document.getElementById("real-blood");
+        var monsterBloodEle = document.getElementById("monster-blood");
+        var monsterEle = document.getElementById("monster");
+
+        
+
+        
+
+        //回车键改名
+        document.onkeydown =function(e){
+            if(e.keyCode == 13){
+                MonsterNameEle.innerHTML = realMonsterNameEle.value; 
+                realMonsterNameEle.value = "";  
+            }
+        }
+
+        //确认键改名
+        confirmEle.onclick = function () {
+            var result = confirm("确认使用此名字吗？");
+            if (result) {
+                MonsterNameEle.innerHTML = realMonsterNameEle.value;
+                realMonsterNameEle.value = ""; 
+            }
+        }
+        
+        //点击攻击按钮的相关操作
+        attackBtnEle.onclick = function () {
+            //1-20随机整数
+            Math.random()*19;
+            var num = Math.random()*19 + 1;
+            hp = parseInt(num, 10);    
+            //血量变化
+            monsterBloodEle.innerHTML-= hp;
+            //血量下限为零
+            if(monsterBloodEle.innerHTML<0){
+                monsterBloodEle.innerHTML=0;
+              
+            }
+            //血槽宽度变化
+            realBloodEle.style.width =monsterBloodEle.innerHTML+"%";
+            //血槽为零同时弹出提示框
+            if(monsterBloodEle.innerHTML==0){
+                alert(MonsterNameEle.innerHTML + "  died");
+               
+            } 
+        }
+
+    </script>
+
+
+</body>
+
+</html>
