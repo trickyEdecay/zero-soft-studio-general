@@ -1,0 +1,215 @@
+	body,ul,li,p,h3{
+				margin:0;
+			}
+			ul,li,p,h3{
+				padding:0;
+				list-style:none;
+				
+			}
+			h1,h2,h3,h4,h5,h6,em,i,strong,b{
+				font-size:14px;
+			}
+			body,html{
+				max-width: 1240px;
+				background: rgb(244,244,244);
+			}
+			.wrap{
+				margin-left: 400px;
+				margin-top: 90px;
+				height: 100px;
+				font-size: 0px;
+
+			}
+			.wrap input[type=text]{
+				text-indent: 16px;
+				width: 480px;
+    			height: 36px;
+    			font-size: 16px;
+    			box-sizing: border-box;
+    			margin-right: 20px;
+    			border: 1px solid #E7E7E7;
+			}
+			.wrap div{
+				box-sizing: border-box;
+				vertical-align: top;
+				width: 120px;
+    			height: 36px;
+    			font-size: 16px;
+    			border: 1px solid black;
+    			line-height: 34px;
+    			text-align: center;
+    			border-radius: 4px;
+    			background: #3F5DEA;
+    			color: white;
+			}
+			.fl{
+				float: left;
+			}
+			.fr{
+				float: right;
+			}
+			.clearfix:after{
+				content: " ";
+				display: block;
+				height: 0px;
+				overflow: hidden;
+				font-size: 0px;
+				clear: both;
+			}
+			.content>h1{
+				position: absolute;
+				top: -19px;
+				font-size: 16px;
+			}
+			.content{
+				margin-left:100px;
+				display: flex;
+				position: absolute;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: center;
+				width: 1240px;
+				margin-top: 16px;
+			}
+			.content article{
+				box-sizing: border-box;
+				width: 290px;
+				height: 100px;
+				padding: 20px;
+				border-radius: 8px;
+				background: white;
+				transition: .7s; 
+				margin-top: 16px;
+			}
+			.content article div:nth-child(1){
+				width: 60px;
+				height: 60px;
+				border-radius: 60px;
+				overflow: hidden;
+				background: rgb(63,93,234);
+				border: 1px solid white;
+			}
+			.content article div:nth-child(2){
+				margin-left: 35px;
+				width: 150px;
+			}
+			.content article div>h2{
+				color: black;
+				margin:0px 0px 6px 0px;
+			}
+			.content article div>h2>a{
+				text-decoration:none;
+			}
+			.content article div>span{
+				margin-top: 6px;
+				color: #ccc;
+				font-size: 12px;
+			}
+			article>div>img{
+				margin: 6px 6px;
+				width: 80%;
+			}
+			.content article:hover{
+				background: #908585;
+				color: white;
+			}
+			.content article:hover>div>h2{
+				color: white;
+			}
+			.motai{
+				position: fixed;
+				top: 0px;
+				right: 0px;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.50);
+			}
+			.motai .xinxi{
+				position: absolute;
+				top: 50%;
+				right: 50%;
+				margin-right: -240px;
+				margin-top: -176px;
+				width: 480px;
+				height: 353px;
+				box-sizing: border-box;
+				border-radius: 4px;
+				padding: 20px 20px;
+				background: white;
+			}
+			.motai .xinxi h2{
+				font-size: 18px;
+				margin-bottom: 20px;
+			}
+			.motai .xinxi span{
+				font-size: 14px;
+				margin-bottom: 4px;
+			}
+			.motai .xinxi .title{
+				font-size: 16px;
+				text-indent: 16px
+				margin-bottom:16px;
+				width: 440px;
+				height: 36px;
+				text-indent: 16px;
+				border-radius: 4px;
+				border: 1px solid #E7E7E7;
+				box-sizing: border-box;
+			}
+			.motai .xinxi .description{
+				font-size: 16px;
+				text-indent: 16px
+				margin-bottom:16px;
+				width: 440px;
+				height: 36px;
+				text-indent: 16px;
+				border-radius: 4px;
+				border: 1px solid #E7E7E7;
+				box-sizing: border-box;
+				outline: none;
+			}
+			.motai .xinxi .ahref{
+				border-radius: 4px;
+				font-size: 16px;
+				text-indent: 16px
+				margin-bottom:16px;
+				width: 440px;
+				height: 36px;
+				text-indent: 16px;
+				box-sizing: border-box;
+				border: 1px solid #E7E7E7;
+				margin-bottom: 20px;
+			}
+			.motai .xinxi .sure{
+				margin-left: 179px;
+				background: #3F5DEA ;
+			}
+			.motai .xinxi .esc{
+				margin-left: 16px;
+				background: white;
+				color: #333333;
+			}
+			.motai .xinxi  button{
+				width: 120px;
+				height: 36px;
+				border-radius: 4px;
+				border:none;
+
+			}
+			.motai.hidden{
+				display: none;
+			}
+			.add{
+				position: fixed;
+				bottom: 20px;
+				right: 30px;
+				width: 64px;
+				height: 64px;
+				line-height: 64px;
+				text-align: center;
+				border-radius: 50%;
+				color: white;
+				background: #3F5DEA;
+				font-size: 50px;
+			}

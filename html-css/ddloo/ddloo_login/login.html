@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charest=utf-8">
-        <link rel="stylesheet" href="css/login.css" type="text/css">
-        <link rel="stylesheet" href="css/normal.css" type="text/css">
-        <script type="text/javascript" src="js/login_visible.js"></script>
+        <meta http-equiv="Content-Type content=utf-8">
+        <title>登录</title>
+        <link rel="stylesheet" href="css/login.css">
     </head>
     <body>
-        <header></header>
-        <div class="outermost">
-            <div class="outside">
-                <h2 class="title">登录</h2>
-                <form action="" autocomplete="off">
-                    <div class="inside">
-                        <label for="input" class="lab">账号: </label>
-                        <img src="img/user.jpg" class="login-img" alt="图片">
-                        <input class="put" id="input" type="text" placeholder="用户名/邮箱/手机号" autofocus required oninput="setCustomValidity('')" oninvalid="setCustomValidity('账号不能为空哦')">
-                    </div>
-                    <div class="inside">
-                        <label for="password" class="lab">密码: </label>
-                        <img src="img/password.jpg" class="login-img" alt="图片">
-                        <input class="put" id="password" type="password" placeholder="人家不会看你密码啦" required oninput="setCustomValidity('')" oninvalid="setCustomValidity('密码不能为空哦')">
-                        <img src="img/visible.png" id="login-visimg" onclick="ishideshow()">
-                    </div>
-                    <div class="divremember">
-                            <input id="remember" type="checkbox" checked>
-                            <label class="labremember" for="remember">记住我</label>
-                    </div>
-                    <div class="divforget">
-                        <a class="ahref" href="">忘记密码?</a>
-                    </div>
-                    <div class="divlogin">
-                        <input id="login" type="submit" value="登录">
-                        <a id="aregister" href="phone_register.html">注册</a>
-                    </div>
+        <div class="login-head-wrap">
+            <div class="login-wrap-img"></div>
+            <div class="login-wrap-content">
+                <h5 class="login-content-title">欢迎登录本系统</h5>
+                <form action="">
+                    <input class="login-content-input" type="text" placeholder="请输入您的用户名">
+                    <input class="login-content-input" type="password" placeholder="请输入您的密码" >
+                    <input class="login-content-submit" type="submit" value="登录">
                 </form>
+                <div class="tail">
+                    <a class="forget tail-a" href="#">忘记密码?</a>
+                    <a class="register tail-a" href="#">注册新账号</a>
+                </div>
             </div>
         </div>
     </body>

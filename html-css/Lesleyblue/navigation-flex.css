@@ -1,0 +1,55 @@
+body{
+  background: #f4f4f4;
+}
+.collect{
+  margin-top: 160px;
+  margin-left: 310px;
+  width: 75px;
+  height: 25px;
+  color: #333333;
+  font-size: 18px;
+}
+.layout{
+  display: flex;
+  width: 1300px;
+  height: 100px;
+  justify-content: space-between;
+  margin-left: 310px;
+  margin-top: 20px;
+}
+.demo{
+  background: #ffffff;
+  width: 310px;
+  height: 100px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.icon{
+  width: 60px;
+  height: 60px;
+  background: #3f5dea;
+  border-radius: 60px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.right{
+  width:190px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.word{
+  width:28px;
+  height: 20px;
+  font-size: 14px;
+  color: #333333;
+}
+.statement{
+  width:190px;
+  height: 34px;
+  font-size: 12px;
+  color: #c4c4c4;
+}
