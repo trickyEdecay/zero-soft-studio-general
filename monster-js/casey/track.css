@@ -1,0 +1,52 @@
+html body{
+	margin:0px;
+	padding: 0px;
+}
+.moniter{
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 300px;
+	height: 300px;
+	border: 1px solid transparent;
+}
+.moniter .img{
+	width: 100px;
+	height: 100px;
+	margin:0 auto;
+	margin-top: 10px;
+	background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556293366797&di=140ac51f45f5f46c2b8fd6c53cc764bc&imgtype=0&src=http%3A%2F%2Fpic60.nipic.com%2Ffile%2F20150212%2F2531170_211303416000_2.jpg) no-repeat 1px 1px/300px 300px;
+}
+.moniter .red{
+	margin-top: 20px;
+	width: 100%;
+	height: 30px;
+	border-radius: 20px;
+	background: red;
+	overflow: hidden;
+	position: relative;
+}
+.moniter .red #red{
+	width: 100%;
+	background: green;
+	height: 30px;
+	transition: width 0.5s;
+}
+.moniter .red #blood-volume{
+	position: absolute;
+    width: 10px;
+    height: 30px;
+    line-height: 30px;
+    top: 0px;
+    left: 131px;
+}
+.moniter #track{
+	outline: none;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 90px;
+	height: 30px;
+	background: skyblue;
+	border-radius: 5px;
+	text-align: center;
+}

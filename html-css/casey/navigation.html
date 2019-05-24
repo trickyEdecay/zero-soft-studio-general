@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+	<head><!-- 这是头部 在这里面记录了关于这个页面的一些属性 是给预览器看的 -->
+		<meta charset="utf-8">
+		<meta name="description" content="这是由三金同学认真上课,通过所学知识写出来的页面">	<!-- meta标签的name属性可以选择description页面描述和keywords关键字 -->
+		<meta name="keywords" content="学习前端,努力,认真"><!-- keywords 主要用来记录网页的关键字 是写给搜索引擎和爬虫看的 -->
+		 <meta name="Generator" content="EditPlus 3"><!--开发工具-->
+		<meta name="Author" content="三金"><!--注明作者-->
+		<title>凯鑫</title>
+		<link rel="stylesheet" type="text/css" href="navigation.css">
+	</head>
+	<body><!-- 这个是身体 里面装载一些页面的结构 -->
+		<nav class="wrap">
+			<input type="text" name="" id="shousuo" placeholder="百度一下">
+			<div class="sumbit-buttom" style="display: inline-block;">搜索</div>
+			<script type="text/javascript">
+				
+				var shousuo=document.getElementById("shousuo");
+				var sbuttom=document.getElementsByClassName("sumbit-buttom")[0];
+				sbuttom.onclick=function(){
+					window.location.href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd="+shousuo.value
+				}
+			</script>
+		</nav>
+		<content class="content">
+			<h1>我的收藏</h1>
+			<article class="clearfix">
+				<div class="fl"><img src="weibo.png"></div>
+				<div class="fl">
+					<h2><a href="https://weibo.com/">微博</a></h2>
+					<span>随时随地发现新鲜事</span>
+				</div>
+			</article>
+			<article class="clearfix">
+				<div class="fl"><img src="github.png"></div>
+				<div class="fl">
+					<h2><a href="https://github.com">gitHub</a></h2>
+					<span>gitHub是一个面向开源及私有软件项目的托管平台</span>
+				</div>
+			</article>
+			<article class="clearfix">
+				<div class="fl"><img src="qq.png"></div>
+				<div class="fl">
+					<h2><a href="https://www.qq.com/">QQ</a></h2>
+					<span>随时随地享受生活</span>
+				</div>
+			</article>
+			<article class="clearfix">
+				<div class="fl"><img src="baidu.png"></div>
+				<div class="fl">
+					<h2><a href="https://www.baidu.com/">百度</a></h2>
+					<span>百度，全球最大的搜索引擎、最大的中文网站。</span>
+				</div>
+			</article>
+			<article class="clearfix">
+				<div class="fl"><img src="weibo.png"></div>
+				<div class="fl">
+					<h2><a href="https://weibo.com/">微博</a></h2>
+					<span>随时随地发现新鲜事</span>
+				</div>
+			</article>
+			<article class="clearfix">
+				<div class="fl"><img src="github.png"></div>
+				<div class="fl">
+					<h2><a href="https://github.com">gitHub</a></h2>
+					<span>gitHub是一个面向开源及私有软件项目的托管平台</span>
+				</div>
+			</article>
+			<article class="clearfix">
+				<div class="fl"><img src="qq.png"></div>
+				<div class="fl">
+					<h2><a href="https://www.qq.com/">QQ</a></h2>
+					<span>随时随地享受生活</span>
+				</div>
+			</article>
+			<article class="clearfix">
+				<div class="fl"><img src="baidu.png"></div>
+				<div class="fl">
+					<h2><a href="https://www.baidu.com/">百度</a></h2>
+					<span>百度，全球最大的搜索引擎、最大的中文网站。</span>
+				</div>
+			</article>
+		</content>
+		<div class="add">+</div>
+		<!-- 模态框 -->
+			<div class="motai hidden">
+				<div class="xinxi">
+					<h2>添加收藏</h2>
+					<span>导航标签</span>
+					<br>
+					<input type="text" name="" class="title" placeholder="百度">
+					<span>导航描述</span>
+					<br>
+					<input type="" name="" class="description">
+					<br>
+					<span>导航链接</span>
+					<br>
+					<input type="" name="" class="ahref">
+					<br>
+					<button class="sure">确定</button>
+					<button class="esc">取消</button>
+				</div>
+			</div>
+			<script type="text/javascript">
+			var Oesc=	document.getElementsByClassName("esc")[0];
+			var Osure=	document.getElementsByClassName("sure")[0];
+			var Omotai=document.getElementsByClassName("motai")[0];
+			var Oxinxi=document.getElementsByClassName("xinxi")[0];
+
+			var Oadd=document.getElementsByClassName("add")[0];
+			function hiddenmotai(){
+				var hidde=Omotai.classList.contains("hidden");
+					if(!hidde){
+						Omotai.classList.add("hidden");
+					}else{
+						Omotai.classList.remove("hidden");
+					}
+			}
+				Oesc.onclick=function(){
+					var Oahref=document.getElementsByClassName("ahref")[0];
+					Oahref.value=" ";
+					var Otitle=document.getElementsByClassName("title")[0];
+					Otitle.value=" ";
+					var Odescription=document.getElementsByClassName("description")[0];
+					Odescription.value=" ";
+					hiddenmotai();
+				}
+				Oadd.onclick=function(){
+					hiddenmotai();
+				}
+				Omotai.onclick=function(){
+					hiddenmotai();
+				}
+				 Oxinxi.onclick=function(){
+					hiddenmotai();
+				}
+				Osure.onclick=function(){
+					var Oahref=document.getElementsByClassName("ahref")[0];
+					Oahrefvlu=Oahref.value;
+					Oahref.value=" ";
+					var Otitle=document.getElementsByClassName("title")[0];
+					Otitlevlu=Otitle.value;
+					Otitle.value=" ";
+					var Odescription=document.getElementsByClassName("description")[0];
+					Odescriptionvlu=Odescription.value;
+					Odescription.value=" ";
+
+					console.log(Odescriptionvlu+Otitlevlu+Oahrefvlu);
+					var addhtml= '<article class="clearfix"><div class="fl"><img src="baidu.png"></div><div class="fl"><h2><a href="'+Oahrefvlu+'"">'+Otitlevlu+'</a></h2><span>'+Odescriptionvlu+'</span></div></article>'
+					var Ocontent=document.getElementsByClassName("content")[0];
+					Ocontent.innerHTML+=addhtml;
+					hiddenmotai();
+				}
+				
+
+			</script>
+	</body>
+</html>
