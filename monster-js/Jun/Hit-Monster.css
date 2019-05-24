@@ -1,0 +1,48 @@
+body{
+	background: #0F0F0F;
+}
+#window{
+	background: seashell;
+	width: 500px;
+	height: 500px;
+    position: absolute;
+	left: 750px;
+	top: 200px;
+	text-align: center;
+	border-radius:10px ;
+}
+#window img{
+	width: 150px;
+	height: 150px;
+}
+#hp{
+	position: absolute;
+	height: 39px;
+	width: 399px;
+	border: red solid 1px;
+	top: 280px;
+	left: 50px;
+	border-radius:10px ;
+}
+#real-hp{
+	height: 40px;
+	width: 400px;
+	background: red;
+	border-radius:10px ;
+	/* transition: width 2s; */
+}
+#hit{
+	border: #255625 solid 1px;
+	background: #23527C;
+	width: 400px;
+	position: absolute;
+	top: 350px;
+	left: 50px;
+	border-radius:10px ;
+}
+#hit:hover{
+	background: blueviolet;
+}
+#hit:active{
+	background: yellowgreen;
+}

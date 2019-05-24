@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>收藏页面</title>
+    <style>
+        .circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            background: #3F5DEA;
+            text-align: center;
+            line-height: 90px;
+        }
+
+        #mycollection {
+            width: 72px;
+            height: 25px;
+            font-size: 18px;
+            color: #333333;
+            margin: 40px 1538px 20px 310px;
+        }
+
+        span {
+            display: inline-block;
+            width: 28px;
+            height: 20px;
+            font-size: 14px;
+            color: #000;
+            margin: 0px 182px 6px 0px;
+
+        }
+
+        p {
+            display: inline-block;
+            font-size: 12px;
+            color: #c4c4c4;
+            width: 190px;
+            height: 34px;
+            margin: 0;
+        }
+
+        a {
+            display: inline-block;
+            background: white;
+            border-radius: 4px;
+            width: 310px;
+            height: 100px;
+            margin-right: 20px;
+            vertical-align: bottom;
+        }
+
+        a:hover {
+            background: #9CC5F3;
+            cursor: pointer;
+        }
+
+        .main-wrap {
+            margin: 20px auto 20px 0px;
+            width: 1320px;
+            height: 100pX;
+            font-size: 0;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        .left {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            margin: 20px 0 20px 20px;
+            vertical-align: bottom;
+        }
+
+        .right {
+            display: inline-block;
+            width: 190px;
+            height: 60px;
+            margin: 20px;
+        }
+
+        #search {
+            width: 480px;
+            height: 36px;
+            background: #FFFFFF;
+            border: 1px solid #E7E7E7;
+            border-radius: 4px;
+            margin: 90px 20px 40px 650px;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #C4C4C4;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        #search:focus {
+            background: #FFFFFF;
+            border: 1px solid #3F5DEA;
+            border-radius: 4px;
+        }
+
+        #search-button {
+            width: 120px;
+            height: 36px;
+            background: #3F5DEA;
+            border-radius: 4px;
+            border: none;
+            margin: 90px auto 40px 20px;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #FFFFFF;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        #search-button:hover {
+            background: #738BFF;
+
+        }
+
+        #search-button:active {
+            background: #1A33A6;
+
+        }
+
+        #add-button {
+            background: #3F5DEA;
+            width: 64px;
+            height: 64px;
+            border-radius: 50px;
+            border: none;
+            position: fixed;
+            right: 48px;
+            bottom: 48px;
+
+        }
+
+        #add {
+            width: 26px;
+            height: 38px;
+            position: fixed;
+            right: 67px;
+            bottom: 65px;
+        }
+
+        #mask {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+
+        }
+
+        #main {
+            margin-left: 310px;
+        }
+
+        .collectionmain {
+            width: 480px;
+            height: 353px;
+            background: #fff;
+            margin-left: 720px;
+            margin-top: 340px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .collectionh1 {
+            width: 72px;
+            height: 25px;
+            font-family: PingFangSC-Medium;
+            font-size: 18px;
+            color: #000;
+            margin: 0 388px 20px 0px;
+        }
+
+        .collectionh21 {
+            width: 56px;
+            height: 20px;
+            font-family: PingFangSC-Medium;
+            font-size: 14px;
+            color: #333333;
+            margin: 0 404px 4px 0;
+        }
+
+        .input {
+            width: 440px;
+            height: 36px;
+            background: #FFFFFF;
+            border: 1px solid #E7E7E7;
+            border-radius: 4px;
+            margin: 0 0 16px 0;
+        }
+
+        .collectionh22 {
+            width: 56px;
+            height: 20px;
+            font-family: PingFangSC-Medium;
+            font-size: 14px;
+            color: #333333;
+            margin: 0 0 4px 0;
+        }
+
+        .collectionh23 {
+            width: 56px;
+            height: 20px;
+            font-family: PingFangSC-Medium;
+            font-size: 14px;
+            color: #333333;
+            margin: 0 0 4px 0;
+        }
+
+        .button{
+            width: 120px;
+            height: 36px;
+            background: #3F5DEA;
+            border-radius: 4px;
+            margin: 0 0 0 184px;
+        }
+    </style>
+    <script src="navigation-js.js"></script>
+</head>
+
+<body>
+    <input id="search" placeholder="百度一下">
+    <input id="search-button" value="搜索" type="button">
+    <h1 id="mycollection">我的收藏</h1>
+    <div id="main">
+        <div class="main-wrap">
+            <a href="http://baidu.com" target="_blanck">
+                <div class="left">
+                    <div class="circle"><img src="baidu.png"></div>
+                </div>
+                <div class="right">
+                    <span>百度</span>
+                    <p>百度，全球最大的中文搜素引擎，最大的中文网站</p>
+                </div>
+            </a>
+
+            <a href="https://weibo.com/" target="_blanck">
+                <div class="left">
+                    <div class="circle"><img src="weibo.png"></div>
+                </div>
+                <div class="right">
+                    <span>微博</span>
+                    <p>随时随地发现新鲜事！</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/" target="_blanck">
+                <div class="left">
+                    <div class="circle"><img src="github.png"></div>
+                </div>
+                <div class="right">
+                    <span>gitHub</span>
+                    <p>gitHub是一个面向开源及私有软件项目的托管平台</p>
+                </div>
+            </a>
+
+            <a href="https://weibo.com/" target="_blanck">
+                <div class="left">
+                    <div class="circle"><img src="weibo.png"></div>
+                </div>
+                <div class="right">
+                    <span>微博</span>
+                    <p>随时随地发现新鲜事！</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="main-wrap">
+            <a href="http://baidu.com" target="_blanck">
+                <div class="left">
+                    <div class="circle"><img src="baidu.png"></div>
+                </div>
+
+                <div class="right">
+                    <span>百度</span>
+                    <p>百度，全球最大的中文搜素引擎，最大的中文网站</p>
+                </div>
+            </a>
+
+            <a href="https://weibo.com/" target="_blanck">
+                <div class="left">
+                    <div class="circle"><img src="weibo.png"></div>
+                </div>
+                <div class="right">
+                    <span>微博</span>
+                    <p>随时随地发现新鲜事！</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/" target="_blanck">
+                <div class="left">
+                    <div class="circle"><img src="github.png"></div>
+                </div>
+                <div class="right">
+                    <span>gitHub</span>
+                    <p>gitHub是一个面向开源及私有软件项目的托管平台</p>
+                </div>
+            </a>
+
+            <a href="https://weibo.com/" target="_blanck">
+                <div class="left">
+                    <div class="circle"><img src="weibo.png"></div>
+                </div>
+                <div class="right">
+                    <span>微博</span>
+                    <p>随时随地发现新鲜事！</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <input id="add-button" type="button">
+    <img id="add" src="jiahao.png">
+    <div id="mask"></div>
+</body>
+
+</html>
