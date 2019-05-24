@@ -6,26 +6,32 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="page">
-        <div class="layout">
+    <div class="layout">
+            <!--搜索栏-->
+            <div class="search-wrap">
+                <input id="entry" type="text"  class="input"  placeholder="百度一下">
+                <div class="button"  id="find">搜索</div>
+            </div>
+            <!--导航栏-->
             <h1>我的收藏</h1>
             <div class="layout-main">
-                <a href="https://www.baidu.com/">
+                <!--第一行-->
+                <a id="first" href="https://www.baidu.com/">
                     <div class="container">
-                    <div class="container-left">
-                        <div class="yuan">
-                            <div class="picture">
-                                <img src="baidu.png">
+                        <div class="container-left">
+                            <div class="yuan">
+                                <div class="picture">
+                                    <img src="baidu.png">
+                                </div>
                             </div>
-                        </div>
                     </div>
-                     <div class="container-right">
-                         <div class="title">
+                        <div class="container-right">
+                            <div class="title">
                              百度
-                         </div>
-                         <div class="describe">
+                            </div>
+                            <div class="describe">
                              百度，全球最大的中文搜索引擎、最大的中文
-                         </div>
+                            </div>
                      </div>
                     </div>
                 </a>
@@ -86,6 +92,8 @@
                      </div>
                     </div>
                 </a>
+
+                <!--第二行-->
                 <a href="https://www.baidu.com/">
                     <div class="container">
                         <div class="container-left">
@@ -163,9 +171,38 @@
                     </div>
                 </a>
              </div>
+            <!--添加-->
+            <div class="add" id="add">+</div>
+         </div>
+    <div class="shade" id="shade">
 
-
-      </div>
     </div>
+    <div class="collection" id="collection">
+        <h2>添加收藏</h2>
+        <div class="navigation">
+            <div class="wrap">
+                <h3>导航标题</h3>
+                <input class="add-input" id="add-title" value="百度">
+            </div>
+            <div class="wrap">
+                <h3>导航描述</h3>
+                <input class="add-input" id="add-describe"  value="百度，全球最大的中文搜索引擎，最大的中文网站">
+            </div>
+            <div class="wrap">
+                <h3>导航链接</h3>
+                <input class="add-input" id="add-link" value="www.baidu.com">
+            </div>
+        </div>
+        <div class="btn-wrap">
+
+            <div class="false-btn"  id="false-btn">
+                取消
+            </div>
+            <div class="true-btn" id="true-btn">
+                确定
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
