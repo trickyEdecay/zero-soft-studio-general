@@ -65,6 +65,7 @@ img{
     margin-bottom: 20px;
     background-color: white;
     border-radius: 4px;
+    transition: background-color .1s, box-shadow .2s;
 }
 .storage{
     height: 60px;
@@ -154,16 +155,33 @@ img{
 }
 #add{
     position: fixed;
+    display: none;
+    opacity: 0;
     top: 0;
     left: 0;
     width: 100%;
-    height: 0%;
-    overflow: hidden;
+    height: 100%;
+    /* height: 0; */
     background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity .1s ease;
+}
+#errorInformation{
+    position: absolute;
+    padding-top: 5px;
+    right: 150px;
+    width: 150px;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(236, 13, 13, 0.836);
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .2s;
 }
 /*鼠标效果*/
 .link-a:hover{
+    box-shadow: 0 0 20px rgba(51, 51, 51, 0.308);
     background-color: rgba(156, 239, 245, 0.39);
+    /* height: 100%; */
 }
 .head .btn:hover{
     background-color: #738BFF
