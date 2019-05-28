@@ -1,0 +1,240 @@
+body{
+    margin:0;
+    background:#F4F4F4;
+}
+*{
+    box-sizing: border-box;
+}
+@navigationItemWidth:310px;
+@navigationItemMarginRight:20px;
+
+@themeColor:#3F5DEA;
+
+.main{
+    width:@navigationItemWidth*4+@navigationItemMarginRight*3;
+    margin:0 auto;
+}
+
+.search-box{
+    margin-top:90px;
+    display: flex;
+    justify-content: center;
+
+    input{
+        width:480px;
+        margin-right:20px;
+    }
+}
+
+.module-title{
+    font-size: 18px;
+    color:#333;
+    font-family: 'PingFangSC-Medium',sans-serif;
+    margin-top:40px;
+    margin-bottom:20px;
+}
+
+.nav-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-item{
+    transition: all .2s;
+    display: flex;
+    width: @navigationItemWidth;
+    height: 100px;
+    background:#fff;
+    border-radius:4px;
+    margin-right:@navigationItemMarginRight;
+    margin-bottom:@navigationItemMarginRight;
+    padding:20px;
+    text-decoration: none;
+    
+    &:nth-of-type(4n){
+        margin-right:0;
+    }
+
+    &:hover{
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    }
+
+    &:active{
+        background:#e4e4e4;
+        box-shadow: none
+    }
+
+    .logo{
+        @logoHeight:60px;
+        width:@logoHeight;
+        height: @logoHeight;
+        border-radius: @logoHeight;
+        background:@themeColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width:30px;
+            height:30px;
+        }
+    }
+
+    .info-container{
+        margin-left:20px;
+        h2{
+            color:#333;
+            font-size:14px;
+            margin:0;
+            margin-bottom:6px;
+        }
+        p{
+            color:#c4c4c4;
+            font-size:12px;
+            margin:0;
+        }
+    }
+
+}
+
+.normal-input{
+    transition: all .2s;
+    height:36px;
+    padding:8px 16px;
+    font-size:14px;
+    border:1px solid #E7E7E7;
+    border-radius: 4px;
+
+    &::placeholder{
+        color:#C4C4C4;
+    }
+
+    &:focus{
+        border-color: @themeColor;
+    }
+}
+
+.normal-button{
+    transition: all .2s;
+    width:120px;
+    height:36px;
+    border-radius: 5px;
+    border:none;
+    background:@themeColor;
+    font-size:14px;
+    color:#fff;
+    cursor: pointer;
+
+    &.white{
+        background:#fff;
+        border:1px solid #E7E7E7;
+        color:#333;
+
+        &:hover{
+            background:#efefef;
+        }
+
+        &:active{
+            background:#c4c4c4;
+        }
+    }
+
+    &:hover{
+        background: #738BFF;
+    }
+
+    &:active{
+        background: #1A33A6;
+    }
+}
+
+.add-btn{
+    transition: all .2s;
+    position: fixed;
+    right: 48px;
+    bottom:48px;
+    @btnHeight:64px;
+    width:@btnHeight;
+    height:@btnHeight;
+    border-radius: @btnHeight;
+    background:@themeColor;
+    color:#fff;
+    font-size:32px;
+    line-height: @btnHeight;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover{
+        background: #738BFF;
+    }
+
+    &:active{
+        background: #1A33A6;
+    }
+}
+
+
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &.show{
+        display: flex;
+    }
+
+    .modal-main{
+        width:480px;
+        padding:20px;
+        background:#fff;
+        border-radius:4px;
+
+        h1{
+            font-size: 18px;
+            color:#000;
+            font-family: 'PingFangSC-Medium',sans-serif;
+            margin:0;
+        }
+
+        .input-group{
+            margin-bottom:16px;
+
+            &:last-of-type{
+                margin-bottom:0;
+            }
+
+            label{
+                display: block;
+                font-size:14px;
+                color:#333;
+                margin-bottom:4px;
+            }
+
+            input{
+                width:100%;
+            }
+        }
+    }
+
+    .modal-content{
+        margin:20px 0;
+    }
+
+
+    footer{
+        display: flex;
+        justify-content: flex-end;
+
+        button{
+            margin-left:16px;
+        }
+    }
+    
+}
+ 

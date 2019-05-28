@@ -1,0 +1,192 @@
+body,
+html{
+    border: 0;
+    
+}
+header{
+    margin-top: 100px; 
+}
+.information{
+    position: absolute;
+    display: inline-block;
+    font-family: 'Lucida Sans Unicode';
+    width: 120px;
+    left: 200px;
+    top: 115px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.img{
+    padding-left: 20px;
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-left: 1%;
+    margin-bottom: 10px;
+}
+.img-harm{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+}
+.btn{
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    background-color: rgba(224, 145, 55, 0.89);
+    font-family: 'Lucida Sans Unicode';
+    /* font-weight: bold; */
+    font-size: 18px;
+    padding: 0 30px;
+    margin-top: 1px;
+    margin-left: 30px;
+    border: 0;
+    border-radius: 5px;
+}
+.div-hero-select{
+    font-size: 0;
+}
+/* .hide{
+    display: none;
+} */
+.skill-name,
+.hide-weapon{
+    border-radius: 5px;
+    margin-left: 0;
+}
+#hero{
+    /* position: absolute; */
+    left: 0;
+    position: relative;
+    display: inline-block;
+    width: 550px;
+    margin-left: 200px;
+}
+#hero h3{
+    width: 300px;
+    margin: 0;
+    text-align: center;
+}
+#hero-wrap{
+    margin-top: 15px;
+}
+#hero-bar{
+    position: relative;
+    display: inline-block;
+    border: 0;
+    width: 150px;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 10px;
+}
+#hero-bar-hp{
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(236, 10, 10);
+    transition: width .3s;
+}
+#img-hero-harm{
+    top: 83px;
+    padding-left: 40px;
+}
+#div-hero-select{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+#div-skill-name,
+#div-hide-weapon{
+    display: none;
+}
+
+/*BOSS视图*/
+#monster{
+    position: absolute;
+    display: inline-block;
+    width: 400px;
+    margin-left: 200px;
+}
+#monster-bar{
+    position: relative;
+    display: inline-block;
+    border: 0;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+}
+#monster-bar-hp{
+    width: 100%;
+    background-color: rgb(236, 10, 10);
+    border-radius: 10px;
+    transition: width .3s;
+}
+#monster h3{
+    width: 400px;
+    margin: 0;
+    text-align: center;
+}
+#img-monster{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    float: right;
+    right: -50px;
+}
+#img-monster-harm{
+    top: 130px;
+    right: 50px;
+}
+@media screen and (max-width: 960px){
+    #hero{
+        margin-left: 20px;
+    }
+    #monster{
+        left: 400px;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 640px){
+    #hero{
+        margin-left: 0px;
+    }
+    #monster{
+        left: 260px;
+        margin-left: 0px;
+    }
+}
+/* 扣血动画 */
+@keyframes imgmonster{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes imghero{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}

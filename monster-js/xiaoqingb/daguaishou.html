@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>打小白</title>
+    <link href="css/daguaishou.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="man-container">
+        <!-- 血槽 -->
+        <div class="blood-bar">
+            <!-- 血条 -->
+            <div id="blood-volumn"></div>
+        </div>
+        <h1>小明</h1>
+        <!-- 血量 -->
+        <h2 id="remain-blood">Hp:100</h2>    
+        <span type="button" id="attack" class="attack" onclick="hurt()">打他</span>
+        <span type="button" id="dec" class="dec" ">剩余复活次数:3</span>
+        <span id="dec-game" class="dec-game"></span>
+    </div>
+    <div class="Rock-paper-scissors" id="Rock-paper-scissors">
+        <p class="game-name">赢了才可以扶起来!</p>
+        <img type="button" class="gesture-icon" src="https://i.loli.net/2019/04/24/5cc06ce5df344.png" onclick="scissors()">
+        <img type="button" class="gesture-icon" src="https://i.loli.net/2019/04/24/5cc06d540f177.png" onclick="rock()">
+        <img type="button" class="gesture-icon" src="https://i.loli.net/2019/04/24/5cc06ce5df30d.png" onclick="paper()">
+    </div>
+    <script src="js/daguaishou.js" ></script>
+</body>
+</html>
