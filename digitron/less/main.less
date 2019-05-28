@@ -1,3 +1,4 @@
+// 输入框样式
 .num-input{
     width: 200px;
     height: 40px;
@@ -5,12 +6,18 @@
     margin-left: 370px;
     border: 1px gray solid;     
 }
+
+
+// 四个数码管的大框
 .digitron-box{
     width: 400px;
     display: flex;
     justify-content: space-around;
     margin-left: 200px;
 }
+
+
+// 单个数码管的框框
 .digitron-frame{
     display: inline-block;
     position: relative;
@@ -18,7 +25,7 @@
     top:100px;
     height: 160px;
     width: 90px;
-    
+    // 横向三个管
     #digitron-h{
         height: 160px;
         width: 105px;
@@ -26,7 +33,7 @@
         display:flex;
         flex-direction:column;
         justify-content: space-between;
-        
+        // 整一条二极管
         .tube{
             height: 20px;
             font-size: 0;
@@ -39,6 +46,7 @@
                 border-right-color: black;
                 margin-left: 2.2px;
             }
+            // 二极管中间的div
             .center-tube{
                 display: inline-block;
                 background-color: black;
@@ -55,7 +63,7 @@
             }
         }
     }
-    
+    // 纵向四个管
     #digitron-v{
         height: 160px;
         width: 95px;
@@ -69,7 +77,7 @@
         .b,.c{
             margin-left: auto;
         }
-        
+        // 整一条二极管
         .tube{
             width: 20px;
             height: 90px;
@@ -82,6 +90,7 @@
                 border: 10px solid transparent;
                 border-bottom-color: black;
             }
+            // 二极管中间的div
             .center-tube{
                 display: inline-block;
                 background-color: black;

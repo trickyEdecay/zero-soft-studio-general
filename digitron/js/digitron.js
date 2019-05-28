@@ -1,3 +1,4 @@
+// 声明各个数码管数字变量，方便重新初始化
 var preN1=0;
 var preN2=0;
 var preN3=0;
@@ -29,6 +30,8 @@ $("input").keyup(function(){
         $(".input-frame").val(" ");
     }
 });
+
+// 各个数码管的点亮函数
 function lightfirst(single){
     $(".num-first").addClass("show-"+single);
     preN1=single;
@@ -45,6 +48,7 @@ function lightfourth(thousand){
     $(".num-fourth").addClass("show-"+thousand);
     preN4=thousand;
 }
+// 一次性熄灭所有数码管函数
 function removelight(){
     $(".num-first").removeClass("show-"+preN1);
     $(".num-second").removeClass("show-"+preN2);
