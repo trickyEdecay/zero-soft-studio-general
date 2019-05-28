@@ -236,7 +236,7 @@ function addtodoissue(title){
                 </button>\
             </div>');
             // 绑定checkbox按钮事件
-            $(".issue-check-box-nodone:not(.done)").click(function(){
+            $(".issue-check-box-nodone:not(.done)").last().click(function(){
                 turnToDone($(this));
             })
         }
@@ -319,11 +319,11 @@ function turnToDone($checkbox){
     addIssueDone(title)
 }
 function turnToNoDone($checkbox){
-    console.log($checkbox.parent().next().html());
     var title =$checkbox.parent().next().html();
     $checkbox.parent().parent().remove();
     addtodoissue(title)
 }
+
 // 绑定完成与未完成事项转换
 $(".issue-check-box-nodone:not(.done)").click(function(){
     turnToDone($(this));
