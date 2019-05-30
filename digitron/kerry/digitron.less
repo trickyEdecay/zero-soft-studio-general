@@ -1,0 +1,244 @@
+body {
+    background: yellow;
+}
+#container {               //最上面的
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    #input {              //输入框
+        width:200px;
+        height: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        border: 0;
+        border-radius: 4px;
+    }
+
+    #certain {           //按钮
+        width: 70px;
+        height: 100%;
+        background: rgb(28, 28, 207);
+        border: 0;
+        float: right;
+        border-radius: 4px;
+    }
+}
+
+
+#digitron-container {       //包含所有数码管的大盒子
+    width: 200px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+
+    .lie {                  //对横向数码管进行设置
+        width: 150px;
+        height: 50px;
+        position: absolute;
+        background: gray;
+        margin-left: 25px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -50px;
+            display: block;
+            border: 25px solid transparent;
+            border-right-color: gray;
+
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 150px;
+            display: block;
+            border: 25px solid transparent;
+            border-left-color: gray;
+        }
+
+        // 对3个横向数码管的位置进行设置
+        &.one { 
+            left: 0;
+            top: 0;
+        }
+        &.four {
+            top: 500px;
+        }
+        &.seven {
+            top: 250px;
+        }
+    }
+
+    .stand {          //对竖向数码管进行设计
+        width: 50px;
+        height: 150px;
+        position: absolute;
+        background: gray;
+        margin-top: 25px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            border:25px solid transparent;
+            border-bottom-color: gray;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 150px;
+            border:25px solid transparent;
+            border-top-color: gray;
+        }
+
+        // 对4个竖向数码管的位置进行设计
+        &.two {
+            top:50px;
+            left:150px;
+        }
+        &.three {
+            top: 300px;
+            left: 150px;
+        }
+        &.five {
+            top: 300px;
+        }
+        &.six {
+            top: 50px;
+        }
+    }
+
+    //对输入的数值相应的数码管点亮
+    &.zero {
+        .first();
+        .second();
+        .third();
+        .sixth();
+        .fifth();
+        .fourth();
+    }
+    &.one {
+        .sixth();      //编号6的数码管点亮
+        .fifth();
+    }
+    &.two {
+        .first();
+        .second();
+        .seventh();
+        .fifth();
+        .fourth();
+    }
+    &.three {
+        .first();
+        .second();
+        .seventh();
+        .third();
+        .fourth();
+    }
+    &.four {
+        .sixth();
+        .seventh();
+        .second();
+        .third();
+    }
+    &.five {
+        .first();
+        .sixth();
+        .seventh();
+        .third();
+        .fourth();
+    }
+    &.six {
+        .sixth();
+        .fifth();
+        .fourth();
+        .third();
+        .seventh();
+    }
+    &.seven {
+        .first();
+        .second();
+        .third();
+    }
+    &.eight {
+        .first();
+        .second();
+        .third();
+        .sixth();
+        .fifth();
+        .fourth();
+        .seventh();
+    }
+    &.nine {
+        .first();
+        .second();
+        .third();
+        .sixth();
+        .seventh();
+    }
+}
+
+.onLie(@color:red) {       //横向数码管点亮时
+    background: @color;
+
+    &::before {
+        border-right-color: @color;
+    }
+    &::after {
+        border-left-color: @color;
+    }
+}
+
+.onStand(@color:red) {       //竖向数码管点亮时
+    background: @color;
+
+    &::before {
+        border-bottom-color: @color;
+    }
+    &::after {
+        border-top-color: @color;
+    }
+}
+
+//下面的都是当函数用，减少代码量
+.first {        //对应函数使编号1的数码管点亮
+    .one {
+        .onLie();
+    }
+}
+.second {
+    .two {
+        .onStand();
+    }
+}
+.third {
+    .three {
+        .onStand();
+    }
+}
+.fourth {
+    .four {
+        .onLie();
+    }
+}
+.fifth {
+    .five {
+        .onStand();
+    }
+}
+.sixth {
+    .six {
+        .onStand();
+    }
+}
+.seventh {
+    .seven {
+        .onLie();
+    }
+}

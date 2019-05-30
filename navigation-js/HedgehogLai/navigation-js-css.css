@@ -1,0 +1,328 @@
+/*背景颜色设置*/
+body{
+    background: #F4F4F4;
+}
+
+/*搜索栏外盒设置*/
+.search{
+    width: 624px;
+    height: 36px;
+    margin-left:650px ; 
+    margin-top: 90px; 
+    display:flex;
+}
+
+/*搜索框内容*/
+#search-content{
+        width: 480px;
+        height: 21px;;
+        margin-right: 20px;        
+        border: 1px solid #E7E7E7;
+        border-radius: 4px;
+        font-family: sans-serif;
+        font-size: 14px;
+        outline: none;
+        padding: 8px 16px;
+}
+#search-content:focus{
+    border: 1px solid #738BFF;
+}
+
+/*搜索按钮*/
+#search-button{
+        width: 120px;
+        height: 36px;
+        background: #3F5DEA;
+        color:white;
+        border-radius: 4px;
+        padding:0;
+        outline: none;
+        border:0px;
+}
+#search-button:hover{
+    background: #738BFF;
+}
+#search-button:active{
+    background: #1A33A6;
+}
+
+/*导航栏外盒*/
+.inline{
+    width: 1740px;
+    height: 100px;
+    font-size: 0;
+    margin-left: 300px;
+    margin-top: 20px;
+}
+
+/*我的收藏设置*/
+p{
+	font-family: PingFangSC-Medium sans-serif;
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: 0;
+    padding-top: 48px;
+    padding-left: 310px;
+    line-height: 25px;
+}
+
+/*导航盒外壳设置*/
+.content{
+	width: 310px;
+	height: 100px;
+	background: #FFFFFF;
+    margin-left: 10px;
+    border-radius: 4px;
+    display:inline-block;
+    margin-right: 10px;
+}
+.content:hover{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.10); 
+}
+.content:active{
+    background: #E4E4E4;
+}
+
+/*图标框设置*/
+.logo{
+	width: 100px;
+	height: 100px;
+	display:inline-block;
+}
+
+/*图标设置*/
+.logo img{
+	width: 30px;
+	background: #F4F4F4;
+	border-radius: 50px;
+	padding: 15px;
+	margin: 20px;	
+}
+
+/*文字介绍框设置*/
+.words{
+	display: inline-block;
+	width: 190px;
+	height: 90px;
+	font-size: 0;
+}
+
+/*文字标题设置*/
+.words p:first-of-type{
+    font-size: 14px;
+    width:190px;
+    height: 29px;
+    position: relative;
+    padding: 0;
+    margin:0;
+    overflow:hidden;
+    font-family: PingFangSC-Regular sans-serif;
+    color: #333333;
+    line-height: 20px;
+    margin: 5px;
+    line-height: 40px;
+   
+}
+
+/*文字介绍设置*/
+.words p:last-of-type{
+    width:190px;
+    height: 48px;
+    position: relative;
+    padding: 0;
+    margin:0;
+    overflow:hidden;
+    font-family: PingFangSC-Regular sans-serif;
+    font-size: 12px;
+    color: #C4C4C4;
+    letter-spacing: 0;
+    line-height: 27px;
+    padding-bottom: 4px;
+    margin: 5px;
+    line-height: normal;
+}
+
+/* 加号框设置*/
+#more{
+    background: #3F5DEA;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    position: fixed;
+    bottom: 48px;
+    right: 48px;
+    margin: 0;
+}
+
+/*加号设置*/
+#more p{
+    font-family: LucidaGrande sans-serif;
+    font-size: 32px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 64px;
+    display: inline-block;
+    padding: 0;
+    margin: 0 17px;
+    width: 26px;
+    height: 38px;
+}
+
+/*添加页隐藏*/
+#back-more{
+    display: none;
+    z-index: 1;
+    overflow:auto;                     
+}
+
+/* 新的背景设置 */
+.new-body{
+    width:100%;
+    height: 100%;
+    background:  rgba(0,0,0,0.50);
+    position: fixed;
+    /* opacity:0.5; */
+    top:0;
+    left:0;
+} 
+
+/* 添加框设置 */
+.more-content{
+   
+    background: #FFFFFF;
+    border-radius: 4px;
+    width: 480px;
+    height: 353px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -240px;
+} 
+
+/* 添加收藏 */
+h3{
+    font-family: PingFangSC-Medium sans-serif;
+    position: absolute;
+    color: #000;
+    line-height: 25px;
+    margin: 0px;
+    top: 20px;
+    left: 20px;  
+} 
+
+/* 导航描述 */
+.more-content-a1{
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    font-family: PingFangSC-Regular sans-serif;
+    font-size: 14px;
+    color: #333333;
+    margin: 0;
+    width: 80px;
+} 
+
+/* 第一个input框 */
+.more-content-input{
+    width: 405px;
+    height: 20px;;
+    margin-right: 20px;        
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 14px;
+    outline: none;
+    padding: 8px 16px;
+    position: absolute;
+    top: 95px;
+    left: 20px;
+} 
+
+/* 导航描述 */
+.more-content-a2{
+    position: absolute;
+    top:141px;
+    left: 20px;
+    font-family: PingFangSC-Regular sans-serif;
+    font-size: 14px;
+    color: #333333;
+    margin: 0;
+    width: 80px;
+} 
+
+/* 标题input框 */
+ .more-content-input2{
+    width: 405px;
+    height: 20px;;
+    margin-right: 20px;        
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 14px;
+    outline: none;
+    padding: 8px 16px;
+    position: absolute;
+    top: 173px;
+    left: 20px;
+} 
+
+/* 描述input框 */
+.more-content-a3{
+    position: absolute;
+    top: 217px;
+    left: 20px;
+    font-family: PingFangSC-Regular sans-serif;
+    font-size: 14px;
+    color: #333333;
+    margin: 0;
+    width: 80px;
+} 
+
+/* 网址input框 */
+.more-content-input3{
+    width: 405px;
+    height: 20px;;
+    margin-right: 20px;        
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 14px;
+    outline: none;
+    
+    padding: 8px 16px;
+    position: absolute;
+    top: 247px;
+    left: 20px;
+} 
+
+/* 确定按钮 */
+.more-content button:first-of-type{
+    position: absolute;
+    top: 297px;
+    left: 204px;
+    width: 120px;
+    height: 36px;
+    background: #3F5DEA;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular sans-serif;
+    outline: none;
+    border: 1px solid #E7E7E7;
+} 
+
+/* 取消按钮 */
+.more-content button:last-of-type{
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+    top: 297px;
+    left: 340px;
+    width: 120px;
+    height: 36px;
+    border-radius: 4px;
+    outline: none;
+}
+

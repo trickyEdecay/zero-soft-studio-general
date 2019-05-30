@@ -1,0 +1,251 @@
+
+        *{margin:0;padding:0;}
+        body {
+            background:#F4F4F4;
+        }
+        .margin-control {
+            margin:0 auto;
+            text-align: center;
+            margin-top: 90px;
+        }
+        .center-control {
+            margin:0 auto;
+            text-align: left;
+            display: block;
+        }
+
+
+        h2 {
+            font-size: 14px;
+            display: inline-block;
+            font-weight: normal;
+            height: 20px;
+            margin-bottom: 6px;
+        }
+        p {
+            font-size: 12px;
+            display: inline-block;
+            color:#C4C4C4;
+            line-height: 17px;
+        }
+        a {
+            display: inline-block;
+            width:310px;
+            height:100px;
+            background: white;
+            text-decoration: none;
+            color:black;
+            padding:20px;
+            box-sizing: border-box;
+            font-size: 0;
+            border-radius: 4px;
+        }
+        .title-name {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 18px;
+            height:25px;
+            line-height: 25px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .link-target {
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        img {
+            margin-right: 20px;
+            width:60px;
+            height: 60px;
+            border-radius: 50px;
+            background: #3F5DEA;
+            padding:15px;
+            box-sizing: border-box;
+        }
+        /*Flex布局*/
+
+       .link-sum {
+        margin:0 auto;
+        text-align: left;
+        display: block;
+        } 
+        .title-name {
+
+        }
+        .content-line {
+            margin: 0 auto;
+        }
+
+        .link-target {
+
+        }
+        .Flex-col {
+
+        }
+      .content-line a:hover {
+          background: #e4e4e4;
+      }  
+
+/*新增部分*/
+
+        /*占位符颜色控制，我百度的*/
+        ::-webkit-input-placeholder { /* WebKit browsers */ 
+            color: #C4C4C4; 
+            } 
+            :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+            color: #C4C4C4; 
+            } 
+            ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+            color: #C4C4C4; 
+            } 
+            :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+            color: #C4C4C4; 
+            }
+
+/*样式控制部分*/    
+    .search,.link-sum{
+        text-align: center;
+        font-size: 0;
+        /*margin-bottom: 40px;
+        height: 36px; */
+        margin:0 auto;
+    }
+    .title-name {
+        text-align: left;
+
+    }
+    
+
+    .search-input {
+        display: inline-block;
+        border:0;
+        width: 480px;
+        height: 36px;
+        box-sizing: border-box;
+        border:1px solid #e7e7e7;
+        padding: 8px 16px 8px 16px;
+        margin-right: 20px;
+        border-radius: 4px;
+       
+    }
+
+    .search-link {
+        display: inline-block;
+        font-size: 14px;
+        padding: 0;
+        border:0;
+        width: 120px;
+        height: 36px;
+        line-height: 36px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color:white;
+        background: #3F5DEA;
+    }
+    /*控制伪类样式*/
+    .search a:hover,.button-group .sure:hover,.add-favourite-item div:hover {
+        background: #738BFF;
+    }
+    .search a:active,.button-group .sure:active,.add-favourite-item div:active {
+        background: #1A33A6;
+    }
+    .button-group .cancle:hover {
+        background: rgb(172, 172, 172);
+    }
+    .button-group .cancle:active {
+        background: rgb(145, 139, 139);
+    }
+
+
+    .add-favourite {
+        position: absolute;
+        right: 48px;
+        bottom: 48px;
+        right: 25px;
+        width: 64px;
+        height: 64px;
+        box-sizing: border-box;
+        border-radius: 64px;
+        font-size: 32px;
+        color: #ffffff;
+        background: #3F5DEA;
+        line-height: 64px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+
+        #back{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.5); 
+            position: fixed;       
+            top: 0;
+            left: 0;
+            z-index: 999;      
+            display: none;
+        }
+
+        #login{
+        display: none;
+        width: 480px;
+        height: 350px;
+        box-sizing: border-box;
+        background-color: #fff;
+        padding: 20px;
+        position: fixed;
+        top:47%;
+        left:47%;
+        margin:-125px 0 0 -200px;
+        z-index: 1000;
+        font-size: 0;
+        } 
+
+        #login h1,h2,input{
+            display: block;
+            margin:0;
+        }
+
+        #login h1 {
+            margin-bottom: 20px;
+        }
+        #login h2 {
+            margin-bottom: 4px;
+        }
+        #login input {
+            margin-bottom: 16px;
+            border:0;
+            border:1px solid #E7E7E7;
+            width: 440px;
+            height: 36px;
+            box-sizing: border-box;
+            padding: 8px 16px 8px 16px;
+        }
+        #add-favourite-input3 {
+            margin-bottom: 20px;
+        }
+        #login button {
+            border:0;
+            width: 120px;
+            height: 36px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        .sure {
+            background: #3F5DEA;
+            color:#fff;
+            margin-right: 16px;
+        }
+        .cancel {
+            background: #FFFFFF;
+            color: #333;         
+        }
+        .button-group {
+            text-align: right;
+        }

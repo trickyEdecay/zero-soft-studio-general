@@ -1,0 +1,189 @@
+body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+@themeColor:#3F5DEA;
+
+.globalBorderRadius(@radius:4px;){
+    border-radius:@radius;
+
+}
+.wrap{
+    width:700px;
+    margin:0 auto;
+    margin-top:120px;
+}
+
+.module-title{
+    color:#333;
+    font-weight:bold;
+    font-size:18px;
+    margin-top:0;
+    margin-bottom:8px;
+}
+
+.input-container{
+    display:flex;
+    width:100%;
+    height:36px;
+
+    input{
+        padding:8px 16px;
+        flex:1;
+        .globalBorderRadius();
+        background:#fff;
+        border:1px solid #E7E7E7;
+
+        &::placeholder{
+            color:#E7E7E7;
+        }
+    }
+}
+
+// 默认按钮样式
+.default-btn{
+    color:#fff;
+    padding:4px 20px;
+    margin-left:20px;
+    height:36px;
+    background:@themeColor;
+    border:none;
+    .globalBorderRadius();
+}
+// 默认按钮样式 [完]
+
+.todo-categories{
+    color:#9B9B9B;
+    font-size:14px;
+    padding-left:20px;
+    font-weight: normal;
+    padding:8px;
+    margin:8px 0;
+    height:36px;
+}
+
+// 已完成的列表的样式
+.todo-list.done{
+    .todo-list-item{
+        p{
+            color:#b5b5b5;
+        }
+    }
+}
+// 已完成的列表的样式 [完]
+
+// 待办事项行样式
+.todo-list-item{
+    height:36px;
+    display: flex;
+    padding:8px;
+    align-items: center;
+    .globalBorderRadius();
+
+    &:hover{
+        .remove-btn{
+            display: flex;
+        }
+    }
+
+
+    p{
+        margin:0;
+        font-size:14px;
+        color:#333;
+        margin-left:8px;
+    }
+
+    .remove-btn{
+        display: none;
+        margin-left: auto;
+        justify-content: center;
+        align-items: center;
+        width:20px;
+        height:20px;
+        color:#333;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover{
+            color:#EA3F46;
+        }
+
+    }
+
+    &:hover{
+        background:#EBEBEB;
+    }
+
+}
+// 待办事项行样式 [完]
+
+// 默认的复选按钮
+.default-checkbox{
+    width:16px;
+    height:16px;
+    position: relative;
+
+    // 当复选按钮出现在已完成的待办事项里面
+    &.done{
+        .checkbox{
+            &:hover{
+                &+.checkbox-border{
+                    border-color:#b5b5b5;
+                }
+            }
+        }
+        .checkbox-border{
+            .checkbox-icon{
+                color:#b5b5b5;
+            }
+        }
+    }
+    // 当复选按钮出现在已完成的待办事项里面 [完]
+
+    .checkbox{
+        position: absolute;
+        top:0;
+        left:0;
+        margin:0;
+        width:100%;
+        height:100%;
+        opacity: 0;
+        cursor: pointer;
+
+        &:hover{
+            &+.checkbox-border{
+                border-color:@themeColor;
+            }
+        }
+
+        &:checked{
+            &+.checkbox-border{
+                .checkbox-icon{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .checkbox-border{
+        width:100%;
+        height:100%;
+        border:1px solid #EBEBEB;
+        .globalBorderRadius();
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:#fff;
+
+        .checkbox-icon{
+            display: none;
+            color:@themeColor;
+            font-size:14px;
+        }
+    }
+}
+// 默认的复选按钮 [完]

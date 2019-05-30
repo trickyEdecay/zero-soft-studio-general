@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <script src="lib/jquery-3.1.4.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="CSS/navigation-flex.css">    
+</head>
+<body>
+    <div class="margin-control">
+      <div class="center-control"> 
+        
+                  <div class="search">
+                    <input class="search-input" placeholder="百度一下">
+                    <a class="search-link" href="http://www.baidu.com">搜索</a>
+                  </div>
+                  <!-- search（完） -->
+                 <!-- <div class="try">   -->
+                  <div class="link-sum">
+                    <div class="title-name">
+                        <h1>我的收藏<h1>
+                    </div>
+                    <!-- title（完） -->     
+        <div class="content-line">
+                    <a class="link-target"  href="https://www.baidu.com/"><!--采用Flex布局-->
+                        <img src="ico/baidu.png">
+                      <div class="Flex-col">
+                        <h2>百度</h2><br>
+                        <p>百度，全球最大的中文搜索引擎，最大的中文网站</p>
+                      </div>
+                    </a>
+
+                    <a class="link-target"  href="https://www.baidu.com/"><!--采用Flex布局-->
+                        <img src="ico/weibo.png">
+                      <div class="Flex-col">
+                        <h2>微博</h2><br>
+                        <p>随时随地发现新鲜事！</p>
+                      </div>
+                    </a>
+
+                    <a class="link-target"  href="https://www.baidu.com/"><!--采用Flex布局-->
+                        <img src="ico/github.png">
+                      <div class="Flex-col">
+                        <h2>Github</h2><br>
+                        <p>Github是一个具有开源代码和实现代码共享平台的网页</p>
+                      </div>
+                    </a>
+                    <a class="link-target"  href="https://www.baidu.com/"><!--采用Flex布局-->
+                        <img src="ico/baidu.png">
+                      <div class="Flex-col">
+                        <h2>百度</h2><br>
+                        <p>百度，全球最大的中文搜索引擎，最大的中文网站</p>
+                      </div>
+                    </a>       
+                    <!-- 变得不居中了 -->
+        <!-- </div>
+           
+        <div class="content-line">    -->
+                        <a class="link-target"  href="https://www.baidu.com/"><!--采用Flex布局-->
+                            <img src="ico/baidu.png">
+                          <div class="Flex-col">
+                            <h2>百度</h2><br>
+                            <p>百度，全球最大的中文搜索引擎，最大的中文网站</p>
+                          </div>
+                        </a>
+                        <a class="link-target"  href="https://www.baidu.com/"><!--采用Flex布局-->
+                            <img src="ico/weibo.png">
+                          <div class="Flex-col">
+                            <h2>微博</h2><br>
+                            <p>随时随地发现新鲜事！</p>
+                          </div>
+                        </a>
+                        <a class="link-target"  href="https://www.baidu.com/"><!--采用Flex布局-->
+                            <img src="ico/github.png">
+                          <div class="Flex-col">
+                            <h2>Github</h2><br>
+                            <p>Github是一个具有开源代码和实现代码共享平台的网页</p>
+                          </div>
+                        </a>
+                        <a class="link-target"  href="https://www.baidu.com/"><!--采用Flex布局-->
+                            <img src="ico/baidu.png">
+                          <div class="Flex-col">
+                            <h2>百度</h2><br>
+                            <p>百度，全球最大的中文搜索引擎，最大的中文网站</p>
+                          </div>
+                        </a>      
+        </div>
+          <!--content-line（完）  -->
+                  </div>   
+                    <!--link-sum（完）  -->
+
+      
+      </div>
+      <!-- center-control（完） -->
+
+        <div class="add-favourite-item">
+                <div class="add-favourite" onclick="add()">
+                    +
+                </div> 
+        </div>
+        <!-- 添加+号部分（完） -->
+
+  </div>   
+  <!-- margin-control（完） -->
+
+      <div id="back"></div>
+      <!-- 隐藏的部分 --> 
+            <div id="login">
+              
+              <h1>添加收藏</h1>
+              <h2>导航标题</h2>
+              <input class="add-link-title-input" placeholder="百度">
+              <h2>导航描述</h2>
+              <input class="add-link-content-input" placeholder="百度，全球最大的中文搜索引擎，最大的中文网站">
+              <h2>导航链接</h2>
+              <input class="add-link-href-input" placeholder="www.baidu.com">
+              <div class="button-group">
+              <button class="sure" id="sure_button">确定</button>
+              <button class="cancle" onclick="cancle()">取消</button>
+              </div>
+
+            </div>        
+      <!-- 隐藏的部分（完） -->
+      
+
+          <script src="JS/main.js"></script>      
+</body>
+</html>
