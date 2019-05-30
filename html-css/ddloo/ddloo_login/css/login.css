@@ -1,81 +1,70 @@
-.login-img{
-    width: 20px;
-    height: 20px;
-    position: relative;
-    top: 5px;
-    left: 6px;
-    z-index: 5;
+*{
+    font-family: PingFangSC-Regular;
 }
-.divremember{
-    font-size: 0;
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(45, 81, 245);
+    overflow-x: hidden;
+}
+.login-head-wrap{
+    margin: 0 auto;
+    margin-top: 306px;
+    width: 350px;
+    background-color: #FFF;
+}
+.login-wrap-img{
     display: inline-block;
-    margin-top: 20px;
-    margin-left: 64px;
+    vertical-align: bottom;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin: 0 135px;
+    margin-top: 50px;
+    background-color:  #c4c4c4;
 }
-.labremember{
-    font-size: 13px;
+.login-wrap-content{
+    margin: 50px 35px;
+    padding-bottom: 70px;
 }
-.divforget{
+.login-content-title{
+    margin: 0;
+    color: #333;
+    font-family: PingFangSC-Medium;
+    font-size: 18px;
+}
+.login-content-input{
     display: inline-block;
     box-sizing: border-box;
-    margin-left: 195px;
-}
-.divlogin{
     margin-top: 15px;
-    padding-left: 66px;
+    width: 280px;
+    height: 36px;
+    padding: 8px;
+    border: 1px solid #C4C4C4;
+    border-radius: 4px;
 }
-#login-visimg{
-    width: 20px;
-    height: 15px;
-    position: relative;
-    z-index: 5;
-    left: -55px;
-    top: 5px;
+.login-content-submit{
     cursor: pointer;
-}
-#input{
-    position: relative;
-    z-index: 1;
-    padding-left: 27px;
-    left: -25px;
-}
-#password{
-    position: relative;
-    z-index: 1;
-    padding-left: 26px;
-    left: -25px;
-}
-#remember{
-    margin-bottom: 0;
-    vertical-align: bottom;
-}
-#login{
-    cursor: pointer;
+    width: 100%;
+    height: 36px;
+    margin-top: 30px;
+    background: #3F5DEA;
     border: 0;
-    border-radius: 5px;
-    border-color: rgb(33, 149, 202);
-    padding: 5px;
-    width: 120px;
-    background-color: rgb(33, 149, 202);
-    color: #fff;
-    font-size: 20px;
-    transition: background-color .3s;
+    border-radius: 4px;
+    color: #FFF;
+    outline: none;
 }
-#aregister{
-    display: inline-block;
+.tail{
+    margin-top: 15px;
+}
+.tail-a{
     text-decoration: none;
-    margin-left:70px; 
-    padding: 5px 40px;
-    border: 1px solid rgba(49, 48, 48, 0.541);
-    border-radius: 5px; 
-    font-size: 20px;
-    color: rgb(71, 69, 69);
-    transition: background-color .3s;
 }
-/*悬停事件*/
-#login:hover{
-    background-color: rgb(28, 180, 250);
+.forget{
+    float: left;
+    color: #c4c4c4;
 }
-#aregister:hover{
-    background-color: rgba(185, 177, 177, 0.767);
+.register{
+    float: right;
+    color: #3F5DEA;;
 }

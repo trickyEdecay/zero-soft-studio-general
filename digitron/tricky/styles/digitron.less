@@ -1,0 +1,493 @@
+html,body{
+    margin:0;
+}
+.main{
+    width:720px;
+    margin:100px auto;
+    display: flex;
+    align-items: center;
+}
+
+// 交通灯的灯体塑料颜色
+@lightBoxColor:#444;
+// 交通灯灭灯的颜色
+@lightBlack:#222;
+// 红灯的颜色
+@lightRed:#ff0037;
+// 黄灯的颜色
+@lightYellow:#f1be17;
+// 绿灯的颜色
+@lightGreen:#29b65f;
+// 红绿灯类前缀
+@trafficLightPrefix: traffic-light;
+
+// 红绿灯
+.@{trafficLightPrefix}-container{
+
+    position: relative;
+    // 交通灯的宽高
+    @lightHeight:60px;
+    width: @lightHeight * 3 + 20;
+    background: @lightBoxColor;
+    padding:10px;
+
+    display: flex;
+    border-radius:10px;
+    overflow: hidden;
+    justify-content: space-around;
+
+    &.red{
+        .@{trafficLightPrefix}:nth-of-type(1){
+            background:darken(@lightRed,5%);
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content:'';
+                position: absolute;
+                top: 8px;
+                width:@lightHeight;
+                height:@lightHeight;
+                border-radius:@lightHeight;
+                background:@lightRed;
+            }
+        }
+    }
+
+    &.yellow{
+        .@{trafficLightPrefix}:nth-of-type(2){
+            background:darken(@lightYellow,5%);
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content:'';
+                position: absolute;
+                top: 8px;
+                width:@lightHeight;
+                height:@lightHeight;
+                border-radius:@lightHeight;
+                background:@lightYellow;
+            }
+        }
+    }
+
+    &.green{
+        .@{trafficLightPrefix}:nth-of-type(3){
+            background:darken(@lightGreen,5%);
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content:'';
+                position: absolute;
+                top: 8px;
+                width:@lightHeight;
+                height:@lightHeight;
+                border-radius:@lightHeight;
+                background:@lightGreen;
+            }
+        }
+    }
+
+    .@{trafficLightPrefix}{
+            
+            width:@lightHeight;
+            height:@lightHeight;
+            border-radius:@lightHeight;
+            background:@lightBlack;
+    }
+}
+// 红绿灯 [完]
+
+// 管道
+.pipe{
+    width:40px;
+    height:20px;
+    background:linear-gradient(#eee,#aaa);
+}
+
+// 数码管类前缀
+@digitronPrefix: digitron;
+
+// 数码管
+.@{digitronPrefix}-container{
+    display: flex;
+    background:@lightBoxColor;
+    border-radius: 10px;
+    overflow: hidden;
+    width:100px;
+    justify-content: space-around;
+    padding:10px;
+
+    // 一个数字
+    .@{digitronPrefix}{
+        width:40px;
+        height:70px;
+        position: relative;
+        
+        // 每一个引脚的粗细
+        @pinWidth:8px;
+        // 每一个引脚的高度
+        @pinHeight:20px;
+
+        .lightOnH(@color:@lightRed){
+            background:@color;
+            &::after{
+                border-left-color: @color;
+            }
+            &::before{
+                border-right-color:@color;
+            }
+        }
+
+        .lightOnV(@color:@lightRed){
+            background:@color;
+            &::after{
+                border-top-color: @color;
+            }
+            &::before{
+                border-bottom-color:@color;
+            }
+        }
+
+        &.green{
+            .renderLight(@lightGreen);
+        }
+        // 默认是红色的字体
+        .renderLight();
+
+        // 这个函数用于生成数字1-9应该开启哪些引脚的灯，参数是设置颜色
+        .renderLight(@color:@lightRed){
+            &.num-0{
+                .@{digitronPrefix}-a{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-b{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-c{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-d{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-e{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-f{
+                    .lightOnV(@color);
+                }
+                // .@{digitronPrefix}-g{
+                //     .lightOnH(@color);
+                // }
+            }
+
+            &.num-1{
+                // .@{digitronPrefix}-a{
+                //     .lightOnH(@color);
+                // }
+                .@{digitronPrefix}-b{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-c{
+                    .lightOnV(@color);
+                }
+                // .@{digitronPrefix}-d{
+                //     .lightOnH(@color);
+                // }
+                // .@{digitronPrefix}-e{
+                //     .lightOnV(@color);
+                // }
+                // .@{digitronPrefix}-f{
+                //     .lightOnV(@color);
+                // }
+                // .@{digitronPrefix}-g{
+                //     .lightOnH(@color);
+                // }
+            }
+    
+    
+            &.num-2{
+                .@{digitronPrefix}-a{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-b{
+                    .lightOnV(@color);
+                }
+                // .@{digitronPrefix}-c{
+                //     .lightOnV(@color);
+                // }
+                .@{digitronPrefix}-d{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-e{
+                    .lightOnV(@color);
+                }
+                // .@{digitronPrefix}-f{
+                //     .lightOnV(@color);
+                // }
+                .@{digitronPrefix}-g{
+                    .lightOnH(@color);
+                }
+            }
+    
+            &.num-3{
+                .@{digitronPrefix}-a{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-b{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-c{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-d{
+                    .lightOnH(@color);
+                }
+                // .@{digitronPrefix}-e{
+                //     .lightOnV(@color);
+                // }
+                // .@{digitronPrefix}-f{
+                //     .lightOnV(@color);
+                // }
+                .@{digitronPrefix}-g{
+                    .lightOnH(@color);
+                }
+            }
+    
+            &.num-4{
+                // .@{digitronPrefix}-a{
+                //     .lightOnH(@color);
+                // }
+                .@{digitronPrefix}-b{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-c{
+                    .lightOnV(@color);
+                }
+                // .@{digitronPrefix}-d{
+                //     .lightOnH(@color);
+                // }
+                // .@{digitronPrefix}-e{
+                //     .lightOnV(@color);
+                // }
+                .@{digitronPrefix}-f{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-g{
+                    .lightOnH(@color);
+                }
+            }
+    
+    
+            &.num-5{
+                .@{digitronPrefix}-a{
+                    .lightOnH(@color);
+                }
+                // .@{digitronPrefix}-b{
+                //     .lightOnV(@color);
+                // }
+                .@{digitronPrefix}-c{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-d{
+                    .lightOnH(@color);
+                }
+                // .@{digitronPrefix}-e{
+                //     .lightOnV(@color);
+                // }
+                .@{digitronPrefix}-f{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-g{
+                    .lightOnH(@color);
+                }
+            }
+    
+    
+            &.num-6{
+                .@{digitronPrefix}-a{
+                    .lightOnH(@color);
+                }
+                // .@{digitronPrefix}-b{
+                //     .lightOnV(@color);
+                // }
+                .@{digitronPrefix}-c{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-d{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-e{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-f{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-g{
+                    .lightOnH(@color);
+                }
+            }
+    
+            &.num-7{
+                .@{digitronPrefix}-a{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-b{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-c{
+                    .lightOnV(@color);
+                }
+                // .@{digitronPrefix}-d{
+                //     .lightOnH(@color);
+                // }
+                // .@{digitronPrefix}-e{
+                //     .lightOnV(@color);
+                // }
+                // .@{digitronPrefix}-f{
+                //     .lightOnV(@color);
+                // }
+                // .@{digitronPrefix}-g{
+                //     .lightOnH(@color);
+                // }
+            }
+    
+    
+            &.num-8{
+                .@{digitronPrefix}-a{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-b{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-c{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-d{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-e{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-f{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-g{
+                    .lightOnH(@color);
+                }
+            }
+    
+    
+            &.num-9{
+                .@{digitronPrefix}-a{
+                    .lightOnH(@color);
+                }
+                .@{digitronPrefix}-b{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-c{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-d{
+                    .lightOnH(@color);
+                }
+                // .@{digitronPrefix}-e{
+                //     .lightOnV(@color);
+                // }
+                .@{digitronPrefix}-f{
+                    .lightOnV(@color);
+                }
+                .@{digitronPrefix}-g{
+                    .lightOnH(@color);
+                }
+            }
+        }
+
+        // 横向的引脚
+        .@{digitronPrefix}-pin-h{
+
+            position: absolute;
+            background:@lightBlack;
+            width:@pinHeight;
+            height:@pinWidth;
+
+            &::after{
+                content:'';
+                position: absolute;
+                right:-@pinWidth;
+                border:@pinWidth/2 solid transparent;
+                border-left-color: @lightBlack;
+            }
+
+            &::before{
+                content:'';
+                position: absolute;
+                left:-@pinWidth;
+                border:@pinWidth/2 solid transparent;
+                border-right-color: @lightBlack;
+            }
+        }
+
+        // 纵向的引脚
+        .@{digitronPrefix}-pin-v{
+
+            position: absolute;
+            background:@lightBlack;
+            width:@pinWidth;
+            height:@pinHeight;
+
+            &::after{
+                content:'';
+                position: absolute;
+                bottom:-@pinWidth;
+                border:@pinWidth/2 solid transparent;
+                border-top-color: @lightBlack;
+            }
+
+            &::before{
+                content:'';
+                position: absolute;
+                top:-@pinWidth;
+                border:@pinWidth/2 solid transparent;
+                border-bottom-color: @lightBlack;
+            }
+        }
+
+        // 下面就是每一根引脚的具体位置
+        .@{digitronPrefix}-a{
+            top:0;
+            left: 10px;
+        }
+
+        .@{digitronPrefix}-b{
+            right:0;
+            top:10px;
+        }
+
+        .@{digitronPrefix}-c{
+            right:0;
+            top: 40px;
+        }
+
+        .@{digitronPrefix}-d{
+            left: 10px;
+            bottom:0;
+        }
+
+        .@{digitronPrefix}-e{
+            left: 0;
+            top: 40px;
+        }
+        
+        .@{digitronPrefix}-f{
+            left: 0;
+            top: 10px;
+        }
+
+        .@{digitronPrefix}-g{
+            left: 10px;
+            top: 30px;
+        }
+        // 每一根引脚的具体位置 [完]
+
+    }
+}
