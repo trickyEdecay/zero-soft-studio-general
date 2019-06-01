@@ -41,8 +41,10 @@ img{
 }
 /*我的收藏*/
 .collection-wrap{
-    margin-left: 310px;
+    margin-left:50%;
     margin-top: 40px;
+    transform: translateX(-50%);
+    width: 1320px;
     /* margin-top: 160px; */
 }
 .title{
@@ -117,8 +119,9 @@ img{
 /*添加收藏弹窗*/
 .add-wrap{
     position: absolute;
-    margin: 0 35%;
-    margin-top: 340px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 480px;
     background-color: #FFF;
     border-radius: 4px;
