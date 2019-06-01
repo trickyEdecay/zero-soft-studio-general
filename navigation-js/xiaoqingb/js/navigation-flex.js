@@ -236,7 +236,7 @@ function addtodoissue(title){
                 </button>\
             </div>');
             // 绑定checkbox按钮事件
-            $(".issue-check-box-nodone:not(.done)").click(function(){
+            $(".issue-check-box-nodone:not(.done)").last().click(function(){
                 turnToDone($(this));
             })
         }
