@@ -319,7 +319,6 @@ function turnToDone($checkbox){
     addIssueDone(title)
 }
 function turnToNoDone($checkbox){
-    console.log($checkbox.parent().next().html());
     var title =$checkbox.parent().next().html();
     $checkbox.parent().parent().remove();
     addtodoissue(title)

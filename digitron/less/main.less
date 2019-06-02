@@ -1,0 +1,239 @@
+// 输入框样式
+.num-input{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 370px;
+    border: 1px gray solid;     
+}
+
+
+// 四个数码管的大框
+.digitron-box{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 200px;
+}
+
+
+// 单个数码管的框框
+.digitron-frame{
+    display: inline-block;
+    position: relative;
+    left:100px;
+    top:100px;
+    height: 160px;
+    width: 90px;
+    // 横向三个管
+    #digitron-h{
+        height: 160px;
+        width: 105px;
+        position: absolute;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        // 整一条二极管
+        .tube{
+            height: 20px;
+            font-size: 0;
+            &::before{
+                content: "";
+                height: 0;
+                width: 0;
+                display: inline-block;
+                border: 10px solid transparent;
+                border-right-color: black;
+                margin-left: 2.2px;
+            }
+            // 二极管中间的div
+            .center-tube{
+                display: inline-block;
+                background-color: black;
+                height: 20px;
+                width: 50px;
+            }
+            &::after{
+                content: "";
+                height: 0;
+                width: 0;
+                display: inline-block;
+                border: 10px solid transparent;
+                border-left-color: black;
+            }
+        }
+    }
+    // 纵向四个管
+    #digitron-v{
+        height: 160px;
+        width: 95px;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .c,.e{
+            margin-top: -20px;
+        }
+        .b,.c{
+            margin-left: auto;
+        }
+        // 整一条二极管
+        .tube{
+            width: 20px;
+            height: 90px;
+            font-size: 0;
+            &::before{
+                content: "";
+                height: 0;
+                width: 0;
+                display: inline-block;
+                border: 10px solid transparent;
+                border-bottom-color: black;
+            }
+            // 二极管中间的div
+            .center-tube{
+                display: inline-block;
+                background-color: black;
+                height: 50px;
+                width: 20px;
+            }
+            &::after{
+                content: "";
+                height: 0;
+                width: 0;
+                display: inline-block;
+                border: 10px solid transparent;
+                border-top-color: black;
+            }
+        }
+    }
+    &.show-0{
+        #digitron-h{
+            .a,.d{
+                .pnp-h-light();
+            }}
+            #digitron-v{    
+                .b,.c,.e,.f{
+                    .pnp-v-light();
+                }
+            }
+        }
+    &.show-1{
+        #digitron-v{
+            .b,.c{
+                .pnp-v-light();
+            }
+        }
+    }
+    &.show-2{
+        #digitron-h{
+            .a,.d,.g{
+                .pnp-h-light();
+            }}
+            #digitron-v{  
+                .b,.e{
+                    .pnp-v-light();
+                }
+            }
+        }
+    &.show-3{
+        #digitron-h{
+            .a,.d,.g{
+                .pnp-h-light();
+            }}
+            #digitron-v{  
+                .b,.c{
+                    .pnp-v-light();
+                }
+            }
+        }
+    &.show-4{
+        #digitron-h{
+            .g{
+                .pnp-h-light();
+            }}
+            #digitron-v{  
+                .b,.c,.f{
+                    .pnp-v-light();
+                }
+            }
+        }
+    &.show-5{
+        #digitron-h{
+            .a,.d,.g{
+                .pnp-h-light();
+            }}
+            #digitron-v{  
+                .c,.f{
+                    .pnp-v-light();
+                }
+            }
+        }
+    &.show-6{
+        #digitron-h{
+            .a,.d,.g{
+                .pnp-h-light();
+            }}
+            #digitron-v{  
+                .c,.e,.f{
+                    .pnp-v-light();
+                }
+            }
+        }
+    &.show-7{
+        #digitron-h{
+            .a{
+                .pnp-h-light();
+            }}
+            #digitron-v{  
+                .b,.c{
+                    .pnp-v-light();
+                }
+            }
+        }
+    &.show-8{
+        #digitron-h{
+            .a,.d,.g{
+                .pnp-h-light();
+            }}
+            #digitron-v{  
+                .b,.c,.e,.f{
+                    .pnp-v-light();
+                }
+            }
+        }
+    &.show-9{
+        #digitron-h{
+            .a,.d,.g{
+                .pnp-h-light();
+            }}
+            #digitron-v{  
+                .b,.c,.f{
+                    .pnp-v-light();
+                }
+            }
+        }
+}
+@PNPlight:red;
+.pnp-h-light(){
+    .center-tube{
+        background-color:@PNPlight;
+        }
+        &::before{
+        border-right-color: @PNPlight;
+        }
+        &::after{
+        border-left-color: @PNPlight;
+        }
+}
+.pnp-v-light(){
+    .center-tube{
+    background-color:@PNPlight;
+    }    
+    &::before{
+    border-bottom-color: @PNPlight;
+    }
+    &::after{
+    border-top-color: @PNPlight;
+    }
+}

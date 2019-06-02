@@ -1,0 +1,78 @@
+html {
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+#slide-box {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+#slide-box .change-btn {
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 30px;
+  background-color: black;
+  opacity: 0.5;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+#slide-box .change-btn:hover {
+  opacity: 0.6;
+}
+#slide-box .btn-right {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#slide-box .btn-left {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#slide-box .inner-container {
+  transition: all ease-in-out 0.5s;
+  width: 1600px;
+  height: 200px;
+  font-size: 0;
+}
+#slide-box .inner-container .pic {
+  margin: 0;
+  float: left;
+  height: 200px;
+  width: 400px;
+}
+#slide-box #indicator-box {
+  position: absolute;
+  left: 175px;
+  bottom: 20px;
+  width: 50px;
+  height: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#slide-box #indicator-box .indicator {
+  opacity: 0.4;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+#slide-box #indicator-box .indicator-on {
+  transition: all 0.5s;
+  background-color: #1a7964;
+}
