@@ -5,119 +5,178 @@
     <meta charset="UTF-8">
     <title>收藏页面</title>
     <style>
-        p{
-        
-           width:60px;
-           height: 60px;
-           border-radius: 50px;
-          background: rgb(0, 89, 255);
-          margin: 20px 20px 20px 20px;
-          float: left;
-          text-align: center;
-         line-height: 60px;
+        .circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            background: #3F5DEA;
+            text-align: center;
+            line-height: 90px;
         }
+
         h1 {
-          
             width: 72px;
             height: 25px;
             font-size: 18px;
-           
             color: #333333;
-          padding: 160px 1538px 20px 310px;
-
-
-
+            margin: 160px 1538px 20px 310px;
         }
 
-        a {
+        span {
             display: inline-block;
-            width:28 px;
+            width: 28px;
             height: 20px;
             font-size: 14px;
             color: #000;
-          margin: 20px 182px 6px 0px;
-        
+            margin: 0px 182px 6px 0px;
+
         }
 
-        h2 {
+        p {
             display: inline-block;
             font-size: 12px;
             color: #c4c4c4;
-            width:190px;
-            height:34px;
-           margin: 6px 20px 20px 0px;
+            width: 190px;
+            height: 34px;
+            margin: 0;
         }
 
-        div div {
+        a {
             display: inline-block;
             background: white;
             border-radius: 4px;
             width: 310px;
             height: 100px;
             margin-right: 20px;
-           
-
-
-        }
-        div div:hover{
-            background: rgb(154, 194, 240);
-            cursor:pointer;  
+            vertical-align: bottom;
         }
 
-        .div {
-           margin: 20px 80px 20px 100px;
+        a:hover {
+            background: #9CC5F3;
+            cursor: pointer;
         }
-        img{
-            width:30px;
+
+        .main-wrap {
+            margin: 20px auto 20px 310px;
+            width: 1320px;
+            height: 100pX;
+            font-size: 0;
+        }
+
+        img {
+            width: 30px;
             height: 30px;
         }
-        body{
+
+        body {
             background: #f4f4f4;
+        }
+
+        .left {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            margin: 20px 0 20px 20px;
+            vertical-align: bottom;
+        }
+
+        .right {
+            display: inline-block;
+            width: 190px;
+            height: 60px;
+            margin: 20px;
         }
     </style>
 </head>
 
 <body>
-    
     <h1>我的收藏</h1>
-    <div class="div">
-        <div onclick="window.open('http://baidu.com');" >
-             
-             <p><img src="icon_百度logo.png"></p>   <a href="http://baidu.com" target="_blanck" >百度</a>
-            <h2>百度，全球最大的中文搜素引擎，最大的中文网站</h2>
-        </div>
-        <div onclick="window.open('http://baidu.com');">
-                <p><img src="weibo.png"></p> <a href="http://baidu.com" target="_blanck">微博</a>
-            <h2>百度，全球最大的中文搜素引擎，最大的中文网站</h2>
-        </div>
-        <div onclick="window.open('http://baidu.com');" >
-                <p><img src="icon_百度logo.png"></p> <a href="http://baidu.com" target="_blanck">百度</a>
-            <h2>百度，全球最大的中文搜素引擎，最大的中文网站</h2>
-        </div>
-        <div onclick="window.open('http://baidu.com');">
-                <p><img src="weibo.png"></p> <a href="http://baidu.com" target="_blanck">微博</a>
-            <h2>百度，全球最大的中文搜素引擎，最大的中文网站</h2>
-        </div>
+    <div class="main-wrap">
+        <a href="http://baidu.com" target="_blanck">
+            <div class="left">
+                <div class="circle"><img src="baidu.png"></div>
+            </div>
+            <div class="right">
+                <span>百度</span>
+                <p>百度，全球最大的中文搜素引擎，最大的中文网站</p>
+            </div>
+        </a>
+
+        <a href="https://weibo.com/" target="_blanck">
+            <div class="left">
+                <div class="circle"><img src="weibo.png"></div>
+            </div>
+            <div class="right">
+                <span>微博</span>
+                <p>随时随地发现新鲜事！</p>
+            </div>
+        </a>
+
+        <a href="https://github.com/" target="_blanck">
+            <div class="left">
+                <div class="circle"><img src="github.png"></div>
+            </div>
+            <div class="right">
+                <span>gitHub</span>
+                <p>gitHub是一个面向开源及私有软件项目的托管平台</p>
+            </div>
+        </a>
+
+        <a href="https://weibo.com/" target="_blanck">
+            <div class="left">
+                <div class="circle"><img src="weibo.png"></div>
+            </div>
+            <div class="right">
+                <span>微博</span>
+                <p>随时随地发现新鲜事！</p>
+            </div>
+        </a>
     </div>
-    <div class="div">
-        <div onclick="window.open('http://baidu.com');">
-                <p><img src="icon_百度logo.png"></p> <a href="http://baidu.com" target="_blanck">百度</a>
-            <h2>百度，全球最大的中文搜素引擎，最大的中文网站</h2>
-        </div>
-        <div onclick="window.open('http://baidu.com');">
-                <p><img src="weibo.png"></p>  <a href="http://baidu.com" target="_blanck">微博</a>
-            <h2>百度，全球最大的中文搜素引擎，最大的中文网站</h2>
-        </div>
-        <div onclick="window.open('http://baidu.com');">
-                <p><img src="icon_百度logo.png"></p> <a href="http://baidu.com" target="_blanck">百度</a>
-            <h2>百度，全球最大的中文搜素引擎，最大的中文网站</h2>
-        </div>
-        <div onclick="window.open('http://baidu.com');">
-                <p><img src="weibo.png"></p>  <a href="http://baidu.com" target="_blanck">微博</a>
-            <h2>百度，全球最大的中文搜素引擎，最大的中文网站</h2>
-        </div>
+
+    <div class="main-wrap">
+        <a href="http://baidu.com" target="_blanck">
+            <div class="left">
+                <div class="circle"><img src="baidu.png"></div>
+            </div>
+
+            <div class="right">
+                <span>百度</span>
+                <p>百度，全球最大的中文搜素引擎，最大的中文网站</p>
+            </div>
+        </a>
+
+        <a href="https://weibo.com/" target="_blanck">
+            <div class="left">
+                <div class="circle"><img src="weibo.png"></div>
+            </div>
+            <div class="right">
+                <span>微博</span>
+                <p>随时随地发现新鲜事！</p>
+            </div>
+        </a>
+
+        <a href="https://github.com/" target="_blanck">
+            <div class="left">
+                <div class="circle"><img src="github.png"></div>
+            </div>
+            <div class="right">
+                <span>gitHub</span>
+                <p>gitHub是一个面向开源及私有软件项目的托管平台</p>
+            </div>
+        </a>
+
+        <a href="https://weibo.com/" target="_blanck">
+            <div class="left">
+                <div class="circle"><img src="weibo.png"></div>
+            </div>
+            <div class="right">
+                <span>微博</span>
+                <p>随时随地发现新鲜事！</p>
+            </div>
+        </a>
 
     </div>
+
 </body>
 
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html charset=utf-8">
+        <link rel="stylesheet" href="css/navigation.css" type="text/css">
+        
+    </head>
+    <body>
+        <div class="head">
+            <input class="input" type="text" placeholder="百度一下">
+            <button class="btn">搜索</button>
+        </div>
+        <div class="collection-wrap">
+            <h3 class="title">我的收藏</h3>
+            <div class="link">
+                <div>
+                <a class="link-a" href="https//www.baidu.com">
+                    <div class="storage">
+                        <img src="img/百度.png" alt="">
+                    </div>
+                    <div class="content">
+                        <span class="content-title">百度</span>
+                        <span class="content-text">百度,全球最大的中文搜索引擎,最大的中文网站</span>
+                    </div>
+                </a>
+                </div>
+                <a class="link-a" href="https//www.baidu.com">
+                    <div class="storage">
+                        <img src="img/百度.png" alt="">
+                    </div>
+                    <div class="content">
+                        <span class="content-title">百度</span>
+                        <span class="content-text">百度,全球最大的中文搜索引擎,最大的中文网站</span>
+                    </div>
+                </a>
+                <a class="link-a" href="https//www.baidu.com">
+                    <div class="storage">
+                        <img src="img/百度.png" alt=""> 
+                    </div>
+                    <div class="content">
+                        <span class="content-title">百度</span>
+                        <span class="content-text">百度,全球最大的中文搜索引擎,最大的中文网站</span>
+                    </div>
+                </a>
+                <a class="link-a" href="https//www.baidu.com">
+                    <div class="storage">
+                        <img src="img/百度.png" alt="">
+                    </div>
+                    <div class="content">
+                        <span class="content-title">百度</span>
+                        <span class="content-text">百度,全球最大的中文搜索引擎,最大的中文网站</span>
+                    </div>
+                </a>
+                <a class="link-a" href="https//www.baidu.com">
+                    <div class="storage">
+                        <img src="img/百度.png" alt="">
+                    </div>
+                    <div class="content">
+                        <span class="content-title">百度</span>
+                        <span class="content-text">百度,全球最大的中文搜索引擎,最大的中文网站</span>
+                    </div>
+                </a>
+                <a class="link-a" href="https//www.baidu.com">
+                    <div class="storage">
+                        <img src="img/百度.png" alt="">
+                    </div>
+                    <div class="content">
+                        <span class="content-title">百度</span>
+                        <span class="content-text">百度,全球最大的中文搜索引擎,最大的中文网站</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="add-wrap-btn" onclick="add()">
+            <img class="add-img" src="img/加号.png">
+        </div>
+        <div id="add">
+            <div class="add-wrap">
+                <div class="add-content">
+                    <h3 class="title" style="color:#000;">添加收藏
+                        <span id="errorInformation"></span>
+                    </h3>
+                    <div class="add-content-div">
+                        <h6>导航标题</h6>
+                        <input id="nav-title" class="input add-input" type="text" placeholder="百度" onfocus="errorHide()">
+                    </div>
+                    <div class="add-content-div">
+                        <h6>导航描述</h6>
+                        <input id="nav-describe" class="input add-input" type="text" placeholder="百度,全球最大的中文搜索引擎、最大的中文网站" onfocus="errorHide()">
+                    </div>
+                    <div class="add-content-div">
+                        <h6>导航链接</h6>
+                        <input id="nav-link" class="input add-input" type="text" placeholder="www.baidu.com" onfocus="errorHide()">
+                    </div>
+                    <button class="btn add-btn-cancel" onclick="hide()">取消</button>
+                    <button class="btn add-btn-determine" onclick="add2()">确定</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/add.js"></script>
+    </body>
+</html>

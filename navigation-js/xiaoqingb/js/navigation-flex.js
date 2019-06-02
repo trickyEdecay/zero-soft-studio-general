@@ -323,7 +323,6 @@ function turnToNoDone($checkbox){
     $checkbox.parent().parent().remove();
     addtodoissue(title)
 }
-
 // 绑定完成与未完成事项转换
 $(".issue-check-box-nodone:not(.done)").click(function(){
     turnToDone($(this));
