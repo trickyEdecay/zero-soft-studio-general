@@ -2,7 +2,9 @@
 @pictureWith:400px;
 @pictureheight:200px;
 
-
+*{
+    box-sizing: border-box;
+}
 .layout-container{
     margin: 100px auto;
     width: @pictureWith;
@@ -11,73 +13,68 @@
     position: relative;
     display: flex;
     align-items: center;
-    /* 左右两个位置 */
+    /* 左右两个按钮 */
     .left-btn{
         position: absolute;
         left: 0;
         top:70px;
+        z-index: 1;
+        width: 30px;
+        height: 60px;
+        background: #000;
+        opacity: .2;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
-        .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::before{
+            content: "";
+            width: 5px;
+            height: 7px;
+            background: #fff;
             transform: skew(-20deg);
         }
-        .bottom{
+        &::after{
+            content: "";
+            width: 5px;
+            height: 7px;
+            background: #fff;
             transform: skew(20deg);
         }
     }
     .rigth-btn{
         position: absolute;
-        top: 70px;
         right: 0;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        .top{
-            transform: skew(20deg);
-        }
-        .bottom{
-            transform: skew(-20deg);
-        }
-        
-    }
-    /* 左右两个位置完 */
-
-
-    /* 左右两个样式 */
-    .pager{
-        
+        top:70px;
         z-index: 1;
         width: 30px;
         height: 60px;
         background: #000;
-        
-        
+        opacity: .2;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .top{
+        &::before{
+            content: "";
             width: 5px;
             height: 7px;
-            
             background: #fff;
-
+            transform: skew(20deg);
         }
-        .bottom{
+        &::after{
+            content: "";
             width: 5px;
             height: 7px;
-            
             background: #fff;
-
+            transform: skew(-20deg);
         }
-        &:hover{
-            background: #4A90E2;
-        }
-       
     }
-
-    /* 左右两个样式完 */
-
-
+    /* 左右两个按钮完 */
 
     /* 移动容器得样式 */
     .inner-container{
@@ -113,21 +110,11 @@
             &:hover{
                 background: #4A90E2;
             }
-            &.spot1{
+            &.active{
                 background: #4A90E2;
             }
-            &.spot2{
-                background: #4A90E2;
-            }
-            &.spot3{
-                background: #4A90E2;
-            }
-            
         }
-
     }
 }
 
-.indicator-on{
-    background: #4A90E2;
-}
+
