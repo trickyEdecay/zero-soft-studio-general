@@ -1,0 +1,232 @@
+.submit-num{
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.digitron-x-container{
+    
+    width: 80px;
+    height:20px;
+    margin: 10px 20px;
+
+    .horizontal{
+        @dark-color: gray;
+        width: 80px;
+        height: 20px;
+        background: @dark-color;
+        position: absolute;
+
+        &::before{
+            .change();
+            border-right-color: @dark-color;  
+            left: -20px;
+        }
+
+        &::after{
+            .change();
+            border-left-color: @dark-color;     
+            left: 60px;
+        }
+
+    }
+}
+
+
+#digitron-main-container{
+
+    font-size: 0;
+
+    .digitron-y-container{
+        
+        width: 20px;
+        height: 80px;
+        display: inline-block;
+        font-size: 0;
+        margin-right: 80px;
+
+        .vertical{
+            @dark-color: gray;
+            width: 20px;
+            height: 80px;
+            background: @dark-color;
+
+            &::before{
+                .change();
+                border-bottom-color:@dark-color;  
+                top: -20px;
+            }
+
+            &::after{
+                .change();
+                border-top-color: @dark-color;     
+                top: 60px;
+            }
+
+        }
+    }
+
+}
+
+#digitron-main-container{
+
+    &.num0{
+        .a();
+        .b();
+        .c();
+        .d();
+        .e();
+        .f();
+    }
+
+    &.num1{
+        .b();
+        .c();
+    }
+
+    &.num2{
+        .a();
+        .b();
+        .g();
+        .e();
+        .d();
+    }
+
+    &.num3{
+        .a();
+        .b();
+        .g();
+        .c();
+        .d();
+    }
+
+    &.num4{
+        .f();
+        .b();
+        .g();
+        .c();
+    }
+
+    &.num5{
+        .a();
+        .f();
+        .g();
+        .c();
+        .d();
+    }
+
+    &.num6{
+        .a();
+        .f();
+        .g();
+        .e();
+        .c();
+        .d();
+    }
+
+    &.num7{
+        .a();
+        .b();
+        .c();
+    }
+
+    &.num8{
+        .a();
+        .f();
+        .b();
+        .g();
+        .e();
+        .c();
+        .d();
+    }
+
+    &.num9{
+        .a();
+        .f();
+        .b();
+        .g();
+        .c();
+        .d();
+    }
+
+}
+
+.change(){
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    position: relative;
+}
+
+.onhorizon(){
+    
+    @light-color:red;
+    background: @light-color;
+
+    &::before{
+        border-right-color: @light-color;  
+    }
+
+    &::after{
+        border-left-color: @light-color;     
+    }
+
+}
+
+.onvertical(){
+
+    @light-color: red;
+    background: @light-color;
+
+    &::before{
+        border-bottom-color: @light-color;  
+    }
+
+    &::after{
+        border-top-color: @light-color;     
+    }
+
+}
+
+.a(){
+    .digitron-a{
+        .onhorizon();
+    }
+}
+
+.f(){
+    .digitron-f{
+        .onvertical();
+    }
+}
+
+.b(){
+    .digitron-b{
+        .onvertical();
+    }
+}
+
+.g(){
+    .digitron-g{
+        .onhorizon();
+    }
+}
+
+.e(){
+    .digitron-e{
+        .onvertical();
+    }
+}
+
+.c(){
+    .digitron-c{
+        .onvertical();
+    }
+}
+
+.d(){
+    .digitron-d{
+        .onhorizon();
+    }
+}
