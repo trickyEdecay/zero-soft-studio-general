@@ -12,6 +12,23 @@ function add(){
     }, 20);
     //add.style.height = "100%";
 }
+//刷新输入框
+function refresh(){
+    var reTitle = document.getElementById("nav-title");
+    var reDescribe = document.getElementById("nav-describe");
+    var reLink = document.getElementById("nav-link");
+    reTitle.value = "";
+    reDescribe.value = "";
+    reLink.value = "";
+    // var addTextEle = document.getElementsByClassName("add-input");
+    // for(var i = 0; i < 3; i++)
+    //     addTextEle[i].value = "";
+}
+//add光标事件,将error隐藏起来
+function errorHide(){
+    var errorEle = document.getElementById("errorInformation");
+    errorEle.style.opacity = "0";
+}
 //隐藏“添加收藏”
 function hide(){
     var add = document.getElementById("add");
@@ -58,20 +75,3 @@ function add2(){
 // window.onscroll = function(){
 
 // }
-//刷新输入框
-function refresh(){
-    var reTitle = document.getElementById("nav-title");
-    var reDescribe = document.getElementById("nav-describe");
-    var reLink = document.getElementById("nav-link");
-    reTitle.value = "";
-    reDescribe.value = "";
-    reLink.value = "";
-    // var addTextEle = document.getElementsByClassName("add-input");
-    // for(var i = 0; i < 3; i++)
-    //     addTextEle[i].value = "";
-}
-//add光标事件,将error隐藏起来
-function errorHide(){
-    var errorEle = document.getElementById("errorInformation");
-    errorEle.style.opacity = "0";
-}
