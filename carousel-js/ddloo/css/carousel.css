@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* 图片 */
+.wrap{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15%;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+}
+.wrap-img{
+    width: 400%;
+    height: 100%;
+    transition: transform .5s ease;
+}
+.wrap-img img{
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+/* 图片按钮 */
+.wrap-btn{
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    color: aquamarine;
+    text-align: center;
+}
+.wrap-btn button{
+    outline: none;
+    background: #FFFFFF;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    font-size: 0;
+    border: 0;
+}
+.wrap-btn .actbtn{
+    background: #4A90E2; 
+}
+/* 上一张或下一张按钮 */
+.wrap-switch{
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    top: 50%;
+    width: 30px;
+    height: 60px;
+    background: #00000020;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 60px;
+    font-weight: bolder;
+}
+/* .wrap-switch img{
+    margin-top: 60%;
+    width: 100%;
+    height: 45%;
+}
+.back-img img{
+    transform: rotate(45deg) translate(20%,-15%);
+} */
+.back-img{
+    left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.next-img{
+    right: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+/* .next-img img{
+    transform: rotate(225deg) translate(20%,-15%);
+} */
+/* 鼠标触碰样式变化 */
+.wrap-btn button:hover{
+    background: #4A90E2;
+}
+.wrap-switch:hover{
+    background: #00000090;
+}
