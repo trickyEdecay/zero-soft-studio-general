@@ -31,7 +31,7 @@ h1{
 }
 .container:hover{
 	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-	transition:box-shadow .3s linear 0s; 
+	transition:box-shadow .2s linear 0s; 
 }
 .container:active{
 	background:#e4e4e4;
@@ -82,7 +82,7 @@ img{
 	height: 36px;
 	border: 1px solid #e4e4e4;
 	border-radius: 4px;
-	padding-left: 16px;
+	padding:0px 16px;
 }
 #search-nav:focus{
 	border:1px solid #3F5DEA;
@@ -97,6 +97,7 @@ img{
 	text-align: center;
 	line-height: 36px;
 	margin-left: 20px;
+	cursor: pointer;
 }
 #search-bt:hover{
 	background: #738BFF;
@@ -118,3 +119,4 @@ img{
 	right: 48px;
 	cursor: pointer;
 }
+.pop

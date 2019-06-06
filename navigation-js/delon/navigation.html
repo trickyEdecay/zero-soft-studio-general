@@ -72,5 +72,33 @@
 		<!-- 添加按钮开始 -->
 		<div id="add-bt">+</div>
 		<!-- 添加按钮 END -->
+
+		<!-- 弹窗开始 -->
+		<section class='popup-wrap'>
+			<div id ="popup">
+				<h1>添加收藏</h1>
+				<label>
+					<h2>导航标签</h2>
+					<input type="text" placeholder="百度">
+				</label>
+				<label>
+					<h2>导航描述</h2>
+					<input type="text" placeholder="百度，全球最大的中文搜索引擎、最大的中文网站。">
+				</label>
+				<label>
+					<h2>导航链接</h2>
+					<input type="text" placeholder="www.baidu.com">
+				</label>
+			</div>
+		</section>
+		<!-- 弹窗 END -->
+		<script>
+			var searchBtEle = document.getElementById('search-bt');
+			var searchNvEle = document.getElementById('search-nav');
+
+			searchBtEle.onclick = function(){
+				searchBtEle.href='http://www.baidu.com/s?wd=' + "我为何如此沙雕";
+			}
+		</script>
 	</body>
 </html>

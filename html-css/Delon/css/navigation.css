@@ -30,7 +30,7 @@
 	.container:hover{
 		background: #d0e9ff;
 		box-shadow: 0 1px 8px #ccc;
-		transition:box-shadow .2s linear 0.1s; 
+		transition:box-shadow .1s linear 0; 
 	}
 	.container:nth-of-type(4n){
 		margin-right: 0;
