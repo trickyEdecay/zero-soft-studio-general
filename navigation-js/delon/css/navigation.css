@@ -119,4 +119,39 @@ img{
 	right: 48px;
 	cursor: pointer;
 }
-.pop
+.popup-wrap{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	z-index:100;
+}
+#popup{
+	position: absolute;
+	z-index:200 ;
+	width: 480px;
+	height: 353px;
+	background:#fff;
+	border-radius: 4px;
+	top:50%;
+	left: 50%;
+	margin-left: -240px;
+	margin-top: -171px;
+	box-sizing: border-box;
+	padding: 20px;
+}
+#popup h2{
+	color: #333;
+	font-size: 14px;
+}
+#popup input{
+	width: 440px;
+	height:36px;
+	padding:0 16px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	border:1px solid #e7e7e7;
+	margin-bottom: 16px;
+}
