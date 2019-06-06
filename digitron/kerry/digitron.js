@@ -2,12 +2,12 @@ $input=$("#input");          //输入框
 
 $input.keydown(function(e){      //输入框按enter键时显示数字
     if(e.keyCode==13){
-        showNum($input.val());
+        showNum(Number($input.val()));
     }
 })
 
 $("#certain").click(function(){   //按按钮时显示数字
-        showNum($input.val());
+    showNum(Number($input.val()));
 })
 
 $container=$("#digitron-container");       //包含所有数码管的大盒子
@@ -21,34 +21,34 @@ function showNum(num){            //获取数字，给大盒子加类
         return;
     }
     
-    if(num==0){
+    if(num===0){
         $container.toggleClass("zero");
     }
-    if(num==1){
+    if(num===1){
         $container.toggleClass("one");
     }
-    if(num==2){
+    if(num===2){
         $container.toggleClass("two");
     }
-    if(num==3){
+    if(num===3){
         $container.toggleClass("three");
     }
-    if(num==4){
+    if(num===4){
         $container.toggleClass("four");
     }
-    if(num==5){
+    if(num===5){
         $container.toggleClass("five");
     }
-    if(num==6){
+    if(num===6){
         $container.toggleClass("six");
     }
-    if(num==7){
+    if(num===7){
         $container.toggleClass("seven");
     }
-    if(num==8){
+    if(num===8){
         $container.toggleClass("eight");
     }
-    if(num==9){
+    if(num===9){
         $container.toggleClass("nine");
     }
 }

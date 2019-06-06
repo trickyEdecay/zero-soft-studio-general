@@ -28,7 +28,7 @@ body {
 
 
 #digitron-container {       //包含所有数码管的大盒子
-    width: 200px;
+    width: 250px;
     height: 550px;
     margin: 0 auto;
     margin-top: 20px;
@@ -45,7 +45,6 @@ body {
             content: "";
             position: absolute;
             left: -50px;
-            display: block;
             border: 25px solid transparent;
             border-right-color: gray;
 
@@ -56,20 +55,21 @@ body {
             position: absolute;
             top: 0;
             left: 150px;
-            display: block;
             border: 25px solid transparent;
             border-left-color: gray;
         }
 
         // 对3个横向数码管的位置进行设置
         &.one { 
-            left: 0;
+            left: 25px;
             top: 0;
         }
         &.four {
+            left: 25px;
             top: 500px;
         }
         &.seven {
+            left: 25px;
             top: 250px;
         }
     }
@@ -100,11 +100,11 @@ body {
         // 对4个竖向数码管的位置进行设计
         &.two {
             top:50px;
-            left:150px;
+            left:200px;
         }
         &.three {
             top: 300px;
-            left: 150px;
+            left: 200px;
         }
         &.five {
             top: 300px;
@@ -124,8 +124,8 @@ body {
         .fourth();
     }
     &.one {
-        .sixth();      //编号6的数码管点亮
-        .fifth();
+        .second();
+        .third();
     }
     &.two {
         .first();
