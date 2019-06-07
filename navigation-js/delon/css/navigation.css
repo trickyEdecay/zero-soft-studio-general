@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding:0;
+	font-family: PingFangSC-Regular,sans-serif;
 }
 body{
 	background: #f4f4f4;
@@ -99,10 +100,10 @@ img{
 	margin-left: 20px;
 	cursor: pointer;
 }
-#search-bt:hover{
+#search-bt:hover,.confirm-bt:hover{
 	background: #738BFF;
 }
-#search-bt:active{
+#search-bt:active,.confirm-bt:active{
 	background: #1A33A6 ;
 }
 #add-bt{
@@ -111,7 +112,7 @@ img{
 	height: 64px;
 	position: fixed;
 	border-radius: 32px;
-	font-size: 48px;
+	font-size: 32px;
 	color:#fff;
 	text-align: center;
 	line-height: 55px;
@@ -119,8 +120,13 @@ img{
 	right: 48px;
 	cursor: pointer;
 }
-.popup-wrap{
-	position: fixed;
+.invisible{
+	visibility: hidden;
+	opacity: 0;
+}
+.show-wrap{
+	visibility:visible;
+	opacity: 1;position: fixed;
 	top:0;
 	left: 0;
 	width: 100%;
@@ -141,6 +147,13 @@ img{
 	margin-top: -171px;
 	box-sizing: border-box;
 	padding: 20px;
+	transition: transform .4s;
+	transform:translateY(100px);
+	-webkit-transform:translateY(100px);
+}
+#popup.showpopup{
+	transform: translateY(0);
+	-webkit-transform: translateY(0);
 }
 #popup h2{
 	color: #333;
@@ -154,4 +167,27 @@ img{
 	border-radius: 4px;
 	border:1px solid #e7e7e7;
 	margin-bottom: 16px;
+	color: #c4c4c4;
+}
+#popup button{
+	width: 120px;
+	height: 36px;
+	font-size: 14px;
+	line-height: 36px;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 12px;
+}
+.confirm-bt{
+	background: #3F5DEA;
+	margin-left: 184px;
+	margin-right: 11px;
+	color: #fff;
+	border-style: none;
+}
+.cancel-bt{
+	background:#fff;
+	color:#333;
+	border:1px solid #e7e7e7;
 }

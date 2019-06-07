@@ -14,7 +14,7 @@
 		<!-- 搜索框 END -->
 
 		<!-- 主体开始 -->
-		<div class="main-content">
+		<section class="main-content">
 			<h1>我的收藏</h1>
 		
 			<a class="container" href="http://www.baidu.com">
@@ -24,82 +24,78 @@
 				<p class="nav-block-description">百度，全球最大的中文搜索引擎、最大的中文网站。</p>
 				</div>
 			</a>
-			<a class="container">
+			<a class="container" href="http://www.weibo.com">
 				<p class="head-img"><img src="icons/weibo.png" alt="head"></p>
 				<div class="innercontainer">
 				<h2 class="nav-block-title">微博</h2>
 				<p class="nav-block-description">随时随地发现新鲜事</p>
 				</div>
 			</a>
-			<a class="container">
+			<a class="container" href="http://www.github.com">
 				<p class="head-img"><img src="icons/github.png" alt="head"></p>
 				<div class="innercontainer">
 				<h2 class="nav-block-title">GitHub</h2>
 				<p class="nav-block-description">gitHub是一个面向开源及私有软件项目的托管平台</p>
 				</div>
 			</a>
-			<a class="container">
+			<a class="container" href="http://www.bilibili.com">
 				<p class="head-img"><img src="icons/CN_bilibili B.png" alt="head"></p>
 				<div class="innercontainer">
 				<h2 class="nav-block-title">B站</h2>
-				<p class="nav-block-description">gitHub是一个面向开源及私有软件项目的托管平台</p>
+				<p class="nav-block-description">它是一个B站</p>
 				</div>
 			</a>
-			<a class="container">
+			<a class="container" href="http://wx.qq.com">
 				<p class="head-img"><img src="icons/weixin.png" alt="head"></p>
 				<div class="innercontainer">
 				<h2 class="nav-block-title">微信</h2>
 				<p class="nav-block-description">一款跨平台的通讯工具。支持单人、多人参与。通过手机网络发送语音、图片、视频和文字。</p>
 				</div>
 			</a>
-			<a class="container">
+			<a class="container" href="http://www.163.com">
 				<p class="head-img"><img src="icons/wangyi.png" alt="head"></p>
 				<div class="innercontainer">
 				<h2 class="nav-block-title">网易</h2>
 				<p class="nav-block-description">网易是中国领先的互联网技术公司</p>
 				</div>
 			</a>
-			<a class="container">
+			<a class="container" href="http://music.163.com">
 				<p class="head-img"><img src="icons/wangyi_music.png" alt="head"></p>
 				<div class="innercontainer">
 				<h2 class="nav-block-title">网易云音乐</h2>
 				<p class="nav-block-description">网易云音乐是一款专注于发现与分享的音乐产品</p>
 				</div>
 			</a> 
-		</div>
+		</section>
 		<!-- 主体结束 -->
 
-		<!-- 添加按钮开始 -->
+		<!-- 收藏按钮开始 -->
 		<div id="add-bt">+</div>
-		<!-- 添加按钮 END -->
+		<!-- 收藏按钮 END -->
 
 		<!-- 弹窗开始 -->
-		<section class='popup-wrap'>
-			<div id ="popup">
-				<h1>添加收藏</h1>
-				<label>
-					<h2>导航标签</h2>
-					<input type="text" placeholder="百度">
-				</label>
-				<label>
-					<h2>导航描述</h2>
-					<input type="text" placeholder="百度，全球最大的中文搜索引擎、最大的中文网站。">
-				</label>
-				<label>
-					<h2>导航链接</h2>
-					<input type="text" placeholder="www.baidu.com">
-				</label>
-			</div>
+		<section class="invisible" id='popup-wrap'>
+				<div id ="popup">
+					<h1>添加收藏</h1>
+					<label>
+						<h2>导航标签</h2>
+						<input type="text" placeholder="百度" class = "label-intp">
+					</label>
+					<label>
+						<h2>导航描述</h2>
+						<input type="text" placeholder="百度，全球最大的中文搜索引擎、最大的中文网站。" class = "description-intp">
+					</label>
+					<label>
+						<h2>导航链接</h2>
+						<input type="text" placeholder="www.baidu.com" class = "link-intp">
+					</label>
+					<button class="confirm-bt">确认</button>
+					<button class="cancel-bt">取消</button>
+				</div>
 		</section>
 		<!-- 弹窗 END -->
-		
-		<script>
-			var searchBtEle = document.getElementById('search-bt');
-			var searchNvEle = document.getElementById('search-nav');
+			
 
-			searchBtEle.onclick = function(){
-				searchBtEle.href='http://www.baidu.com/s?wd=' + "我为何如此沙雕";
-			}
-		</script>
+	<script src="js/navigation.js"></script>
 	</body>
 </html>
