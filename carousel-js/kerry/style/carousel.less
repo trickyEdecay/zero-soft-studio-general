@@ -1,0 +1,129 @@
+// 图片宽度
+@containerWidth:400px;
+// 图片高度
+@containerHeight:200px;
+// 向左移动宽度
+@translateWidth:-400px;
+// 左右键向上距离，向左距离
+@top: 70px;
+@left: 370px;
+
+#images-container {
+    width: @containerWidth;
+    height: @containerHeight;
+    margin: 0 auto;
+    margin-top: 100px;
+    font-size: 0;
+    position: relative;
+    transition: all 2s;
+
+    #container {
+        width: @containerWidth;
+        height: @containerHeight;
+        overflow: hidden;
+
+        img {
+            width: @containerWidth;
+            height: @containerHeight;
+    
+            &.translateX {
+                margin-left: @translateWidth;
+            }
+        }
+
+        &:hover {
+            #left,#right {
+                display: block;
+            }
+        }
+
+        #left {
+            width: 30px;
+            height: 60px;
+            position: absolute;
+            top: @top;
+            left: 0;
+            background: #000;
+            opacity: 0.2;
+            display: none;
+
+            &::before {
+                content: "";
+                width: 5px;
+                height: 15px;
+                position: absolute;
+                left: 10px;
+                top: 15px;
+                transform: skew(-30deg);
+                background: #fff;
+                opacity: 1.0;
+            }
+            &::after {
+                content: "";
+                width: 5px;
+                height: 15px;
+                position: absolute;
+                left: 10px;
+                top: 30px;
+                transform: skew(30deg);
+                background: #fff;
+            }
+        }
+
+        #right {
+            width: 30px;
+            height: 60px;
+            position: absolute;
+            top: @top;
+            left: @left;
+            background: #000;
+            opacity: 0.2;
+            display: none;
+
+            &::before {
+                content: "";
+                width: 5px;
+                height: 15px;
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                transform: skew(30deg);
+                background: #fff;
+            }
+            &::after {
+                content: "";
+                width: 5px;
+                height: 15px;
+                position: absolute;
+                left: 15px;
+                top: 30px;
+                transform: skew(-30deg);
+                background: #fff;
+            }
+        }
+    }
+}
+
+#circle-container {
+    width: 40px;
+    height: 8px;
+    position: absolute;
+    display: flex;
+    top: 184px;
+    left: 180px;
+    justify-content: space-between;
+
+    .circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background: #fff;
+
+        &:hover {
+            background: gray;
+        }
+        &.color {
+            background: gray;
+        }
+    }
+}
