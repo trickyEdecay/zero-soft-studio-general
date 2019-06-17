@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    background: #3F5DEA;
+    /*overflow: scroll;*/
+}
+.box{
+    background: #ffffff;
+    width: 350px;
+    height: 458px;
+    border-radius: 8px;
+    position: fixed;
+    border: none;
+    margin-top: 85px;
+    margin-left: 480px;
+    box-sizing: content-box;
+}
+.picture{
+    background: #c4c4c4;
+    /*text-align: center;*/
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    margin: 50px 135px;
+    position: fixed;
+    /*box-sizing: border-box;*/
+}
+.login-text{
+    width: 126px;
+    height: 25px;
+    color: #333333;
+    font-size: 18px;
+    margin: 180px 189px 253px 35px;
+    position: fixed;
+}
+.login-username{
+    color: #c4c4c4;
+    width: 280px;
+    height: 36px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    line-height: 15px;
+    margin: 220px 35px 202px 35px;
+    position: fixed;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.login-password{
+    color: #c4c4c4;
+    width: 280px;
+    height: 36px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    line-height: 15px;
+    margin: 271px 35px 151px 35px;
+    position: fixed;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.login-btn{
+    background: #3F5DEA;
+    color: white;
+    width: 280px;
+    height: 36px;
+    border-radius: 4px;
+    margin: 337px 35px 15px 35px;
+    line-height: 30px;
+    padding: 0;
+    border: none;
+}
+.nav{
+    width: 280px;
+    height: 20px;
+    margin: 0 35px;
+}
+.nav-forget-password{
+    color: #c4c4c4;
+    width: 70px;
+    height: 20px;
+    font-size: 14px;
+    /*display: inline-block;*/
+    /*vertical-align: bottom;*/
+    position: fixed;
+    /*letter-spacing: normal;*/
+}
+.nav-new{
+    color: #3F5DEA;
+    width: 70px;
+    height: 20px;
+    font-size: 14px;
+    margin-left: 210px;
+    /*display: inline-block;*/
+    /*vertical-align: bottom;*/
+    /*position: absolute;*/
+    /*letter-spacing: normal;*/
+}
+
