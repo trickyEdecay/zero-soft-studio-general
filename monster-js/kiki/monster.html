@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>monster</title>
+    <link href="css/monster.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-screen">
+        <div class="changename">
+                <input id="monster-name-input">
+                <button id="change-name-button" onclick="changeName()">修改怪兽名字</button>
+        </div>
+        <div class="monster"></div>
+        <h1 id="monster-name">tricky</h1>
+        <h1 id="monster-hp">100</h1>
+        <div class="hp-bar">
+            <div class="hp-bar-blood" id="hp-blood"></div>
+        </div>
+        <div id="attack-btn" class="button">攻击</div>
+    </div>
+    <script src="js/monster.js"></script>
+</body>
+</html>

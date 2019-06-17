@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>navigation</title>
+    <script src="lib/jquery-3.1.4.js"></script>
+    <link href="style/navigation.less" rel="stylesheet/less">
+    <script src="lib/less-3.9.0.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="search-box">
+            <input class="normal-input" id="search-input" placeholder="百度一下">
+            <button class="normal-button" id="search-btn">搜索</button>
+        </div>
+        <h1 class="title">我的收藏</h1>
+        <!-- 收藏列表 -->
+        <div class="nav-list">
+            <a class="nav-item" href="http://www.baidu.com" target="_blank">
+                <div class="logo">
+                    <img src="img/baidu.png" alt="百度logo">
+                </div>
+                <div class="info-container">
+                    <h2>百度</h2>
+                    <p>百度，全球最大的中文搜索引擎，最大的中文网站</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="http://www.weibo.com" target="_blank">
+                <div class="logo">
+                    <img src="img/weibo.png" alt="微博logo">
+                </div>
+                <div class="info-container">
+                    <h2>微博</h2>
+                    <p>随时随地发现新鲜事</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="http://www.github.com" target="_blank">
+                <div class="logo">
+                    <img src="img/github.png" alt="github logo">
+                </div>
+                <div class="info-container">
+                    <h2>github</h2>
+                    <p>github是一个面向开源及私有软件项目的托管平台</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="http://www.weibo.com" target="_blank">
+                <div class="logo">
+                    <img src="img/weibo.png" alt="微博logo">
+                </div>
+                <div class="info-container">
+                    <h2>微博</h2>
+                    <p>随时随地发现新鲜事</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="http://www.baidu.com" target="_blank">
+                <div class="logo">
+                    <img src="img/baidu.png" alt="百度logo">
+                </div>
+                <div class="info-container">
+                    <h2>百度</h2>
+                    <p>百度，全球最大的中文搜索引擎，最大的中文网站</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="http://www.weibo.com" target="_blank">
+                <div class="logo">
+                    <img src="img/weibo.png" alt="微博logo">
+                </div>
+                <div class="info-container">
+                    <h2>微博</h2>
+                    <p>随时随地发现新鲜事</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="http://www.github.com" target="_blank">
+                <div class="logo">
+                    <img src="img/github.png" alt="github logo">
+                </div>
+                <div class="info-container">
+                    <h2>github</h2>
+                    <p>github是一个面向开源及私有软件项目的托管平台</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="http://www.weibo.com" target="_blank">
+                <div class="logo">
+                    <img src="img/weibo.png" alt="微博logo">
+                </div>
+                <div class="info-container">
+                    <h2>微博</h2>
+                    <p>随时随地发现新鲜事</p>
+                </div>
+            </a>
+        </div>
+        <!-- 收藏列表完 -->
+
+        <div class="add-btn">+</div>
+
+        <div class="modal">
+            <div class="modal-main">
+                <h1>添加收藏</h1>
+                <div class="modal-content">
+                    <div class="input-group">
+                        <label>导航标题</label>
+                        <input class="normal-input" id="add-fav-title">
+                    </div>
+                    <div class="input-group">
+                        <label>导航描述</label>
+                        <input class="normal-input" id="add-fav-desc">
+                    </div>
+                    <div class="input-group">
+                        <label>导航链接</label>
+                        <input class="normal-input" id="add-fav-link">
+                    </div>
+                </div>
+                <footer>
+                    <button class="normal-button" id="add-fav-verify-btn">确定</button>
+                    <button class="normal-button white" id="add-fav-cancel-btn">取消</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/navigation-jq.js"></script>
+</body>
+</html>
