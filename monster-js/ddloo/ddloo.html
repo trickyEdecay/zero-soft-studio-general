@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html charest=utf-8">
+        <link rel="stylesheet" href="css/monster.css" type="text/css">
+    </head>
+    <body>
+        <header></header>
+
+        <!-- 英雄视图 -->
+        <div id="hero">
+            <h3 id="hero-name">lv.1 比卡丘
+                <div id="hero-bar">
+                    <div id="hero-bar-hp">100</div>
+                </div>
+            </h3>
+            <div id="hero-wrap">
+                <img id="img-myhero" class="img" src="img/myhero.jpg" alt="比卡丘">
+                <img id="img-hero-harm" class="img-harm" src="img/抓痕.jpg">
+                <div class="information" id="skill-weapon-information">2</div>
+                <div id="hero-select">
+                    <div>
+                        <button class="btn" id="btn-attack" onclick="blood_deduction()">攻击</button>
+                    </div>
+                    <div class="div-hero-select">
+                        <button class="btn" id="btn-skill-dominance">技能</button>
+                        <div id="div-skill-name">
+                            <button class="btn skill-name" onmouseover="skill_message_arise(0)" onmouseout="message_disappear()" onclick="btnSkill('tempt')">诱惑</button>
+                            <button class="btn skill-name" onmouseover="skill_message_arise(1)" onmouseout="message_disappear()" onclick="btnSkill('immobility')">呆若木鸡</button>
+                            <button class="btn skill-name" onmouseover="skill_message_arise(2)" onmouseout="message_disappear()" onclick="btnSkill('fist')">动感铁拳</button>
+                        </div>
+                    </div>
+                    <div class="div-hero-select">
+                        <button class="btn" id="btn-hide-weapon">暗器</button>
+                        <div id="div-hide-weapon">
+                            <button class="btn hide-weapon" onmouseover="weapon_message_arise(0)" onmouseout="message_disappear()" onclick="btnWeapon('pillow')">枕头</button>
+                            <button class="btn hide-weapon" onmouseover="weapon_message_arise(1)" onmouseout="message_disappear()" onclick="btnWeapon('slipper')">拖鞋</button>
+                            <button class="btn hide-weapon" onmouseover="weapon_message_arise(2)" onmouseout="message_disappear()" onclick="btnWeapon('poison')">毒龙砂</button>
+                            <button class="btn hide-weapon" onmouseover="weapon_message_arise(3)" onmouseout="message_disappear()" onclick="btnWeapon('armor_break')">破甲散</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 怪兽视图 -->
+        <div id="monster">
+            <h3 id="monster-name">
+                <div id="monster-bar">
+                    <div id="monster-bar-hp">1000</div>
+                </div>
+                <span>lv.99 BOSS</span>
+            </h3>
+            <div id="monster-wrap">
+                <img id="img-monster" class="img" src="img/monster.jpg" alt="BOSS">
+                <img id="img-monster-harm" class="img-harm" src="img/抓痕.jpg">
+            </div>
+        </div>
+        <script src="js/hero vs monster.js"></script>
+    </body>
+</html>

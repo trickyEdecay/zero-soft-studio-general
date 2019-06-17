@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.digital-head{
+    /* position: relative; */
+    width: 200px;
+    margin: 0 50%;
+    margin-top: 10%;
+    /* border: 1px solid black; */
+    /* font-size: 0; */
+}
+.digital-head .digital-h{
+    position: relative;
+    width: 105px;
+    height: 20px;
+    background: #aaa;
+    /* vertical-align: bottom; */
+}
+.digital-head .digital-h::before{
+    position: absolute;
+    left: -20px;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-color: transparent #aaa transparent transparent;
+}
+.digital-head .digital-h::after{
+    position: absolute;
+    left: 105px;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-color: transparent transparent transparent #aaa;
+}
+.digital-head .digital-v{
+    position: relative;
+    left: -20px;
+    top: 10px;
+    width: 20px;
+    height: 105px;
+    background: #aaa;
+}
+.digital-head .digital-v::before{
+    position: absolute;
+    top: -20px;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-color: transparent transparent #aaa transparent;
+}
+.digital-head .digital-v::after{
+    position: absolute;
+    top: 105px;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-color: #aaa transparent transparent transparent;
+}
+.digital-head .digital-b{
+    left: 105px;
+    top: -95px;
+}
+.digital-head .digital-g{
+    top: -85px;
+}
+.digital-head .digital-e{
+    top: -75px;
+}
+.digital-head .digital-d{
+    top: -65px;
+}
+.digital-head .digital-c{
+    left: 105px;
+    top: -200px;
+}
+/* .red > .digital-v,
+.red > .digital-h{
+    background: rgba(240, 45, 11, 0.89);
+} */
+/* 数字0 */
+.num-0 .digital-h,
+.num-0 .digital-v{
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-0 .digital-h::before{
+    border-right-color: rgba(240, 45, 11, 0.89);
+}
+.num-0 .digital-h::after{
+    border-left-color: rgba(240, 45, 11, 0.89);
+}
+.num-0 .digital-v::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+.num-0 .digital-v::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+}
+.num-0 div:nth-of-type(4){
+    background: #aaa;
+}
+.num-0 div:nth-of-type(4)::after{
+    border-left-color: #aaa;
+}
+.num-0 div:nth-of-type(4)::before{
+    border-right-color: #aaa;
+}
+/* 数字1 */
+.num-1 div:nth-of-type(3),
+.num-1 div:nth-of-type(7){
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-1 div:nth-of-type(3)::after,
+.num-1 div:nth-of-type(7)::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+}
+.num-1 div:nth-of-type(3)::before,
+.num-1 div:nth-of-type(7)::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+/* 数字2 */
+.num-2 div:nth-of-type(1),
+.num-2 div:nth-of-type(3),
+.num-2 div:nth-of-type(4),
+.num-2 div:nth-of-type(5),
+.num-2 div:nth-of-type(6){
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-2 div:nth-of-type(4)::after,
+.num-2 div:nth-of-type(1)::after,
+.num-2 div:nth-of-type(6)::after{
+    border-left-color: rgba(240, 45, 11, 0.89);
+}
+.num-2 div:nth-of-type(4)::before,
+.num-2 div:nth-of-type(1)::before,
+.num-2 div:nth-of-type(6)::before{
+    border-right-color: rgba(240, 45, 11, 0.89);
+}
+.num-2 div:nth-of-type(3)::after,
+.num-2 div:nth-of-type(5)::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+}
+.num-2 div:nth-of-type(3)::before,
+.num-2 div:nth-of-type(5)::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+/* 数字3 */
+.num-3 div:nth-of-type(1),
+.num-3 div:nth-of-type(3),
+.num-3 div:nth-of-type(4),
+.num-3 div:nth-of-type(7),
+.num-3 div:nth-of-type(6){
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-3 div:nth-of-type(4)::after,
+.num-3 div:nth-of-type(1)::after,
+.num-3 div:nth-of-type(6)::after{
+    border-left-color: rgba(240, 45, 11, 0.89);
+}
+.num-3 div:nth-of-type(4)::before,
+.num-3 div:nth-of-type(1)::before,
+.num-3 div:nth-of-type(6)::before{
+    border-right-color: rgba(240, 45, 11, 0.89);
+}
+.num-3 div:nth-of-type(3)::after,
+.num-3 div:nth-of-type(7)::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+}
+.num-3 div:nth-of-type(3)::before,
+.num-3 div:nth-of-type(7)::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+/* 数字4 */
+.num-4 div:nth-of-type(2),
+.num-4 div:nth-of-type(3),
+.num-4 div:nth-of-type(4),
+.num-4 div:nth-of-type(7){
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-4 div:nth-of-type(4)::after{
+    border-left-color: rgba(240, 45, 11, 0.89);
+}
+.num-4 div:nth-of-type(4)::before{
+    border-right-color: rgba(240, 45, 11, 0.89);
+}
+.num-4 div:nth-of-type(2)::after,
+.num-4 div:nth-of-type(3)::after,
+.num-4 div:nth-of-type(7)::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+}
+.num-4 div:nth-of-type(2)::before,
+.num-4 div:nth-of-type(3)::before,
+.num-4 div:nth-of-type(7)::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+/* 数字5 */
+.num-5 div:nth-of-type(1),
+.num-5 div:nth-of-type(2),
+.num-5 div:nth-of-type(4),
+.num-5 div:nth-of-type(7),
+.num-5 div:nth-of-type(6){
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-5 div:nth-of-type(1)::before,
+.num-5 div:nth-of-type(4)::before,
+.num-5 div:nth-of-type(6)::before{
+    border-right-color: rgba(240, 45, 11, 0.89);
+}
+.num-5 div:nth-of-type(1)::after,
+.num-5 div:nth-of-type(4)::after,
+.num-5 div:nth-of-type(6)::after{
+    border-left-color: rgba(240, 45, 11, 0.89);
+}
+.num-5 div:nth-of-type(2)::before,
+.num-5 div:nth-of-type(7)::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+.num-5 div:nth-of-type(2)::after,
+.num-5 div:nth-of-type(7)::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+    }
+/* 数字6 */
+.num-6 div:nth-of-type(1),
+.num-6 div:nth-of-type(2),
+.num-6 div:nth-of-type(4),
+.num-6 div:nth-of-type(5),
+.num-6 div:nth-of-type(7),
+.num-6 div:nth-of-type(6){
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-6 div:nth-of-type(2)::before,
+.num-6 div:nth-of-type(5)::before,
+.num-6 div:nth-of-type(7)::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+.num-6 div:nth-of-type(2)::after,
+.num-6 div:nth-of-type(5)::after,
+.num-6 div:nth-of-type(7)::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+}
+.num-6 div:nth-of-type(1)::before,
+.num-6 div:nth-of-type(4)::before,
+.num-6 div:nth-of-type(6)::before{
+    border-right-color: rgba(240, 45, 11, 0.89);
+}
+.num-6 div:nth-of-type(1)::after,
+.num-6 div:nth-of-type(4)::after,
+.num-6 div:nth-of-type(6)::after{
+    border-left-color: rgba(240, 45, 11, 0.89);
+}
+/* 数字7 */
+.num-7 div:nth-of-type(1),
+.num-7 div:nth-of-type(3),
+.num-7 div:nth-of-type(7){
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-7 div:nth-of-type(1)::before{
+    border-right-color: rgba(240, 45, 11, 0.89);
+}
+.num-7 div:nth-of-type(1)::after{
+    border-left-color: rgba(240, 45, 11, 0.89);
+}
+.num-7 div:nth-of-type(3)::before,
+.num-7 div:nth-of-type(7)::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+.num-7 div:nth-of-type(3)::after,
+.num-7 div:nth-of-type(7)::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+}
+/* 数字8 */
+.num-8 .digital-h,
+.num-8 .digital-v{
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-8 .digital-h::before{
+    border-right-color: rgba(240, 45, 11, 0.89);
+}
+.num-8 .digital-h::after{
+    border-left-color: rgba(240, 45, 11, 0.89);
+}
+.num-8 .digital-v::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+.num-8 .digital-v::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+}
+/* 数字9 */
+.num-9 div:nth-of-type(2),
+.num-9 div:nth-of-type(4),
+.num-9 div:nth-of-type(1),
+.num-9 div:nth-of-type(7),
+.num-9 div:nth-of-type(6),
+.num-9 div:nth-of-type(3){
+    background: rgba(240, 45, 11, 0.89);
+}
+.num-9 div:nth-of-type(4)::after,
+.num-9 div:nth-of-type(1)::after,
+.num-9 div:nth-of-type(6)::after
+{
+    border-left-color: rgba(240, 45, 11, 0.89);
+}
+.num-9 div:nth-of-type(7)::after,
+.num-9 div:nth-of-type(2)::after,
+.num-9 div:nth-of-type(3)::after{
+    border-top-color: rgba(240, 45, 11, 0.89);
+}
+.num-9 div:nth-of-type(4)::before,
+.num-9 div:nth-of-type(1)::before,
+.num-9 div:nth-of-type(6)::before
+{
+    border-right-color: rgba(240, 45, 11, 0.89);
+}
+.num-9 div:nth-of-type(2)::before,
+.num-9 div:nth-of-type(7)::before,
+.num-9 div:nth-of-type(3)::before{
+    border-bottom-color: rgba(240, 45, 11, 0.89);
+}
+input{
+    position: absolute;
+    width: 200px;
+    margin: 0 47%;
+    top: 10%;
+    /* left: 47%; */
+    border: 1px solid black;
+}

@@ -1,0 +1,120 @@
+/* 图片尺寸 */
+@pictureWith:400px;
+@pictureheight:200px;
+
+*{
+    box-sizing: border-box;
+}
+.layout-container{
+    margin: 100px auto;
+    width: @pictureWith;
+    height: @pictureheight;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* 左右两个按钮 */
+    .left-btn{
+        position: absolute;
+        left: 0;
+        top:70px;
+        z-index: 1;
+        width: 30px;
+        height: 60px;
+        background: #000;
+        opacity: .2;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::before{
+            content: "";
+            width: 5px;
+            height: 7px;
+            background: #fff;
+            transform: skew(-20deg);
+        }
+        &::after{
+            content: "";
+            width: 5px;
+            height: 7px;
+            background: #fff;
+            transform: skew(20deg);
+        }
+    }
+    .rigth-btn{
+        position: absolute;
+        right: 0;
+        top:70px;
+        z-index: 1;
+        width: 30px;
+        height: 60px;
+        background: #000;
+        opacity: .2;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::before{
+            content: "";
+            width: 5px;
+            height: 7px;
+            background: #fff;
+            transform: skew(20deg);
+        }
+        &::after{
+            content: "";
+            width: 5px;
+            height: 7px;
+            background: #fff;
+            transform: skew(-20deg);
+        }
+    }
+    /* 左右两个按钮完 */
+
+    /* 移动容器得样式 */
+    .inner-container{
+        transition: all .3s;
+        position: absolute;
+        width: @pictureWith*3;
+        height: @pictureheight;
+        left: 0;
+        top: 0;
+        .picture{
+            width: @pictureWith;
+            height: @pictureheight;
+            float: left;
+        }
+    }
+    /* 移动容器的样式完 */
+
+    /* 下面小圆点 */
+    .indicator-container{
+        z-index: 1;
+        width: 40px;
+        height: 10px;
+        position: absolute;
+        top: 184px;
+        left: 196px;
+        display: flex;
+        justify-content: space-around;
+        .indicator{
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #fff;
+            &:hover{
+                background: #4A90E2;
+            }
+            &.active{
+                background: #4A90E2;
+            }
+        }
+    }
+}
+
+

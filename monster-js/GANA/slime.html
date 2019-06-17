@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GAME</title>
+    <style>
+        body {
+            background: rgb(0, 89, 255);
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            width: 400px;
+            height: 600px;
+            margin: 60px auto;
+
+        }
+
+        .attack {
+            background: red;
+            width: 60px;
+            height: 40px;
+            margin-top: 20px;
+        }
+
+        .blood-container {
+            border: 1px solid black;
+            width: 200px;
+            height: 10px;
+        }
+
+        #bloo {
+            width: 200px;
+            height: 10px;
+            background: red;
+        }
+    </style>
+    <script>
+ var name="tricky";
+        //  点击攻击血量值跟血量条减少
+        function att() {
+          
+       
+            var bnEle = document.getElementById("blood-number");
+            var bloEle = document.getElementById("bloo");
+            if (bnEle.innerHTML > 0) {
+                bnEle.innerHTML -= 20;
+                if (bnEle.innerHTML == 0) alert("恭喜您，怪兽已阵亡")
+            }
+            else {
+                bnEle.innerHTML == 0;
+                 alert("恭喜您，怪兽已阵亡")
+            }
+            bloEle.style.width = bnEle.innerHTML + "%";
+        }
+        // 点击获得游戏名 
+        function getName(){
+            var nameEle=document.getElementById("monster-name");
+            nameEle.innerHTML=name;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <img class="monster" src="monster.png">
+        <div id="monster-name" onclick="getName()">monster</div> 
+        
+        <div id="blood-number">100</div>
+        <div class="blood-container">
+            <div class="blood" id="bloo"></div>
+        </div>
+        <button class="attack" id="att" onclick="att()">攻击</button>
+    </div>
+</body>
+
+</html>

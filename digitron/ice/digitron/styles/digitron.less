@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    display: block;
+    width: 480px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 16px;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+#digitron-container{
+    width:220px;
+    height: 280px;
+    // background: orange;
+    margin: 0 auto;
+    padding: 28px 28px 0 28px;
+    box-sizing: border-box;
+    display: flex;
+
+
+    //一到九显示
+    &.one{
+        #bc-container{
+            .up{
+                .on1();
+            }
+            .down{
+                .on1();
+            }
+        }
+    }
+
+    &.two{
+        #fe-container{
+            .low{
+                .on1();
+            }
+        }
+
+        #agd-container{
+            .top{
+                .on2();
+            }
+            .middle{
+                .on2();
+            }
+            .bottom{
+                .on2();
+            }
+        }
+
+        #bc-container{
+            .up{
+                .on1();
+            }
+        }
+    }
+
+    &.three{
+        #agd-container{
+            .top{
+                .on2();
+            }
+            .middle{
+                .on2();
+            }
+            .bottom{
+                .on2();
+            }
+        }
+
+        #bc-container{
+            .up{
+                .on1();
+            }
+            .down{
+                .on1();
+            }
+        }
+    }
+    
+    &.four{
+        #fe-container{
+            .high{
+                .on1();
+            }
+        }
+
+        #agd-container{
+            .middle{
+                .on2();
+            }
+        }
+
+        #bc-container{
+            .up{
+                .on1();
+            }
+            .down{
+                .on1();
+            }
+        }
+    }
+
+
+    &.five{
+        #fe-container{
+            .high{
+                .on1();
+            }
+        }
+
+        #agd-container{
+            .top{
+                .on2();
+            }
+            .middle{
+                .on2();
+            }
+            .bottom{
+                .on2();
+            }
+        }
+
+        #bc-container{
+            .down{
+                .on1();
+            }
+        }
+    }
+
+    &.six{
+        #fe-container{
+            .high{
+                .on1();
+            }
+            .low{
+                .on1();
+            }
+        }
+
+        #agd-container{
+            .top{
+                .on2();
+            }
+            .middle{
+                .on2();
+            }
+            .bottom{
+                .on2();
+            }
+        }
+
+        #bc-container{
+            .down{
+                .on1();
+            }
+        }
+    }
+
+    &.seven{
+        #agd-container{
+            .top{
+                .on2();
+            }
+        }
+
+        #bc-container{
+            .up{
+                .on1();
+            }
+            .down{
+                .on1();
+            }
+        }
+    }
+
+    &.eight{
+        #fe-container{
+            .high{
+                .on1();
+            }
+            .low{
+                .on1();
+            }
+        }
+
+        #agd-container{
+            .top{
+                .on2();
+            }
+            .middle{
+                .on2();
+            }
+            .bottom{
+                .on2();
+            }
+        }
+
+        #bc-container{
+            .up{
+                .on1();
+            }
+            .down{
+                .on1();
+            }
+        }
+    }
+    
+    &.nine{
+        #fe-container{
+            .high{
+                .on1();
+            }
+        }
+
+        #agd-container{
+            .top{
+                .on2();
+            }
+            .middle{
+                .on2();
+            }
+            .bottom{
+                .on2();
+            }
+        }
+
+        #bc-container{
+            .up{
+                .on1();
+            }
+            .down{
+                .on1();
+            }
+        }
+    }
+
+
+
+    //显示八段
+    #fe-container{
+        display: flex;
+        flex-direction: column;
+
+        .fe{
+            width:20px;
+            height:100px;
+            margin-bottom:30px;
+            margin-right: 8px;
+            background:gray;
+            position: relative;
+            
+            &::before{
+                border:10px solid transparent;
+                border-bottom-color: gray;
+                content:'';    
+                display: block;
+                position: absolute;
+                top:-20px;
+
+            }
+
+            &::after{
+                border:10px solid transparent;
+                border-top-color: gray;
+                content:'';   
+                display: block; 
+                position: absolute;
+                bottom: -20px;
+            }
+        }
+    }
+    
+    #agd-container{
+        display: flex;
+        flex-direction: column;
+
+        .agd{
+            width:100px;
+            height:20px;
+            background:gray;
+            position: relative;
+    
+
+            &::before{
+                border:10px solid transparent;
+                border-right-color: gray;
+                content:'';    
+                display: block;
+                position: absolute;
+                left: -20px;
+            }
+
+            &::after{
+                border:10px solid transparent;
+                border-left-color: gray;
+                content:'';   
+                display: block; 
+                position: absolute;
+                right: -20px;   
+            }
+
+            &.top{
+                top:-20px;
+            }
+    
+            &.middle{
+               top:80px;
+            }
+            &.bottom{
+                top:180px;
+            }
+        }
+    }
+
+
+    #bc-container{
+        display: flex;
+        flex-direction: column;
+        
+        .bc{
+            width:20px;
+            height:100px;
+            background:gray;
+            position: relative;
+            margin-bottom: 30px;
+            margin-left: 8px;
+            
+            &::before{
+                border:10px solid transparent;
+                border-bottom-color: gray;
+                content:'';    
+                display: block;
+                position: absolute;
+                top:-20px;
+            }
+
+            &::after{
+                border:10px solid transparent;
+                border-top-color: gray;
+                content:'';   
+                display: block; 
+                position: absolute;
+                bottom: -20px;
+            }
+        }
+    }
+}
+
+
+
+//竖的显示，由于他们三角形的方向不同，设了两个函数
+.on1(@color:red){
+    background:@color;
+
+    &::before{
+        border-bottom-color: @color;
+    }
+
+    &::after{
+        
+        border-top-color: @color;
+    }
+}
+
+//横的显示
+.on2(@color:red){
+    background:@color;
+
+    &::before{
+        border-right-color:@color;
+    }
+
+    &::after{
+        border-left-color:@color;
+       
+    }
+}
+
+

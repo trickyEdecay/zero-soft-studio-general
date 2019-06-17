@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html id="first">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="css/navigation-flex.css" rel="stylesheet" />
+		<script src="js/navigation-flex.js"></script>
+	</head>
+	<body>
+		
+		<!-- 搜索栏部分 -->
+		<div id="search">
+			<input type="text" id="search-text" placeholder="百度一下" />
+			<div onclick="search()">
+				<p>搜索</p>
+			</div>
+		</div>
+		<!-- 搜索栏部分[完] -->
+		
+		<!-- 内容部分 -->
+		<div id="content">
+		</div></div>
+		<!-- 内容部分[完] -->
+		
+		<!-- 添加收藏 -->
+		<div id="add" onclick="ShowAddPage()"><p>+</p></div>
+		<!-- 添加收藏[完] -->
+
+		<!-- 遮罩层 -->
+		<div id="mask">
+			<!-- 添加收藏弹窗 -->
+			<div id="addPage">
+				<h2>添加收藏</h2>
+				<p id="a">导航标题</p>
+				<input id="title" placeholder="百度" />
+				<p id="b">导航描述</p>
+				<input id="con" placeholder="百度,全球最大的中文搜索引擎" />
+				<p id="c">导航链接</p>
+				<input id="url" placeholder="www.baidu.com" />
+				<div id="sure" onclick="sure()">
+					<p>确定</p>
+				</div>
+				<div id="unsure" onclick="nosure()">
+					<p>取消</p>
+				</div>
+			</div>
+			<!-- 添加收藏弹窗[完] -->
+		</div>
+		<!-- 遮罩层[完] -->
+		
+	</body>
+</html>

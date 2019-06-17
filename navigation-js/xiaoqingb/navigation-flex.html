@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/url.css" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <link href="less/main.less" rel="stylesheet/less">
+    <script src="less/less-3.9.0.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    
+<div class="middle">
+<!-- 导航栏容器 -->   
+    <nav class="url-box" id="url-box">
+            <!-- 输入框 -->
+    <div class="input-container">
+            <input type="text" id="search-content" class="search-content" placeholder="百度一下">
+            <input type="button" id="search-btn" class="search-btn" value="搜索">
+            </div>
+            <!-- 输入框【完】 -->
+            
+        <h1 class="my-collect">我的收藏</h1>
+        <!-- 每一个单独的导航栏格子 -->
+        <a class="url-container" id="url-container" href="https://www.baidu.com/">
+            <div class="url-icon">
+                <img class="url-img" src="img\BAT.png">
+            </div>
+            <div class="container-right">
+                <h2 class="url-name">百度</h2>
+                <span class="url-dec">百度，全球最大的中文搜索引擎、最大的中文网站。</span>            
+            </div>
+        </a>
+        <!-- 每一个单独的导航栏各自【完】 -->
+        
+        <a class="url-container" id="url-container" href="https://weibo.com/">
+            <div class="url-icon">
+                <img class="url-img" src="img/web.png">
+            </div>
+            <div class="container-right">
+                <h2 class="url-name">微博</h2>
+                <span class="url-dec">随时随地发现新鲜事！</span>            
+            </div>
+        </a>
+        <a class="url-container" id="url-container" href="https://github.com/join">
+            <div class="url-icon">
+                <img class="url-img" src="img/github.png">
+            </div>
+            <div class="container-right">
+                <h2 class="url-name">Github</h2>
+                <span class="url-dec">gitHub是一个面向开源及私有软件项目的托管平台</span>            
+            </div>
+        </a>
+        <a class="url-container" id="url-container" href="https://www.zhihu.com/">
+            <div class="url-icon">
+                <img class="url-img" src="img\zhihu.png">
+            </div>
+            <div class="container-right">
+                <h2 class="url-name">知乎</h2>
+                <span class="url-dec">网络问答社区，连接各行各业的用户</span>            
+            </div>
+        </a>
+        <a class="url-container" id="url-container" href="">
+            <div class="url-icon">
+                <img class="url-img" src="img/BAT.png">
+            </div>
+            <div class="container-right">
+                <h2 class="url-name">百度</h2>
+                <span class="url-dec">百度，全球最大的中文搜索引擎、最大的中文网站。</span>            
+            </div>
+        </a>
+        <a class="url-container" href="">
+            <div class="url-icon">
+                <img class="url-img" src="img\BAT.png">
+            </div>
+            <div class="container-right">
+                <h2 class="url-name">百度</h2>
+                <span class="url-dec">百度，全球最大的中文搜索引擎、最大的中文网站。</span>            
+            </div>
+        </a>
+        <a class="url-container" href="">
+            <div class="url-icon" id="url-icon">
+                <img class="url-img" src="img/BAT.png">
+            </div>
+            <div class="container-right">
+                <h2 class="url-name">百度</h2>
+                <span class="url-dec">百度，全球最大的中文搜索引擎、最大的中文网站。</span>           
+            </div>
+        </a>
+        <a class="url-container" href="">
+            <div class="url-icon">
+                <img class="url-img" src="img/BAT.png">
+            </div>
+            <div class="container-right">
+                <h2 class="url-name">百度</h2>
+                <span class="url-dec">百度，全球最大的中文搜索引擎、最大的中文网站。</span>
+            </div>
+    </a>
+    <!-- 导航栏容器【完】 -->
+        
+        
+        
+    </nav>
+    
+
+    
+<!-- 我的待办事项 -->
+<div class="waiting-issue">
+    <!-- 待办事项标题 -->
+    <h1 class="my-waiting-issue">我的待办</h1>
+
+    <!-- 待办事项添加 -->
+    <div class="add-issue-container">
+        <input class="input-frame" id="input-frame"  type="text" placeholder="添加你的待办事项，回车键以保存">
+        <button class="add-issue-btn" id="add-issue-btn">添加</button>
+    </div>
+    <!-- 待办事项添加【完】 -->
+
+
+    <div id="unfinished" class="whether-finished">
+        <div class="unfinished-title clumn-shrink-first" id="unfinished-title">
+            <span class="list-coin list-coin-unfinished">∨</span>
+            <span class="whether-finished-words">待完成</span>
+        </div>
+        <div class="issue-dec issue-dec-unfinished">
+            <div class="check-box-container">
+                <input type="checkbox" class="issue-check-box issue-check-box-nodone" checked>
+                <span class="issue-check"></span>
+            </div>
+            <span class="issue-words">睡觉</span>
+            <button id="issue-delete" class="issue-delete">X</button>
+        </div>
+        <div class="issue-dec issue-dec-unfinished">
+            <div class="check-box-container">
+                <input type="checkbox" class="issue-check-box issue-check-box-nodone" checked>
+                <span class="issue-check"></span>
+            </div>
+            <span class="issue-words">吃饭</span>
+            <button id="issue-delete" class="issue-delete">X</button>
+        </div>
+        <div class="issue-dec issue-dec-unfinished">
+            <div class="check-box-container">
+                <input type="checkbox" class="issue-check-box issue-check-box-nodone" checked>
+                <span class="issue-check"></span>
+            </div>
+            <span class="issue-words">洗澡</span>
+            <button id="issue-delete" class="issue-delete">X</button>
+        </div>
+    </div>
+    <div id="finished" class="whether-finished">
+        <div class="finished-title clumn-shrink-second" id="finished-title">
+            <span class="list-coin  list-coin-finished">∨</span>
+            <span class="whether-finished-words">完成</span>
+        </div>
+        <div class="issue-dec issue-dec-finished">
+            <div class="check-box-container">
+                <input type="checkbox" class="issue-check-box issue-check-box-done" checked>
+                <span class="issue-check">√</span>
+            </div>
+            <span class="issue-words">打游戏</span>
+            <button id="issue-delete" class="issue-delete">X</button>
+
+        </div>
+        <div class="issue-dec issue-dec-finished">
+            <div class="check-box-container">
+                <input type="checkbox" class="issue-check-box issue-check-box-done" checked>
+                <span class="issue-check">√</span>
+            </div>
+            <span class="issue-words">学习</span>
+            <button id="issue-delete" class="issue-delete">X</button>
+
+        </div>
+        <div class="issue-dec issue-dec-finished">
+            <div class="check-box-container">
+                <input type="checkbox" class="issue-check-box issue-check-box-done" checked>
+                <span class="issue-check">√</span>
+            </div>
+            <span class="issue-words">看动漫</span>
+            <button id="issue-delete" class="issue-delete">X</button>
+
+        </div>
+    </div>
+
+ </div>
+
+</div>
+
+
+    <!-- 添加收藏页面背景 -->
+    <div id="gray-bg" class="gray-bg"></div>
+    <!-- 添加收藏页面背景【完】 -->
+    
+    <!-- 添加收藏输入框 -->
+    <div id="add-collect" class="add-collect">
+        <h1 class="add-collect-title">添加收藏</h1>
+        <div class="add-url-container">
+            <p class="add-url-sec-title">导航标题</p>
+            <input id="add-url-title" class="add-url-content" value="百度" type="text">
+        </div>
+        <div class="add-url-container">
+            <p class="add-url-sec-title">导航描述</p>
+            <input id="add-url-dec" class="add-url-content" value="百度，全球最大的中文搜索引擎、最大的中文网站" type="text">
+        </div>
+        <div class="add-url-container">
+            <p class="add-url-sec-title">导航链接</p>
+            <input id="add-url" class="add-url-content" value="www.baidu.com" type="text">
+        </div>
+        <!-- 添加收藏输入框【完】 -->
+        
+        
+        <!-- 添加按钮 -->
+        <div class="btn-container">
+            <input type="button" id="btn-cancel" class="btn-cancel" value="取消">
+            <input type="button" id="btn-confirm" class="btn-confirm" value="确认">
+        </div>
+    <!-- 添加按钮【完】 -->
+        
+        
+    </div>
+
+    <!-- 添加按钮 -->
+    <div  type="button" class="add-btn" id="add-btn" >
+        <img class="add-icon" src="img\add.png">
+    </div>
+    <!-- 添加按钮【完】 -->
+
+    <script src="js/navigation-flex.js"></script>
+</body>
+</html>
