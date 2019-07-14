@@ -1,0 +1,67 @@
+html,body,div,img,embed,h3,body,a,span,h5,h6,input,h1{margin:0;padding:0;}
+body {
+    background:#F4F4F4;
+}
+.margin-control {
+    margin:0 auto;
+    padding:20px;
+    padding-top:100px;
+    text-align: center;
+}
+.monster-demo {
+    display: inline-block;
+    width:80px;
+    height:80px;
+    background: green;
+    border:1px;
+    border-radius: 80px;
+}
+h1 {
+    font-size: 16px;
+}
+.blood-number {
+    display:inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.blood-div {
+    display: inline-block;
+    width:300px;
+    height:20px;
+    position: relative;
+}        
+.blood-buttom {
+    display: inline-block;
+    border:1px solid black;
+    width: 300px;
+    height: 20px;
+    background: white; 
+    position: absolute;
+    left:0;
+    border-radius: 5px;
+}       
+.blood-top {
+    display: inline-block;
+    border:1px solid black;
+    width: 300px;
+    height: 20px;
+    background: red; 
+    position: absolute;
+    left:0;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.attack {
+    border:0;
+    width:100px;
+    height: 60px;
+    border-radius: 6px;
+    background: rgb(139, 66, 66);
+}
+button:active {
+    background :rgb(219, 102, 102);
+}
+.button {
+    margin-top:15px;
+}

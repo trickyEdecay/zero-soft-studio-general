@@ -1,0 +1,197 @@
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration:none; 
+    }
+    .input-search{
+        font-size: 0;
+        margin: 0 auto;
+        margin-top: 90px;
+        width: 620px;
+        height: 36px;
+    }
+    #input-search-content{
+        border: 1px solid #E7E7E7;
+        border-radius: 4px;
+        width: 480px;
+        height: 36px;
+        margin-right: 20px;
+        &:focus{
+            border: 1px solid#3F5DEA;
+        }
+    }
+    
+    .button{
+        background: #3F5DEA;
+        border: none;
+        border-radius: 4px;
+        width: 120px;
+        line-height: 36px;
+        &:hover{
+            background:#738BFF; 
+        }
+        &:active{
+            background:#1A33A6;
+    }
+   
+    }   
+    #add-nav-btn{
+        position: fixed;
+        right: 48px;
+        bottom: 48px;
+        background: #3F5DEA;
+        width: 64px;
+        height: 64px;
+        border-radius: 64px;
+        font-size: 16px;
+        color:#fff;
+        line-height: 64px;
+        text-align: center;
+        font-family: LucidaGrande;
+        font-size: 32px;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+    .black-mask{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.5;
+    }
+    .addcontent-dialog-container{
+        position: fixed;
+        width:100%;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .addcontent-dialog{
+        position: relative;
+        position: fixed;
+        width: 480px;
+        height: 353px;
+        background: #FFFFFF;
+        border-radius: 4px;
+        padding: 20px;
+    }
+    .addcontent-dialog h2{
+        font-family: PingFangSC-Medium;
+        font-size: 18px;
+        color: #000000;
+        text-align: left;
+        margin-bottom: 4px;
+    }
+    h3{
+        margin-top: 16px;
+        margin-bottom:4px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #333333;
+    }
+    .add-navmsg{
+        background: #FFFFFF;
+        border: 1px solid #E7E7E7;
+        border-radius: 4px;
+        width: 440px;
+        height: 36px;
+    }
+    #enter-btn{
+        position: absolute;
+        bottom: 20px; 
+        left: 204px;
+    }
+    #cancel-btn{     
+        position: absolute;
+        bottom: 20px; 
+        right: 20px;
+    }
+    #add-nav-dialog{
+        display: none;
+        
+        &.show{
+            display: block;
+        }  
+    }
+
+    h1{
+        margin-top:40px;
+        margin-left: 310px; 
+        font-family: PingFangSC-Medium;
+        font-size: 18px;
+        color: #333333;
+        width: 72px;
+        height: 25px;
+    }
+    #nav-container{
+        width:1328px; 
+        height:224px;
+        margin-top:20px;
+        margin-left: 310px; 
+        border: 0px; 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: flex-start;   
+    }
+    .nav-main-container{
+            flex-basis: 310px;
+            height: 100px;
+            padding: 20px;
+            border: 1px solid black;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;  
+        }
+    .nav-main-content-container{
+           flex: 1; 
+           display: flex;  
+        } 
+   .nav-icon{
+            flex-basis: 60px;
+            background: #3F5DEA ;
+            border-radius: 60px;
+            height: 60px;
+            width: 60px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+    img{
+            width: 30px;
+            height: 30px;
+        }
+    .nav-content{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    .nav-content h2 {
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #333333;
+            line-height: 20px; 
+            margin-bottom:6px;  
+             /* overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; */
+        } 
+    p{
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: #C4C4C4;
+            width:100%;
+        }
+
+
+
+
+

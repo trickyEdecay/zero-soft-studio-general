@@ -1,0 +1,360 @@
+.num-input {
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  margin-left: 370px;
+  border: 1px gray solid;
+}
+.digitron-box {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 200px;
+}
+.digitron-frame {
+  display: inline-block;
+  position: relative;
+  left: 100px;
+  top: 100px;
+  height: 160px;
+  width: 90px;
+}
+.digitron-frame #digitron-h {
+  height: 160px;
+  width: 105px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.digitron-frame #digitron-h .tube {
+  height: 20px;
+  font-size: 0;
+}
+.digitron-frame #digitron-h .tube::before {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border: 10px solid transparent;
+  border-right-color: black;
+  margin-left: 2.2px;
+}
+.digitron-frame #digitron-h .tube .center-tube {
+  display: inline-block;
+  background-color: black;
+  height: 20px;
+  width: 50px;
+}
+.digitron-frame #digitron-h .tube::after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border: 10px solid transparent;
+  border-left-color: black;
+}
+.digitron-frame #digitron-v {
+  height: 160px;
+  width: 95px;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.digitron-frame #digitron-v .c,
+.digitron-frame #digitron-v .e {
+  margin-top: -20px;
+}
+.digitron-frame #digitron-v .b,
+.digitron-frame #digitron-v .c {
+  margin-left: auto;
+}
+.digitron-frame #digitron-v .tube {
+  width: 20px;
+  height: 90px;
+  font-size: 0;
+}
+.digitron-frame #digitron-v .tube::before {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border: 10px solid transparent;
+  border-bottom-color: black;
+}
+.digitron-frame #digitron-v .tube .center-tube {
+  display: inline-block;
+  background-color: black;
+  height: 50px;
+  width: 20px;
+}
+.digitron-frame #digitron-v .tube::after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border: 10px solid transparent;
+  border-top-color: black;
+}
+.digitron-frame.show-0 #digitron-h .a .center-tube,
+.digitron-frame.show-0 #digitron-h .d .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-0 #digitron-h .a::before,
+.digitron-frame.show-0 #digitron-h .d::before {
+  border-right-color: red;
+}
+.digitron-frame.show-0 #digitron-h .a::after,
+.digitron-frame.show-0 #digitron-h .d::after {
+  border-left-color: red;
+}
+.digitron-frame.show-0 #digitron-v .b .center-tube,
+.digitron-frame.show-0 #digitron-v .c .center-tube,
+.digitron-frame.show-0 #digitron-v .e .center-tube,
+.digitron-frame.show-0 #digitron-v .f .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-0 #digitron-v .b::before,
+.digitron-frame.show-0 #digitron-v .c::before,
+.digitron-frame.show-0 #digitron-v .e::before,
+.digitron-frame.show-0 #digitron-v .f::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-0 #digitron-v .b::after,
+.digitron-frame.show-0 #digitron-v .c::after,
+.digitron-frame.show-0 #digitron-v .e::after,
+.digitron-frame.show-0 #digitron-v .f::after {
+  border-top-color: red;
+}
+.digitron-frame.show-1 #digitron-v .b .center-tube,
+.digitron-frame.show-1 #digitron-v .c .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-1 #digitron-v .b::before,
+.digitron-frame.show-1 #digitron-v .c::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-1 #digitron-v .b::after,
+.digitron-frame.show-1 #digitron-v .c::after {
+  border-top-color: red;
+}
+.digitron-frame.show-2 #digitron-h .a .center-tube,
+.digitron-frame.show-2 #digitron-h .d .center-tube,
+.digitron-frame.show-2 #digitron-h .g .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-2 #digitron-h .a::before,
+.digitron-frame.show-2 #digitron-h .d::before,
+.digitron-frame.show-2 #digitron-h .g::before {
+  border-right-color: red;
+}
+.digitron-frame.show-2 #digitron-h .a::after,
+.digitron-frame.show-2 #digitron-h .d::after,
+.digitron-frame.show-2 #digitron-h .g::after {
+  border-left-color: red;
+}
+.digitron-frame.show-2 #digitron-v .b .center-tube,
+.digitron-frame.show-2 #digitron-v .e .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-2 #digitron-v .b::before,
+.digitron-frame.show-2 #digitron-v .e::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-2 #digitron-v .b::after,
+.digitron-frame.show-2 #digitron-v .e::after {
+  border-top-color: red;
+}
+.digitron-frame.show-3 #digitron-h .a .center-tube,
+.digitron-frame.show-3 #digitron-h .d .center-tube,
+.digitron-frame.show-3 #digitron-h .g .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-3 #digitron-h .a::before,
+.digitron-frame.show-3 #digitron-h .d::before,
+.digitron-frame.show-3 #digitron-h .g::before {
+  border-right-color: red;
+}
+.digitron-frame.show-3 #digitron-h .a::after,
+.digitron-frame.show-3 #digitron-h .d::after,
+.digitron-frame.show-3 #digitron-h .g::after {
+  border-left-color: red;
+}
+.digitron-frame.show-3 #digitron-v .b .center-tube,
+.digitron-frame.show-3 #digitron-v .c .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-3 #digitron-v .b::before,
+.digitron-frame.show-3 #digitron-v .c::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-3 #digitron-v .b::after,
+.digitron-frame.show-3 #digitron-v .c::after {
+  border-top-color: red;
+}
+.digitron-frame.show-4 #digitron-h .g .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-4 #digitron-h .g::before {
+  border-right-color: red;
+}
+.digitron-frame.show-4 #digitron-h .g::after {
+  border-left-color: red;
+}
+.digitron-frame.show-4 #digitron-v .b .center-tube,
+.digitron-frame.show-4 #digitron-v .c .center-tube,
+.digitron-frame.show-4 #digitron-v .f .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-4 #digitron-v .b::before,
+.digitron-frame.show-4 #digitron-v .c::before,
+.digitron-frame.show-4 #digitron-v .f::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-4 #digitron-v .b::after,
+.digitron-frame.show-4 #digitron-v .c::after,
+.digitron-frame.show-4 #digitron-v .f::after {
+  border-top-color: red;
+}
+.digitron-frame.show-5 #digitron-h .a .center-tube,
+.digitron-frame.show-5 #digitron-h .d .center-tube,
+.digitron-frame.show-5 #digitron-h .g .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-5 #digitron-h .a::before,
+.digitron-frame.show-5 #digitron-h .d::before,
+.digitron-frame.show-5 #digitron-h .g::before {
+  border-right-color: red;
+}
+.digitron-frame.show-5 #digitron-h .a::after,
+.digitron-frame.show-5 #digitron-h .d::after,
+.digitron-frame.show-5 #digitron-h .g::after {
+  border-left-color: red;
+}
+.digitron-frame.show-5 #digitron-v .c .center-tube,
+.digitron-frame.show-5 #digitron-v .f .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-5 #digitron-v .c::before,
+.digitron-frame.show-5 #digitron-v .f::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-5 #digitron-v .c::after,
+.digitron-frame.show-5 #digitron-v .f::after {
+  border-top-color: red;
+}
+.digitron-frame.show-6 #digitron-h .a .center-tube,
+.digitron-frame.show-6 #digitron-h .d .center-tube,
+.digitron-frame.show-6 #digitron-h .g .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-6 #digitron-h .a::before,
+.digitron-frame.show-6 #digitron-h .d::before,
+.digitron-frame.show-6 #digitron-h .g::before {
+  border-right-color: red;
+}
+.digitron-frame.show-6 #digitron-h .a::after,
+.digitron-frame.show-6 #digitron-h .d::after,
+.digitron-frame.show-6 #digitron-h .g::after {
+  border-left-color: red;
+}
+.digitron-frame.show-6 #digitron-v .c .center-tube,
+.digitron-frame.show-6 #digitron-v .e .center-tube,
+.digitron-frame.show-6 #digitron-v .f .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-6 #digitron-v .c::before,
+.digitron-frame.show-6 #digitron-v .e::before,
+.digitron-frame.show-6 #digitron-v .f::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-6 #digitron-v .c::after,
+.digitron-frame.show-6 #digitron-v .e::after,
+.digitron-frame.show-6 #digitron-v .f::after {
+  border-top-color: red;
+}
+.digitron-frame.show-7 #digitron-h .a .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-7 #digitron-h .a::before {
+  border-right-color: red;
+}
+.digitron-frame.show-7 #digitron-h .a::after {
+  border-left-color: red;
+}
+.digitron-frame.show-7 #digitron-v .b .center-tube,
+.digitron-frame.show-7 #digitron-v .c .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-7 #digitron-v .b::before,
+.digitron-frame.show-7 #digitron-v .c::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-7 #digitron-v .b::after,
+.digitron-frame.show-7 #digitron-v .c::after {
+  border-top-color: red;
+}
+.digitron-frame.show-8 #digitron-h .a .center-tube,
+.digitron-frame.show-8 #digitron-h .d .center-tube,
+.digitron-frame.show-8 #digitron-h .g .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-8 #digitron-h .a::before,
+.digitron-frame.show-8 #digitron-h .d::before,
+.digitron-frame.show-8 #digitron-h .g::before {
+  border-right-color: red;
+}
+.digitron-frame.show-8 #digitron-h .a::after,
+.digitron-frame.show-8 #digitron-h .d::after,
+.digitron-frame.show-8 #digitron-h .g::after {
+  border-left-color: red;
+}
+.digitron-frame.show-8 #digitron-v .b .center-tube,
+.digitron-frame.show-8 #digitron-v .c .center-tube,
+.digitron-frame.show-8 #digitron-v .e .center-tube,
+.digitron-frame.show-8 #digitron-v .f .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-8 #digitron-v .b::before,
+.digitron-frame.show-8 #digitron-v .c::before,
+.digitron-frame.show-8 #digitron-v .e::before,
+.digitron-frame.show-8 #digitron-v .f::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-8 #digitron-v .b::after,
+.digitron-frame.show-8 #digitron-v .c::after,
+.digitron-frame.show-8 #digitron-v .e::after,
+.digitron-frame.show-8 #digitron-v .f::after {
+  border-top-color: red;
+}
+.digitron-frame.show-9 #digitron-h .a .center-tube,
+.digitron-frame.show-9 #digitron-h .d .center-tube,
+.digitron-frame.show-9 #digitron-h .g .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-9 #digitron-h .a::before,
+.digitron-frame.show-9 #digitron-h .d::before,
+.digitron-frame.show-9 #digitron-h .g::before {
+  border-right-color: red;
+}
+.digitron-frame.show-9 #digitron-h .a::after,
+.digitron-frame.show-9 #digitron-h .d::after,
+.digitron-frame.show-9 #digitron-h .g::after {
+  border-left-color: red;
+}
+.digitron-frame.show-9 #digitron-v .b .center-tube,
+.digitron-frame.show-9 #digitron-v .c .center-tube,
+.digitron-frame.show-9 #digitron-v .f .center-tube {
+  background-color: red;
+}
+.digitron-frame.show-9 #digitron-v .b::before,
+.digitron-frame.show-9 #digitron-v .c::before,
+.digitron-frame.show-9 #digitron-v .f::before {
+  border-bottom-color: red;
+}
+.digitron-frame.show-9 #digitron-v .b::after,
+.digitron-frame.show-9 #digitron-v .c::after,
+.digitron-frame.show-9 #digitron-v .f::after {
+  border-top-color: red;
+}
