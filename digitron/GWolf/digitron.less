@@ -1,0 +1,246 @@
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    #input-container{
+        margin: 0 auto;
+        width: 620px;
+        height: 36px;
+        margin-top: 20px;
+    }
+    #main-input-container{
+        border: 1px solid #E7E7E7;
+        width: 480px;
+        height: 36px;
+        border-radius: 4px;
+        margin-right: 30px;
+        outline: none;
+        &:focus{
+            border: 1px solid#3F5DEA;
+        }
+    }
+    #enter-button{
+        width: 100px;
+        height: 36px;
+        background: #3F5DEA;
+        border-radius: 4px;
+        line-height: 36px;
+        border: none;
+        &:hover{
+            background:#738BFF; 
+        }
+        &:active{
+            background:#1A33A6;
+        }
+     }
+     #digitron-container {     
+        width: 250px;
+        height: 550px;
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+
+        .horizontal{
+            width: 150px;
+            height: 50px;
+            position: absolute;
+            background: gray;
+            margin-left: 25px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -50px;
+                display: block;
+                border: 25px solid transparent;
+                border-right-color: gray;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 150px;
+                display: block;
+                border: 25px solid transparent;
+                border-left-color: gray;
+            }
+            &.one { 
+                left: 25px;
+                top: 0;
+            }
+            &.four {
+                left: 25px;
+                top: 500px;
+            }
+            &.seven {
+                left: 25px;
+                top: 250px;
+            }
+        }
+        .vertical {          
+            width: 50px;
+            height: 150px;
+            position: absolute;
+            background: gray;
+            margin-top: 25px;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                top: -50px;
+                border:25px solid transparent;
+                border-bottom-color: gray;
+            }
+    
+            &::after {
+                content: "";
+                position: absolute;
+                top: 150px;
+                border:25px solid transparent;
+                border-top-color: gray;
+            }
+    
+            
+            &.two {
+                top:50px;
+                right:0;
+            }
+            &.three {
+                top: 300px;
+                right: 0;
+            }
+            &.five {
+                top: 300px;
+            }
+            &.six {
+                top: 50px;
+            }
+        }
+        &.zero {
+            .first();
+            .second();
+            .third();
+            .fourth();
+            .sixth();
+            .fifth();
+          
+        }
+        &.one {
+            .third();
+            .second();
+        }
+        &.two {
+            .first();
+            .second();
+            .seventh();
+            .fifth();
+            .fourth();
+        }
+        &.three {
+            .first();
+            .second();
+            .seventh();
+            .third();
+            .fourth();
+        }
+        &.four {
+            .sixth();
+            .seventh();
+            .second();
+            .third();
+        }
+        &.five {
+            .first();
+            .sixth();
+            .seventh();
+            .third();
+            .fourth();
+        }
+        &.six {
+            .first();
+            .sixth();
+            .fifth();
+            .fourth();
+            .third();
+            .seventh();
+        }
+        &.seven {
+            .first();
+            .second();
+            .third();
+        }
+        &.eight {
+            .first();
+            .second();
+            .third();
+            .sixth();
+            .fifth();
+            .fourth();
+            .seventh();
+        }
+        &.nine {
+            .first();
+            .second();
+            .third();
+            .fourth();
+            .sixth();
+            .seventh();
+           }
+
+    }
+    .horizontalon(@color:green) {       
+        background: @color;
+    
+        &::before {
+            border-right-color: @color;
+        }
+        &::after {
+            border-left-color: @color;
+        }
+    }
+    
+    .verticalon(@color:green) {       
+        background: @color;
+    
+        &::before {
+            border-bottom-color: @color;
+        }
+        &::after {
+            border-top-color: @color;
+        }
+    }
+    .first {        
+        .one {
+            .horizontalon();
+        }
+    }
+    .second {
+        .two {
+            .verticalon();
+        }
+    }
+    .third {
+        .three {
+            .verticalon();
+        }
+    }
+    .fourth {
+        .four {
+            .horizontalon();
+        }
+    }
+    .fifth {
+        .five {
+            .verticalon();
+        }
+    }
+    .sixth {
+        .six {
+            .verticalon();
+        }
+    }
+    .seventh {
+        .seven {
+            .horizontalon();
+        }
+    }
