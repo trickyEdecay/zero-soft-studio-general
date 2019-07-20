@@ -1,0 +1,158 @@
+/* 轮播图的长度*/
+@sowingWidth:700px;
+/* 轮播图的宽度*/
+@sowingHeight:400px;
+/* 平行四边形以拼接翻页箭头的长度*/
+@arrowWidth:10px;
+/* 平行四边形以拼接翻页箭头的宽度*/
+@arrowHeight:30px;
+
+*{
+      margin:0;
+      list-style:none;
+}
+
+body{
+        background:rgb(236, 226, 226);
+        position: relative;
+}
+
+
+
+/* 存储轮播图内容的容器*/ 
+.big-container{
+            width:@sowingWidth;
+            height:@sowingHeight;                    
+            left:0;
+            margin:50px auto; 
+            padding:0;          
+            position: relative;
+            overflow: hidden;
+
+/* 轮播图的图片存放位置*/     
+      .sowing-content{
+            width:600%;
+            position: absolute;
+     
+            ul{ 
+                 padding:0;
+                          
+                 li{   
+                        width:@sowingWidth;
+                        height:@sowingHeight;     
+                        float: left;       
+                        display:none;
+                       
+                  }
+                  li.active{
+                    display:block;
+
+                  }
+
+            }
+           
+      }
+}
+
+
+/*平行四边形以拼接翻页箭头*/
+/*左边箭头*/
+.arrow-box-left{
+      position:absolute;
+      background:rgba(59, 66, 75,.3);                                                                       
+      width:50px;
+      height:80px;
+      border-radius: 0 6px 6px 0;
+      top:160px; 
+      display:block; 
+     
+            .arrow-left{
+                  width:@arrowWidth;
+                  height:@arrowHeight;
+                  background:skyblue;
+                  opacity: .8;
+                  transform: skew(-30deg);
+                  margin:0 auto 0 10px;
+                  position: relative;
+                  top:10px;
+                  left:10px;
+                  }
+            .arrow-left::after{
+                  content:"";
+                  position: absolute;
+                  opacity: .8;
+                  width:@arrowWidth;
+                  height:@arrowHeight;
+                  background:skyblue;
+                  top:30px;
+                  transform: skew(230deg);
+                  transform-origin:left top ;          
+            }
+}
+
+
+
+/*右边箭头*/
+.arrow-box-right{
+      position:absolute;
+      background:rgba(59, 66, 75,.3);
+      width:50px;
+      height:80px;
+      border-radius: 6px 0 0 6px;
+      top:160px;
+      right:0;  
+      display:block; 
+     
+            .arrow-right{
+                  width:@arrowWidth;
+                  height:@arrowHeight;
+                  background:skyblue;
+                  opacity: .8;
+                  transform: skew(30deg);
+                  margin:0 auto 0 10px;
+                  position: relative;
+                  top:10px;
+                  left:10px;
+                  }
+            .arrow-right::after{
+                  content:"";
+                  position: absolute;
+                  opacity: .8;
+                  width:@arrowWidth;
+                  height:@arrowHeight;
+                  background:skyblue;
+                  top:30px;
+                  transform: skew(310deg);
+                  transform-origin:left top ;          
+            }
+}
+
+/*小圆点*/
+.pot ul{  
+      width:80px;
+      height: 25px;
+      position: absolute;     
+      display: flex;
+      flex-direction:row;
+      justify-content:center;
+      align-items: center;
+      top:370px;
+      left:@sowingWidth/2-40px;
+      padding:0;
+
+
+      li{
+            min-width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background:#b9b6b6;
+            cursor: pointer;
+            margin: 5px; 
+            opacity: .5;                      
+      }
+
+      li.active{
+            background: #8a3b8a;
+            opacity:1;  
+      }
+}
