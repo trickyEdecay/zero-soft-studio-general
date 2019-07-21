@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+@width:400px;
+@height:200px;
+
+.main-container{
+    position: relative;
+    width:@width;
+    height: @height;
+    margin: 0 auto;
+
+    .inner-container{
+        width:@width;
+        height: @height;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        
+        
+        
+        ul{
+            width: @width*5;
+            // transform: translateX(-800px);
+            transition:all .3s;
+
+            li{
+                list-style: none;
+                float: left;
+                width:@width;
+                height: @height;
+            }
+        }
+    
+        img{
+            width:100%;
+            height: 100%;
+        }
+        
+    }
+    
+    &:hover{
+        .row{
+            opacity: 0.2;
+            background: #000000;
+            
+            width: 30px;
+            height: 60px;
+            box-sizing: border-box;
+            padding-top:15px;
+            position: absolute;
+            bottom:70px;
+            
+            &:first-child{
+                left:0;
+                border-radius:0 8px 8px 0;
+            }
+            &:last-child{
+                right:0;
+                border-radius:8px 0 0 8px ;
+            }
+    
+            div {
+                width: 10px;
+                height: 14px;
+                margin: 0 auto;
+                
+            }
+            
+            .up {
+                transform: skew(-20deg);
+                background-color:#fff;
+            }
+            
+            .bottom {
+                transform: skew(20deg); 
+                background-color: #fff;
+            }
+        }
+    
+        .indicator{
+            display: flex;
+            position: absolute;
+            bottom:5px;
+            left:170px;
+           
+            span{
+                width: 8px;
+                height: 8px;
+                border-radius: 8px;
+                margin: 8px;
+                background: #fff;
+                cursor: pointer;
+            }   
+        }
+    }
+
+}
+
+
+
+
+
