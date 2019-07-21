@@ -1,0 +1,94 @@
+// 轮播图窗口尺寸
+@slideBoxWidth:400px;
+@slideBoxHeight:200px;
+// 图片尺寸
+@picWidth:@slideBoxWidth;
+@picHeight:@slideBoxHeight;
+// 图片容器尺寸
+@innerContainerWidth:@picWidth*4;
+@innerContainerHeight:@slideBoxHeight;
+html{
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+// 大框框
+#slide-box{
+    position: relative;
+    width: @slideBoxWidth;
+    height: @slideBoxHeight;
+    margin:50px auto;
+    overflow: hidden;
+    // 移动按钮
+    .change-btn{
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 30px;
+        background-color:black;
+        opacity: 0.5;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+    // 左右按钮的css
+    .btn-right{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .btn-left{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    // 可移动的图片容器
+    .inner-container{
+        transition: all ease-in-out 0.5s;
+        width: @innerContainerWidth;
+        height: @innerContainerHeight;
+        font-size: 0;
+        .pic{
+            margin: 0;
+           float: left;
+            height: @picHeight;
+            width: @picWidth;
+        }
+    }
+    // 小点点框框
+    #indicator-box{
+        position: absolute;
+        left: 175px;
+        bottom: 20px;
+        width: 50px;
+        height: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // 小点点
+        .indicator{
+            opacity: 0.4;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        // 点亮小点点的特效
+        .indicator-on{
+            transition: all 0.5s;
+            background-color:rgb(26, 121, 100);
+        }
+    }
+}

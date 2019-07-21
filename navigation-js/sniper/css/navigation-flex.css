@@ -1,0 +1,235 @@
+body,html{
+	height: 100%;
+	margin: 0;
+	background: #F4F4F4;
+}
+
+/*实现 添加收藏界面 的按钮*/
+.add-button{
+	width: 64px;
+	height: 64px;
+	background: #3F5DEA;
+	border-radius: 32px;
+	border: 0;
+	font-size: 32px;
+	color: #FFFFFF;
+	padding: 0;
+	position: fixed;
+	right: 48px;
+	bottom: 48px;
+	line-height: 64px;
+	text-align: center;
+}
+
+.add-button:hover{
+	background: #738BFF;
+}
+
+.add-button:active{
+	background: #1A33A6;
+}
+/*实现 添加收藏界面 的按钮 [完]*/
+
+
+/*灰色背景界面*/
+.all-interface{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: black;
+	opacity: .5;
+	display: none;
+}
+/*灰色背景界面 [完]*/
+
+
+/*添加导航栏功能的界面*/
+.add-nav-container{
+	width: 480px;
+	background: #FFFFFF;
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin: 340px auto;
+	padding: 20px;
+	box-sizing: border-box;
+	display: none;
+}
+
+.add-nav-container h1{
+	font-size: 18px;
+	color: #000;
+	text-align: left;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.add-nav-container .nav-info{
+	font-size: 14px;
+	color: #333;
+	margin: 4px 0;
+}
+
+.add-nav-container .nav-content{
+	width: 100%;
+	height: 36px;
+	box-sizing: border-box;
+	padding: 8px 16px;
+	border-radius: 4px;
+	margin-bottom: 12px;
+	border: 1px solid #E7E7E7;
+	outline: none;
+	font-size: 14px;
+	color: #C4C4C4;
+}
+
+.add-nav-container .nav-content:focus{
+	border: 1px solid #3F5DEA;
+}
+
+.add-nav-container .exit-btn{
+	width: 120px;
+	height: 36px;
+	float: right;
+	margin-left: 20px;
+	background: #FFF;
+	border: 1px solid #E7E7E7;
+}
+
+.add-nav-container .submit-btn{
+	width: 120px;
+	height: 36px;
+	float: right;
+	background: #3F5DEA;
+	border: 0;
+}
+/*添加导航栏功能的界面 [完]*/
+
+
+/*使得 灰色背景 和 添加收藏界面 显示*/
+.show{
+	display: block;
+}
+
+#search-bar-container{
+	width: 620px;
+	margin: 0 auto;
+	font-size: 0;
+	padding-top: 90px;
+}
+
+#search-bar{
+	width: 480px;
+	height: 36px;
+	padding: 8px 16px;
+	box-sizing: border-box;
+	border: 1px solid #E7E7E7;
+	margin-right: 20px;
+	font-size: 14px;
+	outline: none;
+	border-radius: 4px;
+	color: #C4C4C4;
+}
+
+#search-bar:focus{
+	border: 1px solid #3F5DEA;
+}
+
+#search-button{
+	width: 120px;
+	height: 36px;
+	background: #3F5DEA;
+	border: 0;
+	font-size: 14px;
+	border-radius: 4px;
+	color: #FFFFFF;
+	outline: none;
+	padding: 8px 0;
+}
+
+#search-button:hover{
+	background: #738BFF;
+}
+
+#search-button:active{
+	background: #1A33A6;
+}
+
+#nav{
+	width: 1320px;
+	margin: 40px auto;
+	height: 100%;
+}
+
+h1{
+	margin: 10px;
+	height: 25px;
+	line-height: 25px;	
+	font-family: "PingFangSC-Medium";	
+	font-size: 18px;
+	color: #333333;
+}
+
+.nav-container{
+	margin: 10px;
+	width: 310px;
+	height: 100px;
+	padding: 20px;
+	box-sizing: border-box;
+	background: white;
+	display: flex;
+	float:left;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.nav-container:hover{
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.10);
+}
+
+.nav-container:active{
+	background: #E4E4E4;
+}
+
+.img-container{
+	flex-basis: 60px;
+	height: 100%;
+	border-radius: 30px;
+	background: #3F5DEA;
+	margin-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-container img{
+	width: 30px;
+	height: 30px;
+}
+
+.info-container{
+	flex: 1;
+	height: 100%;
+	overflow: hidden;
+}
+
+.info-container h2{
+	margin: 0;
+	font-family: "PingFangSC-Regular";
+	color: #333333;
+	font-size: 14px;
+	line-height: 20px;
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.info-container p{
+	margin: 0;
+	font-family: "PingFangSC-Regular";
+	color: #C4C4C4;
+	font-size: 12px;
+	line-height: 18px;
+	margin-top: 6px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度一下</title>
+    <script src="lib/jquery-3.1.4.js"></script>
+    <link href="styles/navigation.less" rel="stylesheet/less">
+    <script src="lib/less.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="search-box">
+            <input class="normal-input" id="search-input" placeholder="百度一下">
+            <button class="normal-button" id="search-btn">搜索</button>
+        </div>
+        <h1 class="module-title">我的收藏</h1>
+        <!-- 我的收藏的列表 -->
+        <div class="nav-list">
+
+            <a class="nav-item" href="http://baidu.com" target="_blank">
+                <div class="logo">
+                    <img src="imgs/logo-baidu.png" alt="百度logo">
+                </div>
+                <div class="info-container">
+                    <h2>百度</h2>
+                    <p>全球最大的中文搜索引擎</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="https://www.csdn.net" target="_blank">
+                <div class="logo">
+                    <img src="imgs/logo-csdn.png" alt="百度logo">
+                </div>
+                <div class="info-container">
+                    <h2>博客</h2>
+                    <p>中国专业IT社区</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="https://github.com" target="_blank">
+                <div class="logo">
+                    <img src="imgs/logo-github.png" alt="百度logo">
+                </div>
+                <div class="info-container">
+                    <h2>GitHub</h2>
+                    <p>全球最大同性交友网站</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="https://www.taobao.com" target="_blank">
+                <div class="logo">
+                    <img src="imgs/logo-taobao.png" alt="百度logo">
+                </div>
+                <div class="info-container">
+                    <h2>淘宝</h2>
+                    <p>亚洲较大的网上交易平台</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="https://www.pinduoduo.com" target="_blank">
+                <div class="logo">
+                    <img src="imgs/logo-pinduoduo.png" alt="百度logo">
+                </div>
+                <div class="info-container">
+                    <h2>拼多多</h2>
+                    <p>国内主流的手机购物APP</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="https://weibo.com" target="_blank">
+                <div class="logo">
+                    <img src="imgs/logo-weibo.png" alt="百度logo">
+                </div>
+                <div class="info-container">
+                    <h2>微博</h2>
+                    <p>随时随地发现新鲜事</p>
+                </div>
+            </a>
+
+            <a class="nav-item" href="http://www.jyu.edu.cn" target="_blank">
+                <div class="logo">
+                    <img src="imgs/logo-jyu.png" alt="百度logo">
+                </div>
+                <div class="info-container">
+                    <h2>嘉应学院</h2>
+                    <p>读书的好地方</p>
+                </div>
+            </a>
+        </div>
+        <!-- 我的收藏列表 [完] -->
+
+        <div class="add-btn">+</div>
+
+        <div class="modal">
+            <div class="modal-main">
+                <h1>添加收藏</h1>
+                <div class="modal-content">
+                    <div class="input-group">
+                        <label>导航标题</label>
+                        <input class="normal-input" id="add-favourite-title">
+                    </div>
+                    <div class="input-group">
+                        <label>导航描述</label>
+                        <input class="normal-input" id="add-favourite-desc">
+                    </div>
+                    <div class="input-group">
+                        <label>导航链接</label>
+                        <input class="normal-input" id="add-favourite-link">
+                    </div>
+                </div>
+                <footer>
+                    <button class="normal-button" id="add-favourite-verify-btn">确定</button>
+                    <button class="normal-button white" id="add-favourite-cancel-btn">取消</button>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="js/navigation.js"></script>
+</body>
+
+</html>

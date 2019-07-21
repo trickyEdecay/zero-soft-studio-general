@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">  
+  <title>navigation-js</title>
+  <link  href="navigation-js.css" rel="stylesheet"> 
+  
+</head>
+<body bgcolor="#f5f5f5" >
+ <div class="search-bar">
+    <input id="search-content" value="百度一下"/>
+    <button id="search-button" >搜索</button>
+ </div>
+ <div class="bigbox">
+   <p><b>我的收藏</b></p>
+   <div class="mycontain" id="contain"> 
+   <!--第一个板块，百度--> 
+     <div class="box" onclick="skip()">
+         <div class="box-icon">
+           <div class="box-icon-a">
+              <img src="img\baidu.png">
+           </div>
+          </div>      
+        <div class="box-part2">
+          <h3 class="box-font"><a href="http://www.baidu.com" target="_blank"> 百度</a></h3>
+          <p class="box-p">百度，全球最大地的中文搜索引擎、最大的中文网站</p>
+       </div>
+     </div>
+   <!--第一个板块，百度（完）--> 
+   <!--第二个板块，微博--> 
+    <div class="box t2" onclick="weibo()">
+          <div class="box-icon">
+              <div class="box-icon-a">
+                <img src="img\sina.png" > 
+              </div>
+          </div>
+          <div class="box-part2">
+            <h3 class="box-font"><a href="http://www.sina.com" target="_blank"> 微博</a></h3>
+            <p class="box-p">随时随地发现</p>
+          </div>
+    </div>
+   <!--第二个板块，微博（完）--> 
+   <!--第三个板块，github-->  
+     <div class="box t3" onclick="github()">
+          <div class="box-icon">
+            <div class="box-icon-a">
+             <img src="img\github.png" > 
+              </div>
+        </div>
+        <div class="box-part2">
+        <h3 class="box-font"><a href="http://www.github.com" target="_blank">github</a></h3>
+        <p class="box-p"> github是一个面向开源及私有软件项目的托管平台</p>
+      </div>
+    </div> 
+    <!--第三个板块，github（完）-->  
+    <!--第四个板块，微博-->   
+     <div class="box t4" onclick="weibo()" >
+          <div class="box-icon">
+              <div class="box-icon-a">
+                 <img src="img\sina.png" > 
+              </div>
+        </div>
+        <div class="box-part2">
+           <h3 class="box-font"><a href="http://www.sina.com" target="_blank"> 微博</a></h3>
+           <p class="box-p">随时随地发现</p>
+        </div>
+    </div>
+    <!--第四个板块，微博（完）-->  
+    <!--第五个板块，百度-->  
+     <div class="box t5"  onclick="skip()">
+        <div class="box-icon">
+           <div class="box-icon-a">
+             <img src="img\baidu.png" >
+           </div>
+        </div>  
+       <div class="box-part2">
+           <h3 class="box-font"><a href="http://www.baidu.com" target="_blank"> 百度</a></h3>
+           <p class="box-p">百度，全球最大地的中文搜索引擎、最大的中文网站</p>
+       </div>
+      </div>
+   <!--第五个板块，百度（完）-->  
+   <!--第六个板块，微博-->
+    <div class="box t6" onclick="weibo()">
+          <div class="box-icon">
+              <div class="box-icon-a">
+             <img src="img\sina.png" > 
+              </div>
+        </div>
+        <div class="box-part2">
+        <h3 class="box-font"><a href="http://www.sina.com" target="_blank"> 微博</a></h3>
+        <p class="box-p">随时随地发现</p>
+      </div>
+    </div>
+     <!--第六个板块，微博（完）-->
+     <!--第七个板块，github-->
+     <div class="box t7" onclick="github()" >
+          <div class="box-icon">
+            <div class="box-icon-a">
+             <img src="img\github.png" > 
+              </div>
+        </div>
+        <div class="box-part2">
+        <h3 class="box-font"><a href="http://www.github.com" target="_blank">github</a></h3>
+        <p class="box-p"> github是一个面向开源及私有软件项目的托管平台</p>
+      </div>
+    </div> 
+       <!--第七个板块，github（完）-->
+      <!--第八个板块，微博）-->
+     <div class="box t8" onclick="weibo()">
+          <div class="box-icon">
+              <div class="box-icon-a">
+                <img src="img\sina.png" > 
+              </div>
+        </div>
+        <div class="box-part2">
+          <h3 class="box-font"><a href="http://www.sina.com" target="_blank"> 微博</a></h3>
+          <p class="box-p">随时随地发现</p>
+      </div>
+    </div> 
+     <!--第八个板块，微博（完）-->  
+  </div>
+</div>  
+<!--+-->
+ <div id="add">+</div>
+<!--+(完）--> 
+<!--添加收藏的小弹窗-->
+<div id="modal">
+    <div class="back"></div>
+    <div id="popup-container">
+        <div id="pop-up">
+           <h3>添加收藏</h3>
+           <p >导航标题</p>
+           <input id="title" type="text" value="百度">
+           <p>导航描述</p>
+           <input id="describle" type="text" value="百度，全球最大地的中文搜索引擎、最大的中文网站">
+           <p>导航链接</p>
+           <input id="link" value="www.baidu.com">
+           <div class="button">
+             <div id="button-sure">确定</div>
+             <div id="button-close">取消</div>
+           </div>
+        </div>
+    </div>
+   
+</div>
+<!--添加收藏的小弹窗（完）-->
+<script src="navigation.js"></script>
+</body>
+</html>
